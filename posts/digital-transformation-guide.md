@@ -1,8 +1,8 @@
 ---
 title: "Digital Transformation Guide: How to Modernize Your Business in 2024"
 excerpt: "Learn the essential steps to transform your business digitally, from assessing current state to implementing modern solutions that drive growth and efficiency."
-date: "2024-03-20"
-coverImage: "/images/blog/digital-transformation.jpg"
+date: "2025-03-20"
+coverImage: "/posts/digital-transformation-guide/cover.jpg"
 category: "Digital Transformation"
 ---
 
