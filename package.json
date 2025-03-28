@@ -15,6 +15,9 @@
     "clean-posts": "rm -rf data/blog-posts.json && rm -rf public/posts/* && rm -rf posts/*"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.0",
+    "@mdx-js/react": "^3.1.0",
+    "@next/mdx": "^15.2.4",
     "axios": "^1.8.1",
     "dotenv": "^16.4.5",
     "framer-motion": "^12.6.2",

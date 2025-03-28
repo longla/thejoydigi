@@ -73,7 +73,7 @@ export default function BlogPost({ post }: BlogPostProps) {
 }
 
 export const getStaticPaths: GetStaticPaths = async () => {
-  const posts = getAllPosts();
+  const posts = await getAllPosts();
   const paths = posts.map((post) => ({
     params: { slug: post.slug },
   }));
@@ -85,7 +85,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
-  const post = getPostBySlug(params?.slug as string);
+  const post = await getPostBySlug(params?.slug as string);
   if (!post) {
     return {
       notFound: true,
