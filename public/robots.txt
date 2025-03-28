@@ -1,0 +1,13 @@
+# *
+User-agent: *
+Allow: /
+
+# Googlebot
+User-agent: Googlebot
+Allow: /
+
+# Host
+Host: https://www.ruhrohretreat.com
+
+# Sitemaps
+Sitemap: https://www.ruhrohretreat.com/sitemap.xml
