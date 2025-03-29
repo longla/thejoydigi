@@ -301,22 +301,42 @@ function LandingComponent() {
                 consultation.
               </p>
             </div>
-            {formSubmitted ? (
-              <div className="bg-green-50 p-6 rounded-lg text-center">
-                <h3 className="text-xl font-semibold text-green-800 mb-2">
-                  Thank you for your message!
-                </h3>
-                <p className="text-green-700">
-                  We'll get back to you as soon as possible.
-                </p>
-                <button
-                  onClick={() => setFormSubmitted(false)}
-                  className="mt-4 text-primary hover:text-primary-600 font-medium"
-                >
-                  Send another message
-                </button>
+            {formSubmitted && (
+              <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg
+                        className="w-8 h-8 text-green-500"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
+                      </svg>
+                    </div>
+                    <h3 className="text-2xl font-heading font-bold text-secondary-900 mb-2">
+                      Thank you for your message!
+                    </h3>
+                    <p className="text-secondary-600 font-sans">
+                      We'll get back to you soon.
+                    </p>
+                  </div>
+                  <button
+                    onClick={() => setFormSubmitted(false)}
+                    className="mt-6 w-full bg-primary hover:bg-primary-600 text-white py-2 rounded-lg font-medium transition-colors"
+                  >
+                    Close
+                  </button>
+                </div>
               </div>
-            ) : (
+            )}
+            {!formSubmitted && (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label

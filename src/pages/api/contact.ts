@@ -1,4 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
+import nodemailer from "nodemailer";
 
 type ContactFormData = {
   name: string;
@@ -7,6 +8,17 @@ type ContactFormData = {
   company: string;
   message: string;
 };
+
+// Create a transporter using SMTP
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: process.env.SMTP_SECURE === "true",
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 export default async function handler(
   req: NextApiRequest,
@@ -47,11 +59,25 @@ export default async function handler(
       });
     }
 
-    // TODO: Send email notification
-    // For now, we'll just log the form data
-    console.log("Contact form submission:", formData);
+    // Prepare email content
+    const mailOptions = {
+      from: process.env.SMTP_FROM,
+      to: process.env.CONTACT_RECIPIENT_EMAIL,
+      subject: `The Joy Digi: New Contact Form Submission from ${formData.name}`,
+      html: `
+        <h2>New Contact Form Submission</h2>
+        <p><strong>Name:</strong> ${formData.name}</p>
+        <p><strong>Email:</strong> ${formData.email}</p>
+        <p><strong>Phone:</strong> ${formData.phone}</p>
+        <p><strong>Company:</strong> ${formData.company || "Not provided"}</p>
+        <p><strong>Message:</strong></p>
+        <p>${formData.message}</p>
+      `,
+    };
 
-    // Return success response
+    // Send email
+    await transporter.sendMail(mailOptions);
+
     return res.status(200).json({
       message: "Thank you for your message. We'll get back to you soon!",
     });
