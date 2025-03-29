@@ -30,7 +30,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-heading font-bold text-primary"
+              className="text-2xl font-heading font-bold text-primary no-underline hover:no-underline"
             >
               TheJoyDigi
             </Link>

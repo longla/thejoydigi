@@ -34,7 +34,7 @@ export default function BlogPost({ post }: BlogPostProps) {
                   {post.category}
                 </span>
               </div>
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
                 {post.title}
               </h1>
               <div className="text-secondary-200">{post.date}</div>
@@ -60,8 +60,56 @@ export default function BlogPost({ post }: BlogPostProps) {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-8 prose prose-lg max-w-none">
-                  <MDXRemote {...post.content} />
+                <div className="p-8 prose prose-lg max-w-none font-sans">
+                  <div className="prose-headings:font-heading prose-h1:font-heading prose-h2:font-heading prose-h3:font-heading prose-h4:font-heading prose-h5:font-heading prose-h6:font-heading prose-p:text-secondary-600 prose-strong:text-secondary-900 prose-strong:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+                    <MDXRemote
+                      {...post.content}
+                      components={{
+                        h1: (props) => (
+                          <h1
+                            className="text-3xl font-heading font-bold mb-6"
+                            {...props}
+                          />
+                        ),
+                        h2: (props) => (
+                          <h2
+                            className="text-2xl font-heading font-bold mb-4"
+                            {...props}
+                          />
+                        ),
+                        h3: (props) => (
+                          <h3
+                            className="text-xl font-heading font-bold mb-3"
+                            {...props}
+                          />
+                        ),
+                        p: (props) => (
+                          <p className="mb-4 text-secondary-600" {...props} />
+                        ),
+                        ul: (props) => (
+                          <ul className="list-disc pl-6 mb-4" {...props} />
+                        ),
+                        ol: (props) => (
+                          <ol className="list-decimal pl-6 mb-4" {...props} />
+                        ),
+                        li: (props) => (
+                          <li className="mb-2 text-secondary-600" {...props} />
+                        ),
+                        a: (props) => (
+                          <a
+                            className="text-primary hover:underline"
+                            {...props}
+                          />
+                        ),
+                        strong: (props) => (
+                          <strong
+                            className="font-semibold text-secondary-900"
+                            {...props}
+                          />
+                        ),
+                      }}
+                    />
+                  </div>
                 </div>
               </motion.div>
             </div>

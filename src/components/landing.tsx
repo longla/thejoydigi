@@ -118,10 +118,11 @@ function LandingComponent() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-heading font-bold mb-6"
+            className="text-4xl md:text-6xl font-heading font-bold mb-6 text-white"
           >
-            Transform Your Business with
-            <span className="text-accent-400"> Digital Solutions</span>
+            Transform Your Business with{" "}
+            <span className="text-primary-400">Innovative</span>{" "}
+            <span className="text-primary-300">IT Solutions</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
