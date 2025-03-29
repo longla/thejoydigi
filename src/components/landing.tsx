@@ -14,6 +14,7 @@ function LandingComponent() {
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
+    phone: "",
     company: "",
     message: "",
   });
@@ -95,6 +96,7 @@ function LandingComponent() {
       setContactForm({
         name: "",
         email: "",
+        phone: "",
         company: "",
         message: "",
       });
@@ -347,6 +349,26 @@ function LandingComponent() {
                     value={contactForm.email}
                     onChange={handleInputChange}
                     required
+                    className="w-full px-4 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                  />
+                </div>
+                <div className="mb-4">
+                  <label
+                    htmlFor="phone"
+                    className="block text-sm font-medium text-secondary-700 mb-1"
+                  >
+                    Phone Number
+                  </label>
+                  <input
+                    type="tel"
+                    id="phone"
+                    value={contactForm.phone}
+                    onChange={(e) =>
+                      setContactForm({ ...contactForm, phone: e.target.value })
+                    }
+                    required
+                    pattern="[0-9]{10}"
+                    placeholder="Enter your phone number"
                     className="w-full px-4 py-2 border border-secondary-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
                   />
                 </div>
