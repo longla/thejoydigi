@@ -28,7 +28,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
               transition={{ duration: 0.8 }}
               className="text-center"
             >
-              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6">
+              <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
                 TheJoyDigi Blog
               </h1>
               <p className="text-xl text-secondary-200 max-w-2xl mx-auto">
