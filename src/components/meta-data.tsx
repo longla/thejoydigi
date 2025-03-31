@@ -37,6 +37,23 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
         rel="stylesheet"
       />
+
+      {/* Google Analytics */}
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=G-J24K88CVVT"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-J24K88CVVT');
+          `,
+        }}
+      />
+      {/* End Google Analytics */}
     </Head>
   );
 };
