@@ -288,7 +288,7 @@ export default function Landing() {
                 perspective and deep understanding of what it takes to deliver
                 exceptional digital solutions.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-xl text-gray-600">
                 My approach combines technical excellence with clear
                 communication and a deep understanding of business needs. I'm
                 passionate about helping businesses create value in the digital
