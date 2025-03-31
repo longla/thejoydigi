@@ -17,24 +17,119 @@ export default function Landing() {
     phone: "",
     message: "",
   });
+  const [errors, setErrors] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
+
+  const formatPhoneNumber = (value: string) => {
+    // Remove all non-numeric characters
+    const numbers = value.replace(/\D/g, "");
+
+    // Format the number as (XXX) XXX-XXXX
+    if (numbers.length === 0) return "";
+    if (numbers.length <= 3) return `(${numbers}`;
+    if (numbers.length <= 6)
+      return `(${numbers.slice(0, 3)}) ${numbers.slice(3)}`;
+    return `(${numbers.slice(0, 3)}) ${numbers.slice(3, 6)}-${numbers.slice(
+      6,
+      10
+    )}`;
+  };
+
+  const handlePhoneChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const formattedNumber = formatPhoneNumber(e.target.value);
+    setFormData({ ...formData, phone: formattedNumber });
+  };
+
+  const validateForm = () => {
+    const newErrors = {
+      name: "",
+      email: "",
+      phone: "",
+      message: "",
+    };
+    let isValid = true;
+
+    // Name validation
+    if (!formData.name.trim()) {
+      newErrors.name = "Name is required";
+      isValid = false;
+    }
+
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!formData.email.trim()) {
+      newErrors.email = "Email is required";
+      isValid = false;
+    } else if (!emailRegex.test(formData.email)) {
+      newErrors.email = "Please enter a valid email address";
+      isValid = false;
+    }
+
+    // Phone validation - update to check formatted number
+    const phoneDigits = formData.phone.replace(/\D/g, "");
+    if (!phoneDigits) {
+      newErrors.phone = "Phone number is required";
+      isValid = false;
+    } else if (phoneDigits.length !== 10) {
+      newErrors.phone = "Please enter a valid 10-digit phone number";
+      isValid = false;
+    }
+
+    // Message validation
+    if (!formData.message.trim()) {
+      newErrors.message = "Message is required";
+      isValid = false;
+    }
+
+    setErrors(newErrors);
+    return isValid;
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError("");
+
+    if (!validateForm()) {
+      return;
+    }
+
+    setIsSubmitting(true);
     try {
+      // Format phone number before sending to API
+      const formattedPhone = formData.phone.replace(/\D/g, "");
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          phone: formattedPhone,
+        }),
       });
+
+      const data = await response.json();
 
       if (response.ok) {
         setShowSuccess(true);
         setFormData({ name: "", email: "", phone: "", message: "" });
+        setErrors({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitError(
+          data.message || "Failed to send message. Please try again."
+        );
       }
     } catch (error) {
       console.error("Error submitting form:", error);
+      setSubmitError("An error occurred. Please try again later.");
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -369,6 +464,11 @@ export default function Landing() {
             Let's Start Your Digital Journey
           </h2>
           <div className="max-w-2xl mx-auto">
+            {submitError && (
+              <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg">
+                {submitError}
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <label
@@ -384,9 +484,14 @@ export default function Landing() {
                   onChange={(e) =>
                     setFormData({ ...formData, name: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200"
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.name ? "border-red-500" : "border-gray-300"
+                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
+                {errors.name && (
+                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                )}
               </div>
               <div>
                 <label
@@ -402,9 +507,14 @@ export default function Landing() {
                   onChange={(e) =>
                     setFormData({ ...formData, email: e.target.value })
                   }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200"
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.email ? "border-red-500" : "border-gray-300"
+                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
+                {errors.email && (
+                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                )}
               </div>
               <div>
                 <label
@@ -417,12 +527,17 @@ export default function Landing() {
                   type="tel"
                   id="phone"
                   value={formData.phone}
-                  onChange={(e) =>
-                    setFormData({ ...formData, phone: e.target.value })
-                  }
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200"
+                  onChange={handlePhoneChange}
+                  placeholder="(XXX) XXX-XXXX"
+                  maxLength={14}
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.phone ? "border-red-500" : "border-gray-300"
+                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
+                {errors.phone && (
+                  <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                )}
               </div>
               <div>
                 <label
@@ -438,15 +553,49 @@ export default function Landing() {
                     setFormData({ ...formData, message: e.target.value })
                   }
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg border border-gray-300 shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200 resize-none"
+                  className={`w-full px-4 py-3 rounded-lg border ${
+                    errors.message ? "border-red-500" : "border-gray-300"
+                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200 resize-none`}
                   required
                 />
+                {errors.message && (
+                  <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                )}
               </div>
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-300 text-lg"
+                disabled={isSubmitting}
+                className={`w-full ${
+                  isSubmitting ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"
+                } text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-300 text-lg flex items-center justify-center`}
               >
-                Send Message
+                {isSubmitting ? (
+                  <>
+                    <svg
+                      className="animate-spin -ml-1 mr-3 h-5 w-5 text-white"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      ></circle>
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
+                      ></path>
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  "Send Message"
+                )}
               </button>
             </form>
           </div>
