@@ -9,7 +9,7 @@ interface MetaDataProps {
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
   title = "TheJoyDigi - IT Solutions for Business",
   description = "Transform your business with innovative IT solutions. We provide web development, mobile apps, cloud solutions, and IT consulting services.",
-  image = "/images/og-image.jpg",
+  image = "/about-image.jpg",
 }) => {
   return (
     <Head>
@@ -91,9 +91,9 @@ export function BlogPostMetaData({
 }: BlogPostMetaDataProps) {
   const imageUrl = hasCoverImage
     ? `https://www.thejoydigi.com/posts/${slug}/cover.jpg`
-    : "https://www.thejoydigi.com/thejoydigi-social.jpg";
+    : "https://www.thejoydigi.com/about-image.jpg";
 
-  const fullTitle = `${title} - Ruh-Roh Retreat Blog`;
+  const fullTitle = `${title} - TheJoyDigi Blog`;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
     year: "numeric",
     month: "long",
@@ -107,10 +107,10 @@ export function BlogPostMetaData({
       <meta name="author" content={author} />
       <meta property="article:published_time" content={date} />
       <meta property="article:author" content={author} />
-      <meta property="article:section" content="Pet Care Blog" />
+      <meta property="article:section" content="Digital Solutions Blog" />
       <meta
         property="article:tag"
-        content="pet care, pet boarding, dog boarding, cat boarding, luxury pet care"
+        content="web development, digital transformation, IT solutions, business technology"
       />
 
       {/* Open Graph / Facebook */}
@@ -122,13 +122,13 @@ export function BlogPostMetaData({
         property="og:url"
         content={`https://www.thejoydigi.com/blog/${slug}`}
       />
-      <meta property="og:site_name" content="Ruh-Roh Retreat" />
+      <meta property="og:site_name" content="TheJoyDigi" />
       <meta property="article:published_time" content={date} />
       <meta property="article:author" content={author} />
-      <meta property="article:section" content="Pet Care Blog" />
+      <meta property="article:section" content="Digital Solutions Blog" />
       <meta
         property="article:tag"
-        content="pet care, pet boarding, dog boarding, cat boarding, luxury pet care"
+        content="web development, digital transformation, IT solutions, business technology"
       />
 
       {/* Twitter */}
@@ -141,7 +141,7 @@ export function BlogPostMetaData({
       {/* Additional SEO Meta Tags */}
       <meta
         name="keywords"
-        content="pet care, pet boarding, dog boarding, cat boarding, luxury pet care, ${title.toLowerCase()}"
+        content="web development, digital transformation, IT solutions, business technology, ${title.toLowerCase()}"
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={`https://www.thejoydigi.com/blog/${slug}`} />
@@ -164,7 +164,7 @@ export function BlogPostMetaData({
             },
             publisher: {
               "@type": "Organization",
-              name: "Ruh-Roh Retreat",
+              name: "TheJoyDigi",
               logo: {
                 "@type": "ImageObject",
                 url: "https://www.thejoydigi.com/logo.png",
