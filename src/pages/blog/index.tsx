@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { GetStaticProps } from "next";
 import BlogCard from "../../components/blog/blog-card";
 import { getAllPosts } from "../../lib/posts";
-import MainLayout from "../_layouts";
+import BlogLayout from "./_layout";
 
 interface BlogIndexProps {
   posts: {
@@ -17,7 +17,7 @@ interface BlogIndexProps {
 
 export default function BlogIndex({ posts }: BlogIndexProps) {
   return (
-    <MainLayout>
+    <BlogLayout>
       <div className="min-h-screen bg-secondary-50">
         {/* Hero Section */}
         <section className="bg-gradient-dark text-white py-20">
@@ -50,7 +50,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
           </div>
         </section>
       </div>
-    </MainLayout>
+    </BlogLayout>
   );
 }
 

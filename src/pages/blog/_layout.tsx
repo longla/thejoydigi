@@ -1,12 +1,28 @@
+import { BlogPostMetaData } from "@/components/meta-data";
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
+import React, { useEffect, useState, useState as useStateReact } from "react";
 
 type BlogLayoutProps = {
   children: React.ReactNode;
+  postData?: {
+    slug: string;
+    title: string;
+    date: string;
+    coverImage: string;
+    category: string;
+    excerpt: string;
+  };
 };
 
-const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
+const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const [currentPostData, setCurrentPostData] = useStateReact<any>(postData);
+
+  useEffect(() => {
+    setCurrentPostData(postData);
+  }, [postData]);
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
@@ -14,54 +30,70 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
 
   return (
     <>
+      {router.pathname === "/blog/[slug]" && currentPostData ? (
+        <BlogPostMetaData
+          title={currentPostData.title}
+          description={currentPostData.excerpt}
+          date={currentPostData.date}
+          author="TheJoyDigi Team"
+          slug={currentPostData.slug}
+          hasCoverImage={!!currentPostData.coverImage}
+        />
+      ) : (
+        <BlogPostMetaData
+          title="Digital Solutions Blog"
+          description="Explore our latest insights on web development, digital transformation, IT solutions, and business technology. Stay updated with industry trends and expert perspectives."
+          date={new Date().toISOString()}
+          author="TheJoyDigi Team"
+          slug="blog"
+          hasCoverImage={false}
+        />
+      )}
       {/* Header Section */}
       <header className="sticky top-0 z-50 bg-white shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="text-logo">
-              Ruh-Roh <span className="highlight">Retreat</span>
+            <Link
+              href="/"
+              className="text-2xl font-heading font-bold text-primary no-underline hover:no-underline"
+            >
+              TheJoyDigi
             </Link>
           </div>
           <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
+              className="text-secondary-600 hover:text-primary font-medium"
             >
               Home
             </Link>
             <Link
               href="/#services"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
+              className="text-secondary-600 hover:text-primary font-medium"
             >
               Services
             </Link>
             <Link
               href="/#about"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
+              className="text-secondary-600 hover:text-primary font-medium"
             >
               About Me
             </Link>
             <Link
-              href="/#testimonials"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
-            >
-              Testimonials
-            </Link>
-            <Link
               href="/#contact"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
+              className="text-secondary-600 hover:text-primary font-medium"
             >
               Contact
             </Link>
             <Link
               href="/blog"
-              className="text-gray-800 hover:text-[#1A9CB0] font-medium"
+              className="text-secondary-600 hover:text-primary font-medium"
             >
               Blog
             </Link>
           </nav>
           <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="text-gray-700">
+            <button onClick={toggleMobileMenu} className="text-secondary-600">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -86,42 +118,35 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
             <div className="container mx-auto px-4 py-2 flex flex-col">
               <Link
                 href="/"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
+                className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#services"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
+                className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/#about"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
+                className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Me
               </Link>
               <Link
-                href="/#testimonials"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Testimonials
-              </Link>
-              <Link
                 href="/#contact"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
+                className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/blog"
-                className="py-2 text-gray-800 hover:text-[#1A9CB0] font-medium"
+                className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
@@ -131,22 +156,24 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
         )}
       </header>
 
-      <main className="container mx-auto px-4 py-8">{children}</main>
+      <main>{children}</main>
 
       {/* Footer Section */}
-      <footer className="bg-[#333333] text-white py-12">
+      <footer className="bg-secondary-900 text-white py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Column 1 - About */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Ruh-Roh Retreat</h3>
-              <p className="mb-4">
-                Premium overnight pet boarding service providing luxury
-                accommodations and specialized care for your furry family
-                members.
+              <h3 className="text-xl font-heading font-semibold mb-4">
+                TheJoyDigi
+              </h3>
+              <p className="mb-4 text-secondary-300">
+                Empowering businesses with innovative IT solutions. I help
+                companies transform their digital presence and streamline their
+                operations.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-[#F28C38]">
+                <a href="#" className="text-white hover:text-accent-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -156,7 +183,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
                 </a>
-                <a href="#" className="text-white hover:text-[#F28C38]">
+                <a href="#" className="text-white hover:text-accent-400">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -171,36 +198,85 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
 
             {/* Column 2 - Services */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">My Services</h3>
+              <h3 className="text-xl font-heading font-semibold mb-4">
+                Services
+              </h3>
               <ul className="space-y-2">
                 <li>
-                  <Link href="/#services" className="hover:text-[#F28C38]">
-                    Luxury Overnight Boarding
+                  <Link
+                    href="/#services"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Web Development
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="hover:text-[#F28C38]">
-                    Spa Bath Experience
+                  <Link
+                    href="/#services"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Mobile Apps
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="hover:text-[#F28C38]">
-                    Special Care Package
+                  <Link
+                    href="/#services"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Cloud Solutions
                   </Link>
                 </li>
                 <li>
-                  <Link href="/#services" className="hover:text-[#F28C38]">
-                    Premium Play Sessions
+                  <Link
+                    href="/#services"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    IT Consulting
                   </Link>
                 </li>
               </ul>
             </div>
 
-            {/* Column 3 - Contact */}
+            {/* Column 3 - Quick Links */}
             <div>
-              <h3 className="text-xl font-semibold mb-4">Contact Me</h3>
+              <h3 className="text-xl font-heading font-semibold mb-4">
+                Quick Links
+              </h3>
+              <ul className="space-y-2">
+                <li>
+                  <Link
+                    href="/#about"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    About Me
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#contact"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Column 4 - Contact */}
+            <div>
+              <h3 className="text-xl font-heading font-semibold mb-4">
+                Contact
+              </h3>
               <address className="not-italic">
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-secondary-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 mr-2"
@@ -221,9 +297,9 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
                       d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
                     />
                   </svg>
-                  12207 Pintado, Irvine, CA, 92618
+                  Irvine, CA
                 </p>
-                <p className="flex items-center mb-2">
+                <p className="flex items-center mb-2 text-secondary-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-5 w-5 mr-2"
@@ -240,7 +316,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
                   </svg>
                   +1 (714) 329-4534
                 </p>
-                <p className="flex items-center">
+                <p className="flex items-center text-secondary-300">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6 mr-2"
@@ -261,18 +337,27 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children }) => {
             </div>
           </div>
 
-          <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between">
-            <p>
-              © {new Date().getFullYear()} Ruh-Roh Retreat. All rights reserved.
+          <div className="border-t border-secondary-800 mt-8 pt-8 flex flex-col md:flex-row justify-between">
+            <p className="text-secondary-300">
+              © {new Date().getFullYear()} TheJoyDigi. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy-policy" className="hover:text-[#F28C38]">
+              <Link
+                href="/privacy-policy"
+                className="text-secondary-300 hover:text-accent-400"
+              >
                 Privacy Policy
               </Link>
-              <Link href="/terms-of-use" className="hover:text-[#F28C38]">
+              <Link
+                href="/terms-of-use"
+                className="text-secondary-300 hover:text-accent-400"
+              >
                 Terms of Use
               </Link>
-              <Link href="/blog" className="hover:text-[#F28C38]">
+              <Link
+                href="/blog"
+                className="text-secondary-300 hover:text-accent-400"
+              >
                 Blog
               </Link>
             </div>

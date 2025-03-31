@@ -1,4 +1,3 @@
-import { DefaultMetaData } from "@/components/meta-data";
 import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
@@ -49,7 +48,6 @@ export default function App({ Component, pageProps }: AppProps) {
           }
         `}</style>
       </Head>
-      <DefaultMetaData />
       <div className="font-sans">
         <Component {...pageProps} />
       </div>

@@ -15,6 +15,7 @@ export interface Post {
   content: any;
 }
 
+// Server-side functions
 export async function getAllPosts(): Promise<Post[]> {
   const fileNames = fs.readdirSync(postsDirectory);
 
@@ -72,4 +73,9 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
   } catch (error) {
     return null;
   }
+}
+
+// Client-side helper functions
+export function getPostSlugFromPath(path: string): string {
+  return path.split("/").pop()?.replace(/\.md$/, "") || "";
 }
