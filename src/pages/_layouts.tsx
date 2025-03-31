@@ -49,16 +49,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
               Services
             </Link>
             <Link
-              href="/#solutions"
-              className="text-secondary-600 hover:text-primary font-medium"
-            >
-              Solutions
-            </Link>
-            <Link
               href="/#about"
               className="text-secondary-600 hover:text-primary font-medium"
             >
-              About Us
+              About Me
             </Link>
             <Link
               href="/#contact"
@@ -112,18 +106,11 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 Services
               </Link>
               <Link
-                href="/#solutions"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Solutions
-              </Link>
-              <Link
                 href="/#about"
                 className="py-2 text-secondary-600 hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About Us
+                About Me
               </Link>
               <Link
                 href="/#contact"
@@ -156,7 +143,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 TheJoyDigi
               </h3>
               <p className="mb-4 text-secondary-300">
-                Empowering businesses with innovative IT solutions. We help
+                Empowering businesses with innovative IT solutions. I help
                 companies transform their digital presence and streamline their
                 operations.
               </p>
@@ -187,7 +174,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
             {/* Column 2 - Services */}
             <div>
               <h3 className="text-xl font-heading font-semibold mb-4">
-                Our Services
+                Services
               </h3>
               <ul className="space-y-2">
                 <li>
@@ -236,15 +223,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     href="/#about"
                     className="text-secondary-300 hover:text-accent-400"
                   >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/#solutions"
-                    className="text-secondary-300 hover:text-accent-400"
-                  >
-                    Solutions
+                    About Me
                   </Link>
                 </li>
                 <li>
@@ -269,7 +248,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
             {/* Column 4 - Contact */}
             <div>
               <h3 className="text-xl font-heading font-semibold mb-4">
-                Contact Us
+                Contact Me
               </h3>
               <ul className="space-y-2">
                 <li>

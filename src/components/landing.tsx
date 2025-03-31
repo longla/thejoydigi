@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import { FaCloud, FaCode, FaLaptopCode, FaMobile } from "react-icons/fa";
 
@@ -165,13 +166,32 @@ export default function Landing() {
           <h2 className="text-4xl font-heading font-bold text-center mb-16">
             Meet Your Digital Partner
           </h2>
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="text-xl text-gray-600 mb-8">
-              As a dedicated freelancer, I'm passionate about helping businesses
-              create value in the digital space. My commitment to transparency,
-              clear communication, and tailored services ensures that your
-              digital journey is both successful and enjoyable.
-            </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+              <Image
+                src="/about-image.jpg"
+                alt="Your Digital Partner"
+                fill
+                className="object-cover object-[center_35%]"
+                priority
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
+            <div className="space-y-6">
+              <p className="text-xl text-gray-600">
+                As a dedicated freelancer, I'm passionate about helping
+                businesses create value in the digital space. My commitment to
+                transparency, clear communication, and tailored services ensures
+                that your digital journey is both successful and enjoyable.
+              </p>
+              <p className="text-lg text-gray-600">
+                With years of experience in web development and digital
+                solutions, I bring a unique blend of technical expertise and
+                business acumen to every project. My approach is collaborative
+                and focused on delivering results that drive your business
+                forward.
+              </p>
+            </div>
           </div>
         </div>
       </section>
