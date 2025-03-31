@@ -1,5 +1,6 @@
+/** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: "https://www.ruhrohretreat.com",
+  siteUrl: "https://www.thejoydigi.com",
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",

@@ -90,10 +90,9 @@ const PrivacyPolicyComponent = () => {
             You have the right to access, update, or delete your personal
             information. You can do this by logging into your account or
             contacting me at
-            <a href="mailto:hello@ruhrohretreat.com">hello@ruhrohretreat.com</a>
-            . You may also opt out of receiving promotional communications from
-            me by following the unsubscribe instructions provided in those
-            emails.
+            <a href="mailto:hello@thejoydigi.com">hello@thejoydigi.com</a>. You
+            may also opt out of receiving promotional communications from me by
+            following the unsubscribe instructions provided in those emails.
           </p>
         </section>
 
@@ -124,8 +123,7 @@ const PrivacyPolicyComponent = () => {
           <p>
             If you have any questions about this Privacy Policy, please contact
             me at
-            <a href="mailto:hello@ruhrohretreat.com">hello@ruhrohretreat.com</a>
-            .
+            <a href="mailto:hello@thejoydigi.com">hello@thejoydigi.com</a>.
           </p>
         </section>
       </div>

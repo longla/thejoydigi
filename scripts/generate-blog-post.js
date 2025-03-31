@@ -169,9 +169,7 @@ async function checkExistingFiles(slug) {
 async function generateBlogPost(blogMeta) {
   try {
     // Check if the title mentions Ruh-Roh Retreat directly
-    const mentionsProduct = blogMeta.title
-      .toLowerCase()
-      .includes("ruhrohretreat");
+    const mentionsProduct = blogMeta.title.toLowerCase().includes("thejoydigi");
 
     // Determine the content format based on the title
     let contentFormat = "general";
@@ -192,12 +190,12 @@ async function generateBlogPost(blogMeta) {
     let promptBase = `
       Create a blog post ${
         mentionsProduct
-          ? "for ruhrohretreat.com"
+          ? "for thejoydigi.com"
           : "about pet care and luxury pet boarding"
       }.
       ${
         !mentionsProduct
-          ? "The blog is from ruhrohretreat.com, a premium pet boarding service providing luxury accommodations and specialized care."
+          ? "The blog is from thejoydigi.com, a premium pet boarding service providing luxury accommodations and specialized care."
           : ""
       }
       

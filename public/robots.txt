@@ -7,7 +7,7 @@ User-agent: Googlebot
 Allow: /
 
 # Host
-Host: https://www.ruhrohretreat.com
+Host: https://www.thejoydigi.com
 
 # Sitemaps
-Sitemap: https://www.ruhrohretreat.com/sitemap.xml
+Sitemap: https://www.thejoydigi.com/sitemap.xml

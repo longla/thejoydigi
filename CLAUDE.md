@@ -28,7 +28,7 @@
 - Primary keywords: luxury pet boarding, overnight pet care, premium pet accommodation
 - Target audience: Pet owners who need reliable and comfortable pet boarding while they're away
 - Service areas: Local regions (customize in the landing page service areas section)
-- Contact: hello@ruhrohretreat.com, +1 (714) 329-4534
+- Contact: hello@thejoydigi.com, +1 (714) 329-4534
 
 ## Design Choices
 

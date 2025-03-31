@@ -59,8 +59,8 @@ export function BlogPostMetaData({
   hasCoverImage,
 }: BlogPostMetaDataProps) {
   const imageUrl = hasCoverImage
-    ? `https://www.ruhrohretreat.com/posts/${slug}/cover.jpg`
-    : "https://www.ruhrohretreat.com/ruhrohretreat-social.jpg";
+    ? `https://www.thejoydigi.com/posts/${slug}/cover.jpg`
+    : "https://www.thejoydigi.com/thejoydigi-social.jpg";
 
   const fullTitle = `${title} - Ruh-Roh Retreat Blog`;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {
@@ -89,7 +89,7 @@ export function BlogPostMetaData({
       <meta property="og:image" content={imageUrl} />
       <meta
         property="og:url"
-        content={`https://www.ruhrohretreat.com/blog/${slug}`}
+        content={`https://www.thejoydigi.com/blog/${slug}`}
       />
       <meta property="og:site_name" content="Ruh-Roh Retreat" />
       <meta property="article:published_time" content={date} />
@@ -105,7 +105,7 @@ export function BlogPostMetaData({
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={imageUrl} />
-      <meta name="twitter:creator" content="@ruhrohretreat" />
+      <meta name="twitter:creator" content="@thejoydigi" />
 
       {/* Additional SEO Meta Tags */}
       <meta
@@ -113,10 +113,7 @@ export function BlogPostMetaData({
         content="pet care, pet boarding, dog boarding, cat boarding, luxury pet care, ${title.toLowerCase()}"
       />
       <meta name="robots" content="index, follow" />
-      <link
-        rel="canonical"
-        href={`https://www.ruhrohretreat.com/blog/${slug}`}
-      />
+      <link rel="canonical" href={`https://www.thejoydigi.com/blog/${slug}`} />
 
       {/* Schema.org markup for Google */}
       <script
@@ -139,12 +136,12 @@ export function BlogPostMetaData({
               name: "Ruh-Roh Retreat",
               logo: {
                 "@type": "ImageObject",
-                url: "https://www.ruhrohretreat.com/logo.png",
+                url: "https://www.thejoydigi.com/logo.png",
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
-              "@id": `https://www.ruhrohretreat.com/blog/${slug}`,
+              "@id": `https://www.thejoydigi.com/blog/${slug}`,
             },
           }),
         }}
