@@ -9,7 +9,7 @@ interface MetaDataProps {
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
   title = "TheJoyDigi - IT Solutions for Business",
   description = "Transform your business with innovative IT solutions. We provide web development, mobile apps, cloud solutions, and IT consulting services.",
-  image = "/about-image.jpg",
+  image = "/about-image.jpeg",
 }) => {
   return (
     <Head>
@@ -91,7 +91,7 @@ export function BlogPostMetaData({
 }: BlogPostMetaDataProps) {
   const imageUrl = hasCoverImage
     ? `https://www.thejoydigi.com/posts/${slug}/cover.jpg`
-    : "https://www.thejoydigi.com/about-image.jpg";
+    : "https://www.thejoydigi.com/about-image.jpeg";
 
   const fullTitle = `${title} - TheJoyDigi Blog`;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {

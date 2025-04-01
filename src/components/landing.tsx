@@ -271,7 +271,7 @@ export default function Landing() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
-                src="/about-image.jpg"
+                src="/about-image.jpeg"
                 alt="Your Digital Partner"
                 fill
                 className="object-cover object-[center_35%]"
