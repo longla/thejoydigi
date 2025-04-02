@@ -1,7 +1,18 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { FaCode, FaMobile } from "react-icons/fa";
+import {
+  FaChartLine,
+  FaClock,
+  FaCloud,
+  FaCode,
+  FaLaptopCode,
+  FaMobile,
+  FaReceipt,
+  FaRocket,
+  FaStar,
+  FaTag,
+} from "react-icons/fa";
 
 type Service = {
   id: number;
@@ -139,9 +150,10 @@ export default function Landing() {
   const services: Service[] = [
     {
       id: 1,
-      title: "🌐 Website Design & Development",
+      title: "Website Design & Development",
       description:
         "Crafting beautiful, responsive websites tailored to your brand and goals.",
+      icon: <FaCode className="w-6 h-6" />,
       features: [
         "Custom website design for businesses, startups, and personal brands",
         "Responsive layouts (mobile, tablet, desktop)",
@@ -153,9 +165,10 @@ export default function Landing() {
     },
     {
       id: 2,
-      title: "📱 Web & Mobile App Development",
+      title: "Web & Mobile App Development",
       description:
         "Building powerful, interactive applications to bring your ideas to life.",
+      icon: <FaMobile className="w-6 h-6" />,
       features: [
         "Full-stack web apps (React, Next.js, Supabase, etc.)",
         "Mobile apps (iOS & Android using React Native / Expo)",
@@ -167,8 +180,9 @@ export default function Landing() {
     },
     {
       id: 3,
-      title: "🚀 SEO & Digital Marketing",
+      title: "SEO & Digital Marketing",
       description: "Helping your business get found and grow online.",
+      icon: <FaRocket className="w-6 h-6" />,
       features: [
         "On-page, technical, and local SEO",
         "Keyword research and content strategy",
@@ -180,9 +194,10 @@ export default function Landing() {
     },
     {
       id: 4,
-      title: "☁️ IT & Cloud Infrastructure",
+      title: "IT & Cloud Infrastructure",
       description:
         "Smart infrastructure to support scalability, speed, and security.",
+      icon: <FaCloud className="w-6 h-6" />,
       features: [
         "Cloud hosting (AWS, Vercel, Supabase, etc.)",
         "Infrastructure as Code (Terraform)",
@@ -193,9 +208,10 @@ export default function Landing() {
     },
     {
       id: 5,
-      title: "🧩 Tech Consulting & Digital Transformation",
+      title: "Tech Consulting & Digital Transformation",
       description:
         "Helping you navigate the tech world with clarity and confidence.",
+      icon: <FaLaptopCode className="w-6 h-6" />,
       features: [
         "Free initial consultation",
         "Tech stack & tools recommendation",
@@ -256,6 +272,7 @@ export default function Landing() {
                 className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="p-8">
+                  <div className="text-blue-600 mb-4">{service.icon}</div>
                   <h3 className="text-2xl font-heading font-semibold mb-4">
                     {service.title}
                   </h3>
@@ -266,19 +283,7 @@ export default function Landing() {
                         key={index}
                         className="flex items-start text-gray-600"
                       >
-                        <svg
-                          className="w-5 h-5 text-blue-500 mr-2 mt-0.5"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth={2}
-                            d="M5 13l4 4L19 7"
-                          />
-                        </svg>
+                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3"></span>
                         {feature}
                       </li>
                     ))}
@@ -466,19 +471,7 @@ export default function Landing() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
+                <FaTag className="w-6 h-6 text-blue-600" />
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold mb-4">
                 Competitive Price
@@ -505,19 +498,7 @@ export default function Landing() {
                 transition={{ duration: 0.6, delay: 0.5 }}
                 className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
-                  />
-                </svg>
+                <FaChartLine className="w-6 h-6 text-blue-600" />
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold mb-4">
                 Value First Approach
@@ -544,19 +525,7 @@ export default function Landing() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+                <FaStar className="w-6 h-6 text-blue-600" />
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold mb-4">
                 High Quality Solutions
@@ -583,19 +552,7 @@ export default function Landing() {
                 transition={{ duration: 0.6, delay: 0.7 }}
                 className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
-                  />
-                </svg>
+                <FaReceipt className="w-6 h-6 text-blue-600" />
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold mb-4">
                 Transparent Billing
@@ -622,19 +579,7 @@ export default function Landing() {
                 transition={{ duration: 0.6, delay: 0.8 }}
                 className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <svg
-                  className="w-6 h-6 text-blue-600"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 10V3L4 14h7v7l9-11h-7z"
-                  />
-                </svg>
+                <FaClock className="w-6 h-6 text-blue-600" />
               </motion.div>
               <h3 className="text-2xl font-heading font-semibold mb-4">
                 Fast Delivery
