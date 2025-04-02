@@ -167,7 +167,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
               <h3 className="text-xl font-heading font-semibold mb-4">
                 TheJoyDigi
               </h3>
-              <p className="mb-4 text-secondary-300">
+              <p className="mb-4 text-secondary-300 font-heading">
                 Empowering businesses with innovative IT solutions. I help
                 companies transform their digital presence and streamline their
                 operations.

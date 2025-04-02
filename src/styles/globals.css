@@ -49,19 +49,19 @@ select {
 
 h1 {
   @apply py-4 text-3xl font-bold text-gray-950;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 h2 {
   @apply text-xl py-4;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 h3 {
   @apply text-lg py-3;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 h4 {
   @apply text-base py-2;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Nunito Sans", sans-serif;
 }
 h5 {
   @apply text-sm py-2;
@@ -121,12 +121,22 @@ a {
 
 /* Font preloading hints for browsers */
 @font-face {
-  font-family: "Quicksand";
+  font-family: "Nunito";
   font-style: normal;
   font-weight: 400;
-  src: local("Quicksand"),
-    url(https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-xDwxUD2GF9Zc.ttf)
-      format("ttf");
+  src: local("Nunito"),
+    url(https://fonts.gstatic.com/s/nunito/v25/XRXI3I6Li01BKofiOc5wtlZ2di8HDLshdTQ3ig.woff2)
+      format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Nunito Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Nunito Sans"),
+    url(https://fonts.gstatic.com/s/nunitosans/v15/pe1M5ImSLYBIvzkGZZZf6J9Xy0p.woff2)
+      format("woff2");
   font-display: swap;
 }
 

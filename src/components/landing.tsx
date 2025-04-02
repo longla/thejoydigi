@@ -224,9 +224,15 @@ export default function Landing() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-quicksand font-bold text-gray-900 mb-6">
-            Bringing Joy to Your Digital Journey
-          </h1>
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-logo"
+          >
+            Transform Your Business with
+            <span className="text-primary"> Digital Solutions</span>
+          </motion.h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
             Empowering Businesses with Innovative Digital Solutions
           </p>
@@ -256,7 +262,7 @@ export default function Landing() {
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16">
             Tailored Digital Solutions Just for You
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -267,12 +273,12 @@ export default function Landing() {
               >
                 <div className="p-8">
                   <div className="text-blue-600 mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-quicksand font-semibold mb-4">
+                  <h3 className="text-2xl font-heading font-semibold mb-4">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <div className="mb-4">
-                    <h4 className="text-xl font-quicksand font-semibold text-gray-800 mb-3">
+                    <h4 className="text-xl font-heading font-semibold text-gray-800 mb-3">
                       What you get:
                     </h4>
                     <ul className="space-y-2">
@@ -473,7 +479,7 @@ export default function Landing() {
               >
                 <FaTag className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-quicksand font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4">
                 Competitive Price
               </h3>
               <p className="text-gray-600">
@@ -500,7 +506,7 @@ export default function Landing() {
               >
                 <FaChartLine className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-quicksand font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4">
                 Value First Approach
               </h3>
               <p className="text-gray-600">
@@ -527,7 +533,7 @@ export default function Landing() {
               >
                 <FaStar className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-quicksand font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4">
                 High Quality Solutions
               </h3>
               <p className="text-gray-600">
@@ -554,7 +560,7 @@ export default function Landing() {
               >
                 <FaReceipt className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-quicksand font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4">
                 Transparent Billing
               </h3>
               <p className="text-gray-600">
@@ -581,7 +587,7 @@ export default function Landing() {
               >
                 <FaClock className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-quicksand font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4">
                 Fast Delivery
               </h3>
               <p className="text-gray-600">
@@ -721,7 +727,7 @@ export default function Landing() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-quicksand font-semibold mb-4">
+                <h3 className="text-2xl font-heading font-semibold mb-4">
                   More Projects Coming Soon
                 </h3>
                 <p className="text-gray-600 mb-6">

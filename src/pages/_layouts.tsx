@@ -30,7 +30,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-heading font-bold text-primary no-underline hover:no-underline"
+              className="text-2xl font-logo font-bold text-primary no-underline hover:no-underline"
             >
               TheJoyDigi
             </Link>
@@ -142,7 +142,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
               <h3 className="text-xl font-heading font-semibold mb-4">
                 TheJoyDigi
               </h3>
-              <p className="mb-4 text-secondary-300">
+              <p className="mb-4 text-secondary-300 font-heading">
                 Empowering businesses with innovative IT solutions. I help
                 companies transform their digital presence and streamline their
                 operations.

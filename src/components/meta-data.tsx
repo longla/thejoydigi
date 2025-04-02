@@ -34,7 +34,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
 
       {/* Fonts */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
 

@@ -15,7 +15,8 @@ const config: Config = {
         "system-ui",
         "sans-serif",
       ],
-      heading: ["Quicksand", "sans-serif"],
+      heading: ["Nunito Sans", "sans-serif"],
+      logo: ["Nunito", "sans-serif"],
     },
     extend: {
       backgroundImage: {
