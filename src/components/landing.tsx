@@ -153,71 +153,74 @@ export default function Landing() {
       id: 1,
       title: "Website Design & Development",
       description:
-        "Crafting beautiful, responsive websites tailored to your brand and goals.",
+        "Build a stunning, modern website that works beautifully on all devices — and turns visitors into customers.",
       icon: <FaCode className="w-6 h-6" />,
       features: [
-        "Custom website design for businesses, startups, and personal brands",
-        "Responsive layouts (mobile, tablet, desktop)",
-        "Landing pages & sales funnels",
-        "Blog and portfolio setup",
-        "E-commerce development (Shopify, WooCommerce, etc.)",
-        "Website performance & SEO best practices",
+        "A custom-built website that reflects your brand",
+        "Mobile-friendly design for phones, tablets, and desktops",
+        "Landing pages to promote products or services",
+        "Blog or portfolio to share your work or story",
+        "Online store setup (with secure checkout)",
+        "Fast loading speed and SEO-friendly structure",
       ],
     },
     {
       id: 2,
       title: "Web & Mobile App Development",
       description:
-        "Building powerful, interactive applications to bring your ideas to life.",
+        "Turn your ideas into real products — like customer portals, tools, or mobile apps — that people can use anywhere.",
       icon: <FaMobile className="w-6 h-6" />,
       features: [
-        "Full-stack web apps (React, Next.js, Supabase, etc.)",
-        "Mobile apps (iOS & Android using React Native / Expo)",
-        "MVP development for startups",
-        "API integrations and backend services",
-        "Authentication, user roles, and real-time features",
+        "Custom web and mobile apps tailored to your needs",
+        "Tools your team or customers can log into and use",
+        "Apps that work across iPhone, Android, and web",
+        "Step-by-step support from idea to launch",
+        "Smooth user experience with simple design",
+        "All the tech stuff handled for you",
       ],
     },
     {
       id: 3,
       title: "SEO & Digital Marketing",
-      description: "Helping your business get found and grow online.",
+      description:
+        "Get your business in front of the right people — on Google, social media, and popular platforms like Yelp and Amazon.",
       icon: <FaRocket className="w-6 h-6" />,
       features: [
-        "On-page, technical, and local SEO",
-        "Keyword research and content strategy",
-        "Google Business Profile setup & optimization",
-        "Social media setup and guidance",
-        "Email marketing (setup + automation)",
-        "Analytics, tracking, and performance audits",
+        "Higher visibility on Google and search engines",
+        "Setup and optimization of your Google Business, Yelp, and Facebook pages",
+        "Help creating or improving your Amazon storefront or listings",
+        "Keyword and content strategy to attract the right audience",
+        "Guidance for social media presence (Facebook, Instagram, etc.)",
+        "Email marketing setup and automation to stay connected with customers",
+        "Easy-to-understand reports so you know what's working",
       ],
     },
     {
       id: 4,
       title: "IT & Cloud Infrastructure",
       description:
-        "Smart infrastructure to support scalability, speed, and security.",
+        "Behind-the-scenes support that keeps your website or app running smoothly, securely, and reliably.",
       icon: <FaCloud className="w-6 h-6" />,
       features: [
-        "Cloud hosting (AWS, Vercel, Supabase, etc.)",
-        "Infrastructure as Code (Terraform)",
-        "CI/CD pipeline setup (GitHub Actions, GitLab CI, etc.)",
-        "Domain, DNS, SSL, and deployment",
-        "Monitoring, backups, and performance optimization",
+        "Secure hosting and domain setup",
+        "Automated systems for easy updates and backups",
+        "Fast and reliable performance for your users",
+        "Setup of accounts and tools to manage your tech",
+        "Peace of mind that everything 'just works'",
       ],
     },
     {
       id: 5,
-      title: "Tech Consulting & Digital Transformation",
+      title: "Tech Consulting & Digital Strategy",
       description:
-        "Helping you navigate the tech world with clarity and confidence.",
+        "Get expert guidance for your next big move — whether you're starting from scratch or ready to grow.",
       icon: <FaLaptopCode className="w-6 h-6" />,
       features: [
-        "Free initial consultation",
-        "Tech stack & tools recommendation",
-        "Digital strategy for small businesses",
-        "Code audits & project rescue",
-        "Personalized digital transformation roadmap",
+        "Free initial consultation to understand your goals",
+        "A clear roadmap for your website, app, or digital plan",
+        "Honest advice on what tech you actually need",
+        "Audits or reviews of your current setup",
+        "Personalized solutions — no cookie-cutter stuff",
       ],
     },
   ];
@@ -277,17 +280,22 @@ export default function Landing() {
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features?.map((feature, index) => (
-                      <li
-                        key={index}
-                        className="flex items-start text-gray-600"
-                      >
-                        <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3"></span>
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="mb-4">
+                    <h4 className="text-xl font-heading font-semibold text-gray-800 mb-3">
+                      What you get:
+                    </h4>
+                    <ul className="space-y-2">
+                      {service.features?.map((feature, index) => (
+                        <li
+                          key={index}
+                          className="flex items-start text-gray-600"
+                        >
+                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3"></span>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
             ))}
@@ -295,8 +303,8 @@ export default function Landing() {
           <div className="text-center mt-12">
             <p className="text-gray-600 italic mb-6 flex items-center justify-center gap-2">
               <FaComments className="w-5 h-5 text-blue-600" />
-              Not sure what you need? Let's chat! Book a free consultation and
-              I'll help you figure out the right path.
+              Not sure what you need yet? Let's talk. I offer a free consult to
+              help you figure out the best next step.
             </p>
             <a
               href="#booking"
