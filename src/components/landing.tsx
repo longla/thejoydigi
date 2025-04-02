@@ -312,28 +312,33 @@ export default function Landing() {
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/about-image.jpeg"
-                alt="Your Digital Partner"
+                alt="Long La - Your Digital Partner"
                 fill
-                className="object-cover object-[center_35%]"
-                priority
-                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
               />
             </div>
             <div className="space-y-6">
-              <p className="text-xl text-gray-600">
-                With over 10 years of experience in software development, I've
-                had the privilege of working across diverse environments - from
-                innovative startups to established tech giants and consulting
-                firms. This rich background has equipped me with a unique
-                perspective and deep understanding of what it takes to deliver
+              <p className="text-lg text-gray-600">
+                Hi, I'm Long La, your dedicated digital partner with over 12
+                years of experience in the tech industry. My journey has taken
+                me through leading tech companies, innovative startups, and
+                consulting firms, giving me a unique perspective on delivering
                 exceptional digital solutions.
               </p>
-              <p className="text-xl text-gray-600">
-                My approach combines technical excellence with clear
-                communication and a deep understanding of business needs. I'm
-                passionate about helping businesses create value in the digital
-                space, ensuring that your digital journey is both successful and
-                enjoyable.
+              <p className="text-lg text-gray-600">
+                My philosophy is simple: value first. Every project I undertake
+                is driven by a commitment to deliver real, measurable results
+                that matter to your business. Whether it's building a custom
+                website, developing a mobile app, or implementing digital
+                marketing strategies, I focus on solutions that directly impact
+                your bottom line.
+              </p>
+              <p className="text-lg text-gray-600">
+                Having worked across various industries, I understand that each
+                business has unique challenges and opportunities. My approach
+                combines technical expertise with clear communication and a deep
+                understanding of business needs, ensuring that your digital
+                journey is both successful and enjoyable.
               </p>
               <div className="flex flex-wrap gap-3 pt-4">
                 <motion.div
@@ -353,7 +358,7 @@ export default function Landing() {
                       d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
                     />
                   </svg>
-                  10+ Years Experience
+                  12+ Years Experience
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
@@ -412,44 +417,20 @@ export default function Landing() {
                   </svg>
                   Consulting Expertise
                 </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-pink-100 text-pink-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+              </div>
+              <div className="flex gap-4 pt-4">
+                <a
+                  href="#booking"
+                  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
                 >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-                    />
-                  </svg>
-                  Strong Communication
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-teal-100 text-teal-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                  Let's Work Together
+                </a>
+                <a
+                  href="#portfolio"
+                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-300"
                 >
-                  <svg
-                    className="w-5 h-5"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
-                    />
-                  </svg>
-                  Technical Excellence
-                </motion.div>
+                  View My Work
+                </a>
               </div>
             </div>
           </div>
