@@ -9,8 +9,8 @@ html {
 }
 
 body {
-  font-family: "Varela Round", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
   background-color: #f9f5eb;
 }
 
@@ -49,19 +49,19 @@ select {
 
 h1 {
   @apply py-4 text-3xl font-bold text-gray-950;
-  font-family: "Fredoka One", "Comic Sans MS", cursive;
+  font-family: "Quicksand", sans-serif;
 }
 h2 {
   @apply text-xl py-4;
-  font-family: "Fredoka One", "Comic Sans MS", cursive;
+  font-family: "Quicksand", sans-serif;
 }
 h3 {
   @apply text-lg py-3;
-  font-family: "Comic Neue", "Comic Sans MS", cursive;
+  font-family: "Quicksand", sans-serif;
 }
 h4 {
   @apply text-base py-2;
-  font-family: "Comic Neue", "Comic Sans MS", cursive;
+  font-family: "Quicksand", sans-serif;
 }
 h5 {
   @apply text-sm py-2;
@@ -117,36 +117,16 @@ a {
 @tailwind components;
 @tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@300;400;700&family=Varela+Round&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
 
 /* Font preloading hints for browsers */
 @font-face {
-  font-family: "Varela Round";
+  font-family: "Quicksand";
   font-style: normal;
   font-weight: 400;
-  src: local("Varela Round"),
-    url(https://fonts.gstatic.com/s/varelaround/v13/w8gdH283Tvk__Lua32TysjIfp8uP.woff2)
-      format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Fredoka One";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Fredoka One"),
-    url(https://fonts.gstatic.com/s/fredokaone/v8/k3kUo8kEI-tA1RRcTZGmTlHGCac.woff2)
-      format("woff2");
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Comic Neue";
-  font-style: normal;
-  font-weight: 400;
-  src: local("Comic Neue Regular"),
-    url(https://fonts.gstatic.com/s/comicneue/v4/4UaHrEJDsxBrF37olUeD96rp57F2IwM.woff2)
-      format("woff2");
+  src: local("Quicksand"),
+    url(https://fonts.gstatic.com/s/quicksand/v31/6xK-dSZaM9iE8KbpRA_LJ3z8mH9BOJvgkP8o58a-xDwxUD2GF9Zc.ttf)
+      format("ttf");
   font-display: swap;
 }
 

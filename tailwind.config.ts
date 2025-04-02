@@ -15,7 +15,7 @@ const config: Config = {
         "system-ui",
         "sans-serif",
       ],
-      heading: ["Poppins", "sans-serif"],
+      heading: ["Quicksand", "sans-serif"],
     },
     extend: {
       backgroundImage: {
