@@ -6,6 +6,7 @@ import {
   FaClock,
   FaCloud,
   FaCode,
+  FaComments,
   FaLaptopCode,
   FaMobile,
   FaReceipt,
@@ -173,7 +174,6 @@ export default function Landing() {
         "Full-stack web apps (React, Next.js, Supabase, etc.)",
         "Mobile apps (iOS & Android using React Native / Expo)",
         "MVP development for startups",
-        "Progressive Web Apps (PWAs)",
         "API integrations and backend services",
         "Authentication, user roles, and real-time features",
       ],
@@ -293,9 +293,10 @@ export default function Landing() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <p className="text-gray-600 italic mb-6">
-              👉 Not sure what you need? Let's chat! Book a free consultation
-              and I'll help you figure out the right path.
+            <p className="text-gray-600 italic mb-6 flex items-center justify-center gap-2">
+              <FaComments className="w-5 h-5 text-blue-600" />
+              Not sure what you need? Let's chat! Book a free consultation and
+              I'll help you figure out the right path.
             </p>
             <a
               href="#booking"
