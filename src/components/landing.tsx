@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
-import { FaCloud, FaCode, FaLaptopCode, FaMobile } from "react-icons/fa";
+import { FaCode, FaMobile } from "react-icons/fa";
 
 type Service = {
   id: number;
   title: string;
   description: string;
-  icon: React.ReactNode;
+  icon?: React.ReactNode;
+  features?: string[];
 };
 
 export default function Landing() {
@@ -138,31 +139,70 @@ export default function Landing() {
   const services: Service[] = [
     {
       id: 1,
-      title: "Web Development",
+      title: "🌐 Website Design & Development",
       description:
-        "Custom web applications and websites built with cutting-edge technologies to help your business thrive online.",
-      icon: <FaCode className="w-8 h-8" />,
+        "Crafting beautiful, responsive websites tailored to your brand and goals.",
+      features: [
+        "Custom website design for businesses, startups, and personal brands",
+        "Responsive layouts (mobile, tablet, desktop)",
+        "Landing pages & sales funnels",
+        "Blog and portfolio setup",
+        "E-commerce development (Shopify, WooCommerce, etc.)",
+        "Website performance & SEO best practices",
+      ],
     },
     {
       id: 2,
-      title: "Mobile Apps",
+      title: "📱 Web & Mobile App Development",
       description:
-        "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
-      icon: <FaMobile className="w-8 h-8" />,
+        "Building powerful, interactive applications to bring your ideas to life.",
+      features: [
+        "Full-stack web apps (React, Next.js, Supabase, etc.)",
+        "Mobile apps (iOS & Android using React Native / Expo)",
+        "MVP development for startups",
+        "Progressive Web Apps (PWAs)",
+        "API integrations and backend services",
+        "Authentication, user roles, and real-time features",
+      ],
     },
     {
       id: 3,
-      title: "Cloud Solutions",
-      description:
-        "Scalable cloud infrastructure and services to optimize your business operations and reduce costs.",
-      icon: <FaCloud className="w-8 h-8" />,
+      title: "🚀 SEO & Digital Marketing",
+      description: "Helping your business get found and grow online.",
+      features: [
+        "On-page, technical, and local SEO",
+        "Keyword research and content strategy",
+        "Google Business Profile setup & optimization",
+        "Social media setup and guidance",
+        "Email marketing (setup + automation)",
+        "Analytics, tracking, and performance audits",
+      ],
     },
     {
       id: 4,
-      title: "IT Consulting",
+      title: "☁️ IT & Cloud Infrastructure",
       description:
-        "Expert guidance on digital transformation, technology strategy, and implementation for your business.",
-      icon: <FaLaptopCode className="w-8 h-8" />,
+        "Smart infrastructure to support scalability, speed, and security.",
+      features: [
+        "Cloud hosting (AWS, Vercel, Supabase, etc.)",
+        "Infrastructure as Code (Terraform)",
+        "CI/CD pipeline setup (GitHub Actions, GitLab CI, etc.)",
+        "Domain, DNS, SSL, and deployment",
+        "Monitoring, backups, and performance optimization",
+      ],
+    },
+    {
+      id: 5,
+      title: "🧩 Tech Consulting & Digital Transformation",
+      description:
+        "Helping you navigate the tech world with clarity and confidence.",
+      features: [
+        "Free initial consultation",
+        "Tech stack & tools recommendation",
+        "Digital strategy for small businesses",
+        "Code audits & project rescue",
+        "Personalized digital transformation roadmap",
+      ],
     },
   ];
 
@@ -209,55 +249,55 @@ export default function Landing() {
           <h2 className="text-4xl font-heading font-bold text-center mb-16">
             Tailored Digital Solutions Just for You
           </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center p-8 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-blue-600 mb-4">
-                <FaCode className="w-12 h-12 mx-auto" />
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {services.map((service) => (
+              <div
+                key={service.id}
+                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+              >
+                <div className="p-8">
+                  <h3 className="text-2xl font-heading font-semibold mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <ul className="space-y-2">
+                    {service.features?.map((feature, index) => (
+                      <li
+                        key={index}
+                        className="flex items-start text-gray-600"
+                      >
+                        <svg
+                          className="w-5 h-5 text-blue-500 mr-2 mt-0.5"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth={2}
+                            d="M5 13l4 4L19 7"
+                          />
+                        </svg>
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
-                Web Development
-              </h3>
-              <p className="text-gray-600">
-                Custom web applications and websites built with cutting-edge
-                technologies to help your business thrive online.
-              </p>
-            </div>
-            <div className="text-center p-8 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-blue-600 mb-4">
-                <FaMobile className="w-12 h-12 mx-auto" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
-                Mobile Apps
-              </h3>
-              <p className="text-gray-600">
-                Native and cross-platform mobile applications that deliver
-                exceptional user experiences across all devices.
-              </p>
-            </div>
-            <div className="text-center p-8 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-blue-600 mb-4">
-                <FaCloud className="w-12 h-12 mx-auto" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
-                Cloud Solutions
-              </h3>
-              <p className="text-gray-600">
-                Scalable cloud infrastructure and services to optimize your
-                business operations and reduce costs.
-              </p>
-            </div>
-            <div className="text-center p-8 rounded-lg bg-white shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="text-blue-600 mb-4">
-                <FaLaptopCode className="w-12 h-12 mx-auto" />
-              </div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
-                IT Consulting
-              </h3>
-              <p className="text-gray-600">
-                Expert guidance on digital transformation, technology strategy,
-                and implementation for your business.
-              </p>
-            </div>
+            ))}
+          </div>
+          <div className="text-center mt-12">
+            <p className="text-gray-600 italic mb-6">
+              👉 Not sure what you need? Let's chat! Book a free consultation
+              and I'll help you figure out the right path.
+            </p>
+            <a
+              href="#booking"
+              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+            >
+              Schedule Your Free Consultation
+            </a>
           </div>
         </div>
       </section>
