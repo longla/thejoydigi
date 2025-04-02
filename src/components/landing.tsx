@@ -156,12 +156,10 @@ export default function Landing() {
         "Build a stunning, modern website that works beautifully on all devices — and turns visitors into customers.",
       icon: <FaCode className="w-6 h-6" />,
       features: [
-        "A custom-built website that reflects your brand",
-        "Mobile-friendly design for phones, tablets, and desktops",
-        "Landing pages to promote products or services",
-        "Blog or portfolio to share your work or story",
-        "Online store setup (with secure checkout)",
-        "Fast loading speed and SEO-friendly structure",
+        "Custom website that matches your brand perfectly",
+        "Mobile-friendly design for all devices",
+        "Fast loading speed and SEO optimization",
+        "Secure online store with payment integration",
       ],
     },
     {
@@ -171,12 +169,10 @@ export default function Landing() {
         "Turn your ideas into real products — like customer portals, tools, or mobile apps — that people can use anywhere.",
       icon: <FaMobile className="w-6 h-6" />,
       features: [
-        "Custom web and mobile apps tailored to your needs",
-        "Tools your team or customers can log into and use",
-        "Apps that work across iPhone, Android, and web",
-        "Step-by-step support from idea to launch",
-        "Smooth user experience with simple design",
-        "All the tech stuff handled for you",
+        "Custom web and mobile apps for your needs",
+        "Cross-platform compatibility (iOS, Android, Web)",
+        "User-friendly interface and smooth experience",
+        "Secure authentication and data protection",
       ],
     },
     {
@@ -186,13 +182,10 @@ export default function Landing() {
         "Get your business in front of the right people — on Google, social media, and popular platforms like Yelp and Amazon.",
       icon: <FaRocket className="w-6 h-6" />,
       features: [
-        "Higher visibility on Google and search engines",
-        "Setup and optimization of your Google Business, Yelp, and Facebook pages",
-        "Help creating or improving your Amazon storefront or listings",
-        "Keyword and content strategy to attract the right audience",
-        "Guidance for social media presence (Facebook, Instagram, etc.)",
-        "Email marketing setup and automation to stay connected with customers",
-        "Easy-to-understand reports so you know what's working",
+        "Higher visibility on search engines",
+        "Social media and platform optimization",
+        "Content strategy and keyword research",
+        "Performance tracking and analytics",
       ],
     },
     {
@@ -202,11 +195,10 @@ export default function Landing() {
         "Behind-the-scenes support that keeps your website or app running smoothly, securely, and reliably.",
       icon: <FaCloud className="w-6 h-6" />,
       features: [
-        "Secure hosting and domain setup",
-        "Automated systems for easy updates and backups",
-        "Fast and reliable performance for your users",
-        "Setup of accounts and tools to manage your tech",
-        "Peace of mind that everything 'just works'",
+        "Secure hosting and domain management",
+        "Automated backups and updates",
+        "Performance optimization and monitoring",
+        "Cloud migration and optimization",
       ],
     },
     {
@@ -216,11 +208,10 @@ export default function Landing() {
         "Get expert guidance for your next big move — whether you're starting from scratch or ready to grow.",
       icon: <FaLaptopCode className="w-6 h-6" />,
       features: [
-        "Free initial consultation to understand your goals",
-        "A clear roadmap for your website, app, or digital plan",
-        "Honest advice on what tech you actually need",
-        "Audits or reviews of your current setup",
-        "Personalized solutions — no cookie-cutter stuff",
+        "Free initial consultation and planning",
+        "Custom digital roadmap for your business",
+        "Technology stack recommendations",
+        "Ongoing strategic guidance",
       ],
     },
   ];
@@ -233,7 +224,7 @@ export default function Landing() {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
-          <h1 className="text-5xl md:text-6xl font-heading font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-quicksand font-bold text-gray-900 mb-6">
             Bringing Joy to Your Digital Journey
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
@@ -265,7 +256,7 @@ export default function Landing() {
       {/* Services Section */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
+          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Tailored Digital Solutions Just for You
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -276,12 +267,12 @@ export default function Landing() {
               >
                 <div className="p-8">
                   <div className="text-blue-600 mb-4">{service.icon}</div>
-                  <h3 className="text-2xl font-heading font-semibold mb-4">
+                  <h3 className="text-2xl font-quicksand font-semibold mb-4">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   <div className="mb-4">
-                    <h4 className="text-xl font-heading font-semibold text-gray-800 mb-3">
+                    <h4 className="text-xl font-quicksand font-semibold text-gray-800 mb-3">
                       What you get:
                     </h4>
                     <ul className="space-y-2">
@@ -319,7 +310,7 @@ export default function Landing() {
       {/* About Section */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
+          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Meet Your Digital Partner
           </h2>
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -459,7 +450,7 @@ export default function Landing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-heading font-bold text-center mb-16"
+            className="text-4xl font-quicksand font-bold text-center mb-16"
           >
             Why Choose Me
           </motion.h2>
@@ -482,7 +473,7 @@ export default function Landing() {
               >
                 <FaTag className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-quicksand font-semibold mb-4">
                 Competitive Price
               </h3>
               <p className="text-gray-600">
@@ -509,7 +500,7 @@ export default function Landing() {
               >
                 <FaChartLine className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-quicksand font-semibold mb-4">
                 Value First Approach
               </h3>
               <p className="text-gray-600">
@@ -536,7 +527,7 @@ export default function Landing() {
               >
                 <FaStar className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-quicksand font-semibold mb-4">
                 High Quality Solutions
               </h3>
               <p className="text-gray-600">
@@ -563,7 +554,7 @@ export default function Landing() {
               >
                 <FaReceipt className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-quicksand font-semibold mb-4">
                 Transparent Billing
               </h3>
               <p className="text-gray-600">
@@ -590,7 +581,7 @@ export default function Landing() {
               >
                 <FaClock className="w-6 h-6 text-blue-600" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-quicksand font-semibold mb-4">
                 Fast Delivery
               </h3>
               <p className="text-gray-600">
@@ -605,7 +596,7 @@ export default function Landing() {
       {/* Portfolio Section */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
+          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Explore My Work
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -615,7 +606,7 @@ export default function Landing() {
                 <div className="text-blue-600 mb-6">
                   <FaCode className="w-12 h-12" />
                 </div>
-                <h3 className="text-2xl font-heading font-semibold mb-4">
+                <h3 className="text-2xl font-quicksand font-semibold mb-4">
                   QRganiz
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -666,7 +657,7 @@ export default function Landing() {
                 <div className="text-purple-600 mb-6">
                   <FaMobile className="w-12 h-12" />
                 </div>
-                <h3 className="text-2xl font-heading font-semibold mb-4">
+                <h3 className="text-2xl font-quicksand font-semibold mb-4">
                   Ruh-Roh Retreat
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -730,7 +721,7 @@ export default function Landing() {
                     />
                   </svg>
                 </div>
-                <h3 className="text-2xl font-heading font-semibold mb-4">
+                <h3 className="text-2xl font-quicksand font-semibold mb-4">
                   More Projects Coming Soon
                 </h3>
                 <p className="text-gray-600 mb-6">
@@ -751,7 +742,7 @@ export default function Landing() {
       {/* Booking Section */}
       <section id="booking" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
+          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Schedule Your Free Consultation
           </h2>
           <div className="max-w-[800px] mx-auto">
@@ -771,7 +762,7 @@ export default function Landing() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
+          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Let's Start Your Digital Journey
           </h2>
           <div className="max-w-2xl mx-auto">
@@ -933,7 +924,7 @@ export default function Landing() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-heading font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-quicksand font-bold text-gray-900 mb-2">
                 Thank You!
               </h3>
               <p className="text-gray-600 mb-6">
