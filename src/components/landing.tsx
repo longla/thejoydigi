@@ -266,15 +266,26 @@ export default function Landing() {
             Tailored Digital Solutions Just for You
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
+            {services.map((service, index) => (
+              <motion.div
                 key={service.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ scale: 1.02 }}
                 className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="p-8">
-                  <div className="text-blue-600 mb-4 flex justify-center">
+                  <motion.div
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
+                    className="text-blue-600 mb-4 flex justify-center"
+                  >
                     {service.icon}
-                  </div>
+                  </motion.div>
                   <h3 className="text-2xl font-heading font-semibold mb-4">
                     {service.title}
                   </h3>
@@ -284,19 +295,26 @@ export default function Landing() {
                       What you get:
                     </h4>
                     <ul className="space-y-2">
-                      {service.features?.map((feature, index) => (
-                        <li
-                          key={index}
+                      {service.features?.map((feature, featureIndex) => (
+                        <motion.li
+                          key={featureIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          viewport={{ once: true }}
+                          transition={{
+                            duration: 0.4,
+                            delay: index * 0.2 + 0.4 + featureIndex * 0.1,
+                          }}
                           className="flex items-start text-gray-600"
                         >
                           <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3"></span>
                           {feature}
-                        </li>
+                        </motion.li>
                       ))}
                     </ul>
                   </div>
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="text-center mt-12">
