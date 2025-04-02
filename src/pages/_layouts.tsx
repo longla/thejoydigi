@@ -182,7 +182,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     href="/#services"
                     className="text-secondary-300 hover:text-accent-400"
                   >
-                    Web Development
+                    Website Design & Development
                   </Link>
                 </li>
                 <li>
@@ -190,7 +190,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     href="/#services"
                     className="text-secondary-300 hover:text-accent-400"
                   >
-                    Mobile Apps
+                    Web & Mobile App Development
                   </Link>
                 </li>
                 <li>
@@ -198,7 +198,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     href="/#services"
                     className="text-secondary-300 hover:text-accent-400"
                   >
-                    Cloud Solutions
+                    SEO & Digital Marketing
                   </Link>
                 </li>
                 <li>
@@ -206,7 +206,15 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     href="/#services"
                     className="text-secondary-300 hover:text-accent-400"
                   >
-                    IT Consulting
+                    IT & Cloud Infrastructure
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/#services"
+                    className="text-secondary-300 hover:text-accent-400"
+                  >
+                    Tech Consulting & Digital Strategy
                   </Link>
                 </li>
               </ul>
