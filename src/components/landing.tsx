@@ -5,10 +5,10 @@ import {
   FaChartLine,
   FaClock,
   FaCloud,
-  FaCode,
-  FaComments,
   FaLaptopCode,
   FaMobile,
+  FaPalette,
+  FaQuestionCircle,
   FaReceipt,
   FaRocket,
   FaStar,
@@ -154,7 +154,7 @@ export default function Landing() {
       title: "Website Design & Development",
       description:
         "Build a stunning, modern website that works beautifully on all devices — and turns visitors into customers.",
-      icon: <FaCode className="w-6 h-6" />,
+      icon: <FaPalette className="w-6 h-6" />,
       features: [
         "Custom website that matches your brand perfectly",
         "Mobile-friendly design for all devices",
@@ -272,7 +272,9 @@ export default function Landing() {
                 className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="p-8">
-                  <div className="text-blue-600 mb-4">{service.icon}</div>
+                  <div className="text-blue-600 mb-4 flex justify-center">
+                    {service.icon}
+                  </div>
                   <h3 className="text-2xl font-heading font-semibold mb-4">
                     {service.title}
                   </h3>
@@ -298,8 +300,10 @@ export default function Landing() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <p className="text-gray-600 italic mb-6 flex items-center justify-center gap-2">
-              <FaComments className="w-5 h-5 text-blue-600" />
+            <p className="text-lg md:text-xl text-gray-600 mb-8">
+              <span className="hidden md:inline-block mr-2">
+                <FaQuestionCircle className="inline-block w-5 h-5 text-primary" />
+              </span>
               Not sure what you need yet? Let's talk. I offer a free consult to
               help you figure out the best next step.
             </p>
@@ -319,7 +323,7 @@ export default function Landing() {
           <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
             Meet Your Digital Partner
           </h2>
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12">
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
               <Image
                 src="/about-image.jpeg"
@@ -609,9 +613,6 @@ export default function Landing() {
             {/* QRganiz Project */}
             <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <div className="text-blue-600 mb-6">
-                  <FaCode className="w-12 h-12" />
-                </div>
                 <h3 className="text-2xl font-quicksand font-semibold mb-4">
                   QRganiz
                 </h3>
@@ -660,9 +661,6 @@ export default function Landing() {
             {/* Ruh-Roh Retreat Project */}
             <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <div className="text-purple-600 mb-6">
-                  <FaMobile className="w-12 h-12" />
-                </div>
                 <h3 className="text-2xl font-quicksand font-semibold mb-4">
                   Ruh-Roh Retreat
                 </h3>
@@ -712,21 +710,6 @@ export default function Landing() {
             {/* Placeholder for future projects */}
             <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <div className="text-green-600 mb-6">
-                  <svg
-                    className="w-12 h-12"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M12 6v6m0 0v6m0-6h6m-6 0H6"
-                    />
-                  </svg>
-                </div>
                 <h3 className="text-2xl font-heading font-semibold mb-4">
                   More Projects Coming Soon
                 </h3>
