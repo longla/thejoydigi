@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "category": "Web Design",
+    "seo_value": "high"
+  },
+  {
+    "id": 2,
+    "category": "Mobile App Development",
+    "seo_value": "high"
+  },
+  {
+    "id": 3,
+    "category": "SEO Techniques",
+    "seo_value": "very high"
+  },
+  {
+    "id": 4,
+    "category": "Cloud Infrastructure",
+    "seo_value": "medium"
+  },
+  {
+    "id": 5,
+    "category": "Digital Transformation",
+    "seo_value": "high"
+  },
+  {
+    "id": 6,
+    "category": "E-commerce Solutions",
+    "seo_value": "high"
+  },
+  {
+    "id": 7,
+    "category": "Business Technology",
+    "seo_value": "medium"
+  },
+  {
+    "id": 8,
+    "category": "Digital Marketing",
+    "seo_value": "very high"
+  },
+  {
+    "id": 9,
+    "category": "User Experience (UX)",
+    "seo_value": "high"
+  },
+  {
+    "id": 10,
+    "category": "Website Performance",
+    "seo_value": "high"
+  },
+  {
+    "id": 11,
+    "category": "Technical SEO",
+    "seo_value": "very high"
+  },
+  {
+    "id": 12,
+    "category": "Content Marketing",
+    "seo_value": "high"
+  },
+  {
+    "id": 13,
+    "category": "Local SEO",
+    "seo_value": "high"
+  },
+  {
+    "id": 14,
+    "category": "Business Growth Strategies",
+    "seo_value": "medium"
+  },
+  {
+    "id": 15,
+    "category": "Technology Consulting",
+    "seo_value": "medium"
+  },
+  {
+    "id": 16,
+    "category": "Data Security",
+    "seo_value": "medium"
+  },
+  {
+    "id": 17,
+    "category": "Web Development Frameworks",
+    "seo_value": "medium"
+  },
+  {
+    "id": 18,
+    "category": "CMS Platforms",
+    "seo_value": "medium"
+  },
+  {
+    "id": 19,
+    "category": "SaaS Solutions",
+    "seo_value": "medium"
+  },
+  {
+    "id": 20,
+    "category": "Digital Analytics",
+    "seo_value": "high"
+  }
+]
