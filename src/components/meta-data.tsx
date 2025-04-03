@@ -9,7 +9,7 @@ interface MetaDataProps {
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
   title = "TheJoyDigi - IT Solutions for Business",
   description = "Transform your business with innovative IT solutions. We provide web development, mobile apps, cloud solutions, and IT consulting services.",
-  image = "/thjoydigi_shared.png",
+  image = "/thejoydigi_shared.png",
 }) => {
   return (
     <Head>
