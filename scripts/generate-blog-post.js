@@ -160,15 +160,11 @@ async function getHighValueBusinessCategories() {
   );
 }
 
+// Update the generateBlogIdeas function to ensure it returns exactly numPosts ideas
 async function generateBlogIdeas(numPosts, existingTitles = []) {
   try {
-    // Get business categories sorted by SEO value
     const businessCategories = await getHighValueBusinessCategories();
-
-    // Extract categories from the business categories, prioritizing higher value ones
     const allCategories = businessCategories.map((topic) => topic.category);
-
-    // Take a mix of high-value categories, focusing more on very high and high
     const veryHighCategories = businessCategories
       .filter((t) => t.seo_value === "very high")
       .map((t) => t.category);
@@ -176,82 +172,127 @@ async function generateBlogIdeas(numPosts, existingTitles = []) {
       .filter((t) => t.seo_value === "high")
       .map((t) => t.category);
 
-    // Randomly select categories to focus on, with bias toward higher SEO value
     const selectedCategories = [
-      ...veryHighCategories, // Include all very high categories
-      ...highCategories.sort(() => 0.5 - Math.random()).slice(0, 3), // Add some high categories
-      ...allCategories.sort(() => 0.5 - Math.random()).slice(0, 2), // Add some random categories for diversity
+      ...veryHighCategories,
+      ...highCategories.sort(() => 0.5 - Math.random()).slice(0, 3),
+      ...allCategories.sort(() => 0.5 - Math.random()).slice(0, 2),
     ];
 
-    // Remove duplicates
     const uniqueSelectedCategories = [...new Set(selectedCategories)];
-
-    // Load target keywords for inspiration
     const allKeywords = await loadTargetKeywords();
-
-    // Extract main keywords from all categories for title inspiration
     const mainKeywords = Object.values(allKeywords)
       .flatMap((category) => category.main || [])
       .filter(Boolean);
 
-    const prompt = `
-      Generate a list of ${numPosts} unique blog post ideas related to these business website categories: ${uniqueSelectedCategories.join(
-      ", "
-    )}.
-      
-      These blog posts will be for a digital services company called "TheJoyDigi" that provides web design, development, and digital marketing services.
-      
-      Important requirements:
-      - Focus on the LATEST TRENDS and CURRENT YEAR best practices in each business category
-      - Each post should be optimized for SEO to help businesses rank better in search results
-      - Include specific mention of current year (${new Date().getFullYear()}) in the titles where appropriate
-      - Make the content valuable for businesses looking to improve their digital presence
-      - Each post title should incorporate one or more of these target keywords where possible: ${mainKeywords.join(
+    // Maximum number of retries
+    const maxRetries = 3;
+    let blogIdeas = [];
+    let retryCount = 0;
+
+    while (blogIdeas.length < numPosts && retryCount < maxRetries) {
+      // Calculate how many more posts we need to generate
+      const remainingPosts = numPosts - blogIdeas.length;
+
+      // If this is a retry, request more posts than needed to ensure we get enough
+      const postsToRequest =
+        retryCount > 0 ? remainingPosts * 1.5 : remainingPosts;
+
+      const prompt = `
+        Generate a list of EXACTLY ${Math.ceil(
+          postsToRequest
+        )} unique blog post ideas related to these business website categories: ${uniqueSelectedCategories.join(
         ", "
-      )}
-      - Each post should be unique and different from these existing titles: ${existingTitles.join(
-        ", "
-      )}
-      
-      For each blog post, provide:
-      - A catchy, SEO-optimized title that mentions the current year where appropriate and includes target keywords
-      - A brief description (2-3 sentences) that includes key SEO terms
-      - The primary business category it belongs to (from the list provided)
-      
-      Return the response as a JSON array with objects containing 'title', 'description', and 'category' fields.
-      Do not include any other text or formatting, markdown code blocks, or backticks.
-    `;
+      )}.
+        
+        These blog posts will be for a digital services company called "TheJoyDigi" that provides web design, development, and digital marketing services.
+        
+        Important requirements:
+        - You MUST generate EXACTLY ${Math.ceil(postsToRequest)} blog post ideas
+        - Focus on the LATEST TRENDS and CURRENT YEAR best practices in each business category
+        - Each post should be optimized for SEO to help businesses rank better in search results
+        - Include specific mention of current year (${new Date().getFullYear()}) in the titles where appropriate
+        - Make the content valuable for businesses looking to improve their digital presence
+        - Each post title should incorporate one or more of these target keywords where possible: ${mainKeywords.join(
+          ", "
+        )}
+        - Each post should be unique and different from these existing titles: ${[
+          ...existingTitles,
+          ...blogIdeas.map((idea) => idea.title),
+        ].join(", ")}
+        
+        For each blog post, provide:
+        - A catchy, SEO-optimized title that mentions the current year where appropriate and includes target keywords
+        - A brief description (2-3 sentences) that includes key SEO terms
+        - The primary business category it belongs to (from the list provided)
+        
+        Return the response as a JSON array with objects containing 'title', 'description', and 'category' fields.
+        The JSON array MUST contain EXACTLY ${Math.ceil(postsToRequest)} items.
+        Do not include any other text or formatting, markdown code blocks, or backticks.
+      `;
 
-    const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
+      try {
+        const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash" });
+        const result = await model.generateContent(prompt);
+        const response = await result.response;
+        const cleanResponse = response
+          .text()
+          .replace(/^```json\n?|\n?```$/g, "")
+          .trim();
 
-    // Clean the response text by removing markdown code block
-    const cleanResponse = response
-      .text()
-      .replace(/^```json\n?|\n?```$/g, "")
-      .trim();
-    console.log("Generated blog ideas:", cleanResponse);
+        console.log(`Attempt ${retryCount + 1}: Generating blog ideas...`);
 
-    try {
-      const blogIdeas = JSON.parse(cleanResponse);
+        const newIdeas = JSON.parse(cleanResponse);
 
-      // Add additional metadata to each blog idea
-      const blogPosts = blogIdeas.map((post) => ({
-        ...post,
-        status: "pending",
-        date: null,
-        slug: slugify(post.title, { lower: true, strict: true }),
-        hasImage: false,
-        business_category: post.category || uniqueSelectedCategories[0], // Fallback if category not provided
-      }));
+        // Filter out duplicates based on title
+        const uniqueNewIdeas = newIdeas.filter(
+          (newIdea) =>
+            !blogIdeas.some(
+              (existingIdea) =>
+                existingIdea.title.toLowerCase() === newIdea.title.toLowerCase()
+            )
+        );
 
-      return blogPosts;
-    } catch (parseError) {
-      console.error("Error parsing JSON response:", parseError.message);
-      console.error("Raw response:", cleanResponse);
-      throw new Error("Failed to parse blog ideas response");
+        // Add the unique new ideas to our collection
+        blogIdeas = [...blogIdeas, ...uniqueNewIdeas];
+
+        // Trim to the exact number needed
+        if (blogIdeas.length > numPosts) {
+          blogIdeas = blogIdeas.slice(0, numPosts);
+        }
+
+        // If we have enough ideas, break out of the loop
+        if (blogIdeas.length >= numPosts) {
+          break;
+        }
+
+        retryCount++;
+      } catch (error) {
+        console.error(
+          `Error in generation attempt ${retryCount + 1}:`,
+          error.message
+        );
+        retryCount++;
+      }
     }
+
+    // Check if we got enough blog ideas
+    if (blogIdeas.length < numPosts) {
+      console.warn(
+        `Warning: Could only generate ${blogIdeas.length}/${numPosts} blog post ideas after ${maxRetries} attempts.`
+      );
+    }
+
+    // Add additional metadata to each blog idea
+    const blogPosts = blogIdeas.map((post) => ({
+      ...post,
+      status: "pending",
+      date: null,
+      slug: slugify(post.title, { lower: true, strict: true }),
+      hasImage: false,
+      business_category: post.category || uniqueSelectedCategories[0],
+    }));
+
+    return blogPosts;
   } catch (error) {
     console.error("Error generating blog ideas:", error.message);
     throw error;
@@ -744,7 +785,15 @@ async function createBlogPost() {
     if (action === "all") {
       console.log(`\nGenerating ${pendingPosts.length} blog posts...\n`);
 
-      for (const post of pendingPosts) {
+      let successCount = 0;
+      let errorCount = 0;
+
+      for (let i = 0; i < pendingPosts.length; i++) {
+        const post = pendingPosts[i];
+        console.log(
+          `Processing post ${i + 1}/${pendingPosts.length}: ${post.title}`
+        );
+
         // Skip if file already exists
         if (await checkExistingFiles(post.slug)) {
           console.log(`Skipping existing post: ${post.title}`);
@@ -769,11 +818,24 @@ async function createBlogPost() {
           continue;
         }
 
-        // Generate the blog post
-        await generateSingleBlogPost(post);
+        try {
+          // Generate the blog post
+          await generateSingleBlogPost(post);
+          successCount++;
+        } catch (error) {
+          console.error(
+            `Error generating post "${post.title}":`,
+            error.message
+          );
+          errorCount++;
+        }
       }
 
-      console.log("\nAll blog posts have been generated successfully!");
+      console.log("\nBlog post generation complete!");
+      console.log(`Successfully generated: ${successCount} posts`);
+      if (errorCount > 0) {
+        console.log(`Failed to generate: ${errorCount} posts`);
+      }
       return;
     }
 
