@@ -1,0 +1,40 @@
+### Technical SEO
+
+1. **Ensure Mobile-Friendliness:**
+   - The component already mentions mobile-friendly design, which is great. Ensure that all elements are responsive and test the site on various devices.
+
+2. **Improve Site Speed:**
+   - Optimize images using formats like WebP and ensure they are appropriately sized for different devices.
+   - Consider lazy loading images to improve initial load times.
+
+3. **Secure Your Site:**
+   - Ensure that all API calls, like the one in `handleSubmit`, are made over HTTPS.
+
+4. **Implement Structured Data:**
+   - Use schema markup for services to help search engines understand the content better. This can be done using JSON-LD in the `<head>` section of your HTML.
+
+### On-Page SEO
+
+1. **Optimize Title Tags and Meta Descriptions:**
+   - Ensure that each page has a unique title and meta description that includes primary keywords.
+
+2. **Use Header Tags:**
+   - Use appropriate header tags (H1, H2, H3) for structuring content. Ensure that the main title of the page is wrapped in an H1 tag.
+
+3. **Optimize Images:**
+   - Use descriptive file names and alt tags for images. This helps with accessibility and can improve image search rankings.
+
+4. **Create Quality Content:**
+   - The descriptions for services are informative, which is good. Ensure that content is regularly updated and includes relevant keywords naturally.
+
+5. **Internal Linking:**
+   - Use internal links to connect related content. This can help with navigation and distribute page authority across your site.
+
+6. **Optimize URLs:**
+   - Ensure URLs are clean and descriptive, including relevant keywords.
+
+### Additional Recommendations
+
+- **Accessibility:** Ensure that all interactive elements are accessible via keyboard and have appropriate ARIA labels.
+- **Analytics:** Implement Google Analytics or similar tools to monitor traffic and user behavior.
+- **Regular Audits:** Conduct regular SEO audits to identify and fix issues. 
