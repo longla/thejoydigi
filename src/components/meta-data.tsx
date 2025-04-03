@@ -7,7 +7,7 @@ interface MetaDataProps {
 }
 
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
-  title = "The Joy Digi – Digital Partner for Small Business Growth",
+  title = "The Joy Digi – Digital Partner for Business Growth",
   description = "Web design, app development, SEO, and digital transformation for small businesses. Custom solutions by The Joy Digi.",
   image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png",
 }) => {
