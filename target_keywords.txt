@@ -1,0 +1,21 @@
+# Target Keywords for TheJoyDigi
+
+## Website Design & Development
+- Keywords: "website design," "web development," "responsive web design"
+- Long-Tail Keywords: "custom website design services," "mobile-friendly web development," "SEO optimized website design"
+
+## Web & Mobile App Development
+- Keywords: "app development," "mobile app development," "cross-platform apps"
+- Long-Tail Keywords: "custom mobile app development services," "iOS and Android app development," "user-friendly app design"
+
+## SEO & Digital Marketing
+- Keywords: "SEO services," "digital marketing," "social media optimization"
+- Long-Tail Keywords: "SEO services for small businesses," "digital marketing strategies for startups," "social media marketing services"
+
+## IT & Cloud Infrastructure
+- Keywords: "cloud infrastructure," "IT support," "secure hosting"
+- Long-Tail Keywords: "cloud infrastructure management services," "IT support for businesses," "secure web hosting solutions"
+
+## Additional Keywords
+- General Keywords: "digital solutions," "technology services," "online business support"
+- Long-Tail Keywords: "comprehensive digital solutions for businesses," "technology services for startups," "online business support and development" 
