@@ -45,7 +45,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
       <meta property="twitter:description" content={description} />
       <meta
         property="twitter:image"
-        content="/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png"
+        content="/long-digital-partner-websites-apps-seo-the-joy-digi-square.png"
       />
       <meta name="twitter:creator" content="@thejoydigi" />
 
