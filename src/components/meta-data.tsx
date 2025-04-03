@@ -7,8 +7,8 @@ interface MetaDataProps {
 }
 
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
-  title = "TheJoyDigi - IT Solutions for Business",
-  description = "Transform your business with innovative IT solutions. We provide web development, mobile apps, cloud solutions, and IT consulting services.",
+  title = "The Joy Digi – Digital Partner for Small Business Growth",
+  description = "Web design, app development, SEO, and digital transformation for small businesses. Custom solutions by The Joy Digi.",
   image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png",
 }) => {
   return (
@@ -16,6 +16,15 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
       <title>{title}</title>
       <meta name="description" content={description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta
+        name="keywords"
+        content="the joy digi, long digital partner, website design, app development, SEO, small business websites, digital solutions"
+      />
+      <meta name="author" content="Long – The Joy Digi" />
+      <meta
+        name="copyright"
+        content="© 2025 The Joy Digi. All rights reserved."
+      />
       <link rel="icon" href="/favicon.ico" />
 
       {/* Open Graph / Facebook */}
@@ -27,6 +36,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
         property="og:image"
         content="/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png"
       />
+      <meta property="og:site_name" content="The Joy Digi" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -37,6 +47,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
         property="twitter:image"
         content="/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png"
       />
+      <meta name="twitter:creator" content="@thejoydigi" />
 
       {/* Instagram */}
       <meta
