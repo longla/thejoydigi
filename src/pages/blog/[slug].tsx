@@ -2,8 +2,9 @@ import { motion } from "framer-motion";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
+import Link from "next/link";
 import SocialShare from "../../components/blog/social-share";
-import { getAllPosts, getPostBySlug } from "../../lib/posts";
+import { getAllPosts, getPostBySlug, getRelatedPosts } from "../../lib/posts";
 import BlogLayout from "./_layout";
 
 interface BlogPostProps {
@@ -16,9 +17,17 @@ interface BlogPostProps {
     content: any;
     excerpt: string;
   };
+  relatedPosts: {
+    slug: string;
+    title: string;
+    date: string;
+    coverImage: string;
+    category: string;
+    excerpt: string;
+  }[];
 }
 
-export default function BlogPost({ post }: BlogPostProps) {
+export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
   const postUrl = `https://thejoydigi.com/blog/${post.slug}`;
 
   return (
@@ -128,6 +137,57 @@ export default function BlogPost({ post }: BlogPostProps) {
             </motion.div>
           </div>
         </section>
+
+        {/* Related Posts Section */}
+        {relatedPosts.length > 0 && (
+          <section className="py-20 bg-secondary-100">
+            <div className="container mx-auto px-4">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+              >
+                <h2 className="text-3xl font-heading font-bold mb-8 text-center">
+                  More {post.category} Articles
+                </h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                  {relatedPosts.map((relatedPost) => (
+                    <Link
+                      key={relatedPost.slug}
+                      href={`/blog/${relatedPost.slug}`}
+                      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                    >
+                      <div className="relative h-48">
+                        <Image
+                          src={relatedPost.coverImage}
+                          alt={relatedPost.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                      <div className="p-6">
+                        <h3 className="text-xl font-heading font-bold mb-2 text-secondary-900">
+                          {relatedPost.title}
+                        </h3>
+                        <p className="text-secondary-600 mb-4">
+                          {relatedPost.excerpt}
+                        </p>
+                        <div className="flex items-center justify-between">
+                          <span className="text-sm text-secondary-500">
+                            {relatedPost.date}
+                          </span>
+                          <span className="text-sm text-primary font-medium">
+                            Read More →
+                          </span>
+                        </div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </motion.div>
+            </div>
+          </section>
+        )}
       </div>
     </BlogLayout>
   );
@@ -153,9 +213,12 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     };
   }
 
+  const relatedPosts = await getRelatedPosts(post.slug, post.category);
+
   return {
     props: {
       post,
+      relatedPosts,
     },
   };
 };

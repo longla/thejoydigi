@@ -79,3 +79,14 @@ export async function getPostBySlug(slug: string): Promise<Post | null> {
 export function getPostSlugFromPath(path: string): string {
   return path.split("/").pop()?.replace(/\.md$/, "") || "";
 }
+
+export async function getRelatedPosts(
+  slug: string,
+  category: string,
+  limit: number = 3
+): Promise<Post[]> {
+  const allPosts = await getAllPosts();
+  return allPosts
+    .filter((post) => post.slug !== slug && post.category === category)
+    .slice(0, limit);
+}
