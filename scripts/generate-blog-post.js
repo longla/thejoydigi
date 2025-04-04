@@ -512,7 +512,7 @@ async function getImageForTopic(topicSlug) {
 
     // First try to find exact match
     const exactMatch = imageFiles.find((file) =>
-      file.toLowerCase().startsWith(topicSlug.toLowerCase())
+      file.toLowerCase().includes(topicSlug.toLowerCase())
     );
 
     if (exactMatch) {

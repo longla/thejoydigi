@@ -55,13 +55,17 @@ export default function BlogPost({ post }: BlogPostProps) {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-white rounded-lg shadow-lg overflow-hidden"
             >
-              <div className="relative h-[400px]">
-                <Image
-                  src={post.coverImage}
-                  alt={post.title}
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative w-full max-h-[500px] overflow-hidden flex items-center justify-center pt-8">
+                <div className="relative h-[500px] w-auto">
+                  <Image
+                    src={post.coverImage}
+                    alt={post.title}
+                    width={1920}
+                    height={1080}
+                    className="h-full w-auto object-contain"
+                    priority
+                  />
+                </div>
               </div>
               <div className="p-8">
                 <SocialShare
