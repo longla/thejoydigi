@@ -1,0 +1,122 @@
+{
+  "Web Design": {
+    "slug": "the-joy-digi-web-design",
+    "prompt": "Create a professional image showing a modern, responsive website design displayed across multiple devices (desktop, tablet, mobile) with a clean, minimalist interface. The image should show a sleek website layout with modern UI elements, subtle animations, and a professional color scheme. No text or UI elements should be readable - just the overall aesthetic and layout.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Mobile App Development": {
+    "slug": "the-joy-digi-mobile-app-development",
+    "prompt": "Create an image showing the mobile app development process with clean, modern UI elements and development tools. Show a professional workspace with a developer's setup, including multiple screens showing code and app interfaces. The focus should be on the development environment and app UI elements, not on readable text or code.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "SEO Techniques": {
+    "slug": "the-joy-digi-seo-techniques",
+    "prompt": "Create an image showing an SEO analytics dashboard with growing metrics and search rankings. Show abstract representations of search engine optimization with elements like rising graphs, search icons, and website connections. The image should convey growth and optimization without showing actual readable data or text.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Cloud Infrastructure": {
+    "slug": "the-joy-digi-cloud-infrastructure",
+    "prompt": "Create an image showing cloud infrastructure and services with a connected network. Show abstract representations of cloud computing with elements like servers, data centers, and network connections. The image should convey scalability and reliability with a modern, technological aesthetic.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Digital Transformation": {
+    "slug": "the-joy-digi-digital-transformation",
+    "prompt": "Create an image showing business digital transformation with modern technology elements. Show a professional business environment transitioning to digital solutions, with elements like digital interfaces, automation, and modern technology integration. The image should convey innovation and progress.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "E-commerce Solutions": {
+    "slug": "the-joy-digi-e-commerce-solutions",
+    "prompt": "Create an image showing a modern e-commerce website with shopping cart and payment processing. Show a clean, professional online store interface with product displays and shopping elements. The image should convey trust and professionalism in online shopping without showing readable text or prices.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Business Technology": {
+    "slug": "the-joy-digi-business-technology",
+    "prompt": "Create an image showing cutting-edge business technology implementation. Show a modern office environment with advanced technology solutions, including digital displays, smart devices, and professional workstations. The image should convey innovation and efficiency.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Digital Marketing": {
+    "slug": "the-joy-digi-digital-marketing",
+    "prompt": "Create an image showing digital marketing channels and analytics on screens. Show abstract representations of various digital marketing channels (social media, email, search) with analytics and growth indicators. The image should convey multi-channel marketing success without showing readable data.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "User Experience (UX)": {
+    "slug": "the-joy-digi-user-experience-ux",
+    "prompt": "Create an image showing the UX design process with wireframes and prototypes. Show a professional design workspace with user interface elements, design tools, and user flow diagrams. The image should convey the creative and technical aspects of UX design without showing readable text.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Website Performance": {
+    "slug": "the-joy-digi-website-performance",
+    "prompt": "Create an image showing website performance optimization with speed and efficiency indicators. Show abstract representations of website loading, caching, and optimization with elements like speed gauges and performance metrics. The image should convey speed and efficiency without showing readable data.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Technical SEO": {
+    "slug": "the-joy-digi-technical-seo",
+    "prompt": "Create an image showing technical SEO elements with website architecture and optimization indicators. Show abstract representations of website structure, crawling, indexing, and technical optimization. The image should convey technical expertise and optimization without showing readable code or text.",
+    "style": "happy and positive",
+    "completed": true
+  },
+  "Content Marketing": {
+    "slug": "the-joy-digi-content-marketing",
+    "prompt": "Create an image showing content marketing strategy with various content types and distribution channels. Show abstract representations of content creation, distribution, and engagement with elements like social media, blogs, and multimedia content. The image should convey content strategy without showing readable text.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Local SEO": {
+    "slug": "the-joy-digi-local-seo",
+    "prompt": "Create an image showing local SEO with map-based elements and local business presence. Show abstract representations of local search, maps, and business listings with elements like location pins and local search indicators. The image should convey local presence without showing readable addresses or text.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Business Growth Strategies": {
+    "slug": "the-joy-digi-business-growth-strategies",
+    "prompt": "Create an image showing business growth and expansion with modern business solutions. Show a professional business environment with elements of growth, scaling, and success indicators. The image should convey business development and progress without showing readable text or data.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Technology Consulting": {
+    "slug": "the-joy-digi-technology-consulting",
+    "prompt": "Create an image showing technology consulting with professional business meetings and technology solutions. Show a modern consulting environment with technology experts and business professionals discussing solutions. The image should convey expertise and professional consultation without showing readable text.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Data Security": {
+    "slug": "the-joy-digi-data-security",
+    "prompt": "Create an image showing data security and protection with modern security elements. Show abstract representations of data protection, encryption, and security measures with elements like shields, locks, and secure connections. The image should convey security and protection without showing readable data or text.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Web Development Frameworks": {
+    "slug": "the-joy-digi-web-development-frameworks",
+    "prompt": "Create an image showing web development frameworks with modern coding and development elements. Show a professional development environment with framework-specific tools and interfaces. The image should convey technical expertise and modern development without showing readable code.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "CMS Platforms": {
+    "slug": "the-joy-digi-cms-platforms",
+    "prompt": "Create an image showing content management system platforms with modern website management elements. Show abstract representations of CMS interfaces and website management tools. The image should convey ease of content management without showing readable text or interface elements.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "SaaS Solutions": {
+    "slug": "the-joy-digi-saas-solutions",
+    "prompt": "Create an image showing software-as-a-service solutions with cloud-based applications. Show abstract representations of SaaS platforms and cloud services with elements like applications, data flow, and service integration. The image should convey software service delivery without showing readable text.",
+    "style": "happy and positive",
+    "completed": false
+  },
+  "Digital Analytics": {
+    "slug": "the-joy-digi-digital-analytics",
+    "prompt": "Create an image showing digital analytics with data visualization and insights. Show abstract representations of analytics dashboards and data visualization with elements like charts, graphs, and metrics. The image should convey data analysis and insights without showing readable data or text.",
+    "style": "happy and positive",
+    "completed": false
+  }
+}

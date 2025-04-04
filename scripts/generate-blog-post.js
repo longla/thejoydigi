@@ -484,119 +484,46 @@ async function generateBlogPost(blogMeta) {
   }
 }
 
-async function generateBlogImage(blogMeta) {
+// Helper function to get a random image from the blog images folder
+async function getRandomBlogImage() {
   try {
-    // Determine the key theme based on the title, description and category
-    const title = blogMeta.title.toLowerCase();
-    const description = blogMeta.description.toLowerCase();
-    const category = (blogMeta.business_category || "").toLowerCase();
-    const currentYear = new Date().getFullYear();
-
-    // Analyze the content to determine what kind of image would be good
-    let imageTheme = "";
-
-    // Map business categories to appropriate image themes
-    if (category.includes("web design") || title.includes("web design")) {
-      imageTheme = "modern responsive website design on multiple devices";
-    } else if (
-      category.includes("mobile app") ||
-      title.includes("mobile app")
-    ) {
-      imageTheme = "mobile app development process with UI/UX elements";
-    } else if (category.includes("seo") || title.includes("seo")) {
-      imageTheme =
-        "SEO analytics dashboard with growing metrics and search rankings";
-    } else if (category.includes("cloud") || title.includes("cloud")) {
-      imageTheme = "cloud infrastructure and services with connected network";
-    } else if (
-      category.includes("digital transformation") ||
-      title.includes("digital transformation")
-    ) {
-      imageTheme =
-        "business digital transformation visualization with modern technology elements";
-    } else if (
-      category.includes("e-commerce") ||
-      title.includes("e-commerce")
-    ) {
-      imageTheme =
-        "modern e-commerce website with shopping cart and payment processing";
-    } else if (
-      category.includes("digital marketing") ||
-      title.includes("digital marketing")
-    ) {
-      imageTheme = "digital marketing channels and analytics on screens";
-    } else if (category.includes("ux") || title.includes("user experience")) {
-      imageTheme = "UX design process with wireframes and prototypes";
-    } else if (category.includes("business") || title.includes("business")) {
-      imageTheme = "professional business meeting discussing digital strategy";
-    } else if (
-      category.includes("technology") ||
-      title.includes("technology")
-    ) {
-      imageTheme = "cutting-edge business technology implementation";
-    } else if (
-      title.includes("trend") ||
-      title.includes(currentYear.toString())
-    ) {
-      imageTheme = `latest ${currentYear} digital business trends visualization with futuristic elements`;
-    } else {
-      // Default theme if no specific matches
-      imageTheme =
-        "professional digital services team working on business website development";
+    const blogImagesDir = path.join(__dirname, "../public/images/blog");
+    const files = await fs.readdir(blogImagesDir);
+    const imageFiles = files.filter((file) => /\.(jpg|jpeg|png)$/i.test(file));
+    if (imageFiles.length === 0) {
+      console.error("No images found in the blog images directory");
+      return null;
     }
-
-    const promptText = `
-      Create an eye-catching, professional image that would work well as a cover image for a blog post titled "${blogMeta.title}".
-      
-      The image should:
-      - Show ${imageTheme}
-      - Include modern, cutting-edge visual elements that suggest ${currentYear} business technology trends
-      - Be visually appealing with good lighting and composition
-      - Use an attractive color scheme that's professional and modern
-      - Not include blog title, not contain any text overlays or words
-      - Have a clean, uncluttered composition that would look good when shared on social media
-      - Be appropriate as a thumbnail/cover image that makes business people want to read the article
-      - Have a professional photography style (not cartoon or illustrated)
-      
-      Make the image high-quality, vibrant, and aspirational, showing the latest business technology trends of ${currentYear}.
-    `;
-
-    // Create a prompt object as expected by the API
-    const contents = [{ text: promptText }];
-
-    // Use the correct model for image generation
-    const model = genAI.getGenerativeModel({
-      model: "gemini-2.0-flash-exp-image-generation",
-      generationConfig: {
-        responseModalities: ["Text", "Image"],
-      },
-    });
-
-    console.log("Generating image with Gemini...");
-    const response = await model.generateContent(contents);
-
-    // Process each part of the response
-    for (const part of response.response.candidates[0].content.parts) {
-      // Look for inline data (the image)
-      if (part.inlineData) {
-        console.log("Image generated successfully!");
-        return part.inlineData.data; // Return the base64 image data
-      } else if (part.text) {
-        console.log("Text response from image generation:", part.text);
-      }
-    }
-
-    console.log("No image data found in the response");
-    return null;
+    const randomImage =
+      imageFiles[Math.floor(Math.random() * imageFiles.length)];
+    return `/images/blog/${randomImage}`;
   } catch (error) {
-    console.error("Error generating blog image:", error.message);
+    console.error("Error getting random blog image:", error.message);
+    return null;
+  }
+}
 
-    // More detailed error information if available
-    if (error.response) {
-      console.error("Error details:", JSON.stringify(error.response, null, 2));
+// Helper function to get image path based on SEO topic slug
+async function getImageForTopic(topicSlug) {
+  try {
+    const blogImagesDir = path.join(__dirname, "../public/images/blog");
+    const files = await fs.readdir(blogImagesDir);
+    const imageFiles = files.filter((file) => /\.(jpg|jpeg|png)$/i.test(file));
+
+    // First try to find exact match
+    const exactMatch = imageFiles.find((file) =>
+      file.toLowerCase().startsWith(topicSlug.toLowerCase())
+    );
+
+    if (exactMatch) {
+      return `/images/blog/${exactMatch}`;
     }
 
-    return null;
+    // If no exact match, get a random image
+    return await getRandomBlogImage();
+  } catch (error) {
+    console.error("Error getting image for topic:", error.message);
+    return await getRandomBlogImage();
   }
 }
 
@@ -873,21 +800,7 @@ async function generateSingleBlogPost(post) {
       // Update its status in the JSON
       post.status = "completed";
       post.date = post.date || new Date().toISOString().split("T")[0];
-
-      // Check if cover image exists
-      const coverImagePath = path.join(
-        path.join(PUBLIC_POSTS_DIR, post.slug),
-        "cover.jpg"
-      );
-      let hasImage = false;
-      try {
-        await fs.access(coverImagePath);
-        hasImage = true;
-      } catch (error) {
-        // Image doesn't exist
-      }
-
-      await updateBlogStatus(post, hasImage);
+      await updateBlogStatus(post, true);
       return;
     }
 
@@ -898,10 +811,6 @@ async function generateSingleBlogPost(post) {
     const slug = post.slug;
     const fileName = `${slug}.md`;
     const filePath = path.join(POSTS_DIR, fileName);
-
-    // Create post directory under public/posts
-    const postDir = path.join(PUBLIC_POSTS_DIR, slug);
-    await fs.mkdir(postDir, { recursive: true });
 
     // Get relevant target keywords to reference
     const targetKeywords = await getKeywordsForCategory(post.business_category);
@@ -915,32 +824,23 @@ async function generateSingleBlogPost(post) {
 
     const content = await generateBlogPost(post);
 
-    // Check if cover image exists
-    const coverImagePath = path.join(postDir, "cover.jpg");
-    let hasCoverImage = false;
-    try {
-      await fs.access(coverImagePath);
-      hasCoverImage = true;
-    } catch (error) {
-      // Image doesn't exist, generate one
-      console.log(`Generating cover image for: ${post.title}`);
-      const imageData = await generateBlogImage(post);
-      if (imageData) {
-        await saveBase64Image(imageData, coverImagePath);
-        hasCoverImage = true;
-        console.log(`Cover image created successfully.`);
-      } else {
-        console.log(`Failed to generate cover image.`);
-      }
-    }
+    // Get image path based on SEO topic
+    const imagePath = await getImageForTopic(
+      post.business_category.toLowerCase().replace(/\s+/g, "-")
+    );
+    console.log(`Using image: ${imagePath}`);
 
-    // Add frontmatter to content
+    // Add frontmatter to content with full-size image settings
     const frontmatter = `---
 title: "${post.title}"
 description: "${post.description}"
 date: "${post.date}"${
       post.business_category ? `\ncategory: "${post.business_category}"` : ""
-    }${hasCoverImage ? `\ncoverImage: "/posts/${slug}/cover.jpg"` : ""}
+    }${imagePath ? `\ncoverImage: "${imagePath}"` : ""}
+imageStyle: "full-width"
+imageHeight: "auto"
+imageWidth: "100%"
+imageObjectFit: "cover"
 keywords: ${JSON.stringify([
       ...targetKeywords.main,
       ...targetKeywords.longTail.slice(0, 3),
@@ -952,15 +852,10 @@ keywords: ${JSON.stringify([
     // Write the blog post file with frontmatter and content
     await fs.writeFile(filePath, frontmatter + content, "utf8");
 
-    // Update blog status, including image status
-    await updateBlogStatus(post, hasCoverImage);
+    // Update blog status
+    await updateBlogStatus(post, true);
 
     console.log(`Blog post created: ${filePath}`);
-    if (!hasCoverImage) {
-      console.log(
-        `To add a cover image, place it at: ${path.join(postDir, "cover.jpg")}`
-      );
-    }
   } catch (error) {
     console.error(`Error generating blog post "${post.title}":`, error.message);
   }
