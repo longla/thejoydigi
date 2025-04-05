@@ -4,7 +4,6 @@ import { useState } from "react";
 import {
   FaChartLine,
   FaClock,
-  FaCloud,
   FaLaptopCode,
   FaMobile,
   FaPalette,
@@ -153,65 +152,52 @@ export default function Landing() {
       id: 1,
       title: "Website Design & Development",
       description:
-        "Transform your online presence with our custom website design and development services. We create responsive, SEO-optimized websites that convert visitors into customers and drive business growth.",
+        "Get a professional website that builds trust, brings in customers, and makes your business look great — no tech experience needed. I handle everything so you can focus on running your business.",
       icon: <FaPalette className="w-6 h-6" />,
       features: [
-        "Custom website design that perfectly represents your brand",
-        "Mobile-friendly responsive design for all devices",
-        "SEO-optimized for better search engine visibility",
-        "Secure e-commerce solutions with payment integration",
+        "Custom website that fits your business and brand",
+        "Mobile-friendly and easy to use on all devices",
+        "Built to help you get found on Google (local SEO)",
+        "Online store or booking system if needed",
       ],
     },
     {
       id: 2,
-      title: "Web & Mobile App Development",
+      title: "Mobile App Development",
       description:
-        "Bring your ideas to life with our expert web and mobile app development services. We build cross-platform applications that deliver seamless user experiences across iOS, Android, and web platforms.",
+        "I help founders bring their app ideas to life without needing a technical background. I design and build mobile apps for iOS and Android that are user-friendly, scalable, and tailored to your goals — whether it’s a side project or the start of a business.",
       icon: <FaMobile className="w-6 h-6" />,
       features: [
-        "Custom web and mobile applications tailored to your needs",
-        "Cross-platform development for iOS, Android, and web",
-        "Intuitive user interface and smooth user experience",
-        "Enterprise-grade security and data protection",
+        "Apps designed with your goals in mind",
+        "Works on both iOS and Android devices",
+        "Great for MVPs or small business tools",
+        "No tech skills required to get started",
       ],
     },
     {
       id: 3,
       title: "SEO & Digital Marketing",
       description:
-        "Boost your online visibility and reach your target audience with our comprehensive SEO and digital marketing services. From search engine optimization to social media marketing, we help businesses grow their online presence.",
+        "Want to show up on Google and get more customers? I take care of SEO and digital ads for you — including Google, Facebook, Instagram, and Amazon. You don’t need to understand the tech — I handle it all and help you reach more people online.",
       icon: <FaRocket className="w-6 h-6" />,
       features: [
-        "Strategic SEO services for higher search rankings",
-        "Social media marketing and platform optimization",
-        "Content strategy and targeted keyword research",
-        "Performance analytics and ROI tracking",
-      ],
-    },
-    {
-      id: 4,
-      title: "IT & Cloud Infrastructure",
-      description:
-        "Ensure your digital assets are secure and perform optimally with our IT and cloud infrastructure services. We provide reliable hosting, security solutions, and technical support to keep your business running smoothly.",
-      icon: <FaCloud className="w-6 h-6" />,
-      features: [
-        "Secure cloud hosting and domain management",
-        "Automated backups and system updates",
-        "Performance optimization and real-time monitoring",
-        "24/7 technical support and maintenance",
+        "Get found on Google with smart SEO",
+        "Run ads that bring real customers",
+        "Help with content and social media",
+        "Simple reports to show what’s working",
       ],
     },
     {
       id: 5,
-      title: "Tech Consulting & Digital Strategy",
+      title: "Digital Analytics",
       description:
-        "Get expert guidance for your next big move — whether you're starting from scratch or ready to grow.",
+        "I set up tracking so you know what’s working and what’s not. No complicated dashboards — just clear reports that show where your visitors come from, what they do, and how your business is growing.",
       icon: <FaLaptopCode className="w-6 h-6" />,
       features: [
-        "Free initial consultation and planning",
-        "Custom digital roadmap for your business",
-        "Technology stack recommendations",
-        "Ongoing strategic guidance",
+        "Track visits and customer behavior",
+        "Know which pages and ads perform best",
+        "Easy-to-read reports — no tech jargon",
+        "Insights to help grow your business",
       ],
     },
   ];
@@ -219,39 +205,40 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-secondary via-white to-secondary">
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.05),transparent_50%)]"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(74,190,255,0.05),transparent_50%)]"></div>
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 font-logo"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-textLight mb-6 font-logo"
           >
-            Transform Your Business with
-            <span className="text-primary"> Digital Solutions</span>
+            Elevating
+            <span className="text-primary"> Digital Experiences</span>
           </motion.h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
-            Empowering Businesses with Innovative Digital Solutions
+          <p className="text-xl md:text-2xl text-textLight mb-8 max-w-3xl mx-auto">
+            Empowering businesses with cutting-edge digital solutions that drive
+            growth and enhance user experiences
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#booking"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
             >
               Schedule Your Free Consultation
             </a>
             <a
               href="#contact"
-              className="inline-block bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+              className="inline-block bg-white text-primary border-2 border-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition-colors duration-300"
             >
               Contact Me
             </a>
             <a
               href="#why-me"
-              className="inline-block bg-white text-blue-600 border-2 border-blue-600 px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-50 transition-colors duration-300"
+              className="inline-block bg-white text-primary border-2 border-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-secondary transition-colors duration-300"
             >
               Why Me
             </a>
@@ -260,10 +247,10 @@ export default function Landing() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-white">
+      <section id="services" className="py-20 bg-bgLight">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16">
-            Tailored Digital Solutions Just for You
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
+            Cutting-Edge Digital Solutions for Your Business
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
@@ -274,7 +261,7 @@ export default function Landing() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ scale: 1.02 }}
-                className="bg-white rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
+                className="bg-bgLight rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden"
               >
                 <div className="p-8">
                   <motion.div
@@ -282,16 +269,16 @@ export default function Landing() {
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6, delay: index * 0.2 + 0.2 }}
-                    className="text-blue-600 mb-4 flex justify-center"
+                    className="text-primary mb-4 flex justify-center"
                   >
                     {service.icon}
                   </motion.div>
-                  <h3 className="text-2xl font-heading font-semibold mb-4">
+                  <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-6">{service.description}</p>
+                  <p className="text-textLight mb-6">{service.description}</p>
                   <div className="mb-4">
-                    <h4 className="text-xl font-heading font-semibold text-gray-800 mb-3">
+                    <h4 className="text-xl font-heading font-semibold text-textLight mb-3">
                       What you get:
                     </h4>
                     <ul className="space-y-2">
@@ -305,9 +292,9 @@ export default function Landing() {
                             duration: 0.4,
                             delay: index * 0.2 + 0.4 + featureIndex * 0.1,
                           }}
-                          className="flex items-start text-gray-600"
+                          className="flex items-start text-textLight"
                         >
-                          <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 mr-3"></span>
+                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3"></span>
                           {feature}
                         </motion.li>
                       ))}
@@ -318,7 +305,7 @@ export default function Landing() {
             ))}
           </div>
           <div className="text-center mt-12">
-            <p className="text-lg md:text-xl text-gray-600 mb-8">
+            <p className="text-lg md:text-xl text-textLight mb-8">
               <span className="hidden md:inline-block mr-2">
                 <FaQuestionCircle className="inline-block w-5 h-5 text-primary" />
               </span>
@@ -327,7 +314,7 @@ export default function Landing() {
             </p>
             <a
               href="#booking"
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+              className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
             >
               Schedule Your Free Consultation
             </a>
@@ -336,9 +323,9 @@ export default function Landing() {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-20 bg-gray-50">
+      <section id="about" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
             Meet Your Digital Partner
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
@@ -351,14 +338,14 @@ export default function Landing() {
               />
             </div>
             <div className="space-y-6">
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-textLight">
                 Hi, I'm Long La, your dedicated digital partner with over 12
                 years of experience in the tech industry. My journey has taken
                 me through leading tech companies, innovative startups, and
                 consulting firms, giving me a unique perspective on delivering
                 exceptional digital solutions.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-textLight">
                 My philosophy is simple: value first. Every project I undertake
                 is driven by a commitment to deliver real, measurable results
                 that matter to your business. Whether it's building a custom
@@ -366,7 +353,7 @@ export default function Landing() {
                 marketing strategies, I focus on solutions that directly impact
                 your bottom line.
               </p>
-              <p className="text-lg text-gray-600">
+              <p className="text-lg text-textLight">
                 Having worked across various industries, I understand that each
                 business has unique challenges and opportunities. My approach
                 combines technical expertise with clear communication and a deep
@@ -376,7 +363,7 @@ export default function Landing() {
               <div className="flex flex-wrap gap-3 pt-4">
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-blue-100 text-blue-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"
@@ -395,7 +382,7 @@ export default function Landing() {
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"
@@ -414,7 +401,7 @@ export default function Landing() {
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-green-100 text-green-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 bg-primary-100 text-primary-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"
@@ -433,7 +420,7 @@ export default function Landing() {
                 </motion.div>
                 <motion.div
                   whileHover={{ scale: 1.05 }}
-                  className="px-4 py-2 bg-orange-100 text-orange-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
+                  className="px-4 py-2 bg-accent-100 text-accent-700 rounded-full text-lg font-medium shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-2"
                 >
                   <svg
                     className="w-5 h-5"
@@ -454,13 +441,13 @@ export default function Landing() {
               <div className="flex gap-4 pt-4">
                 <a
                   href="#booking"
-                  className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300"
+                  className="inline-block bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
                 >
                   Let's Work Together
                 </a>
                 <a
                   href="#portfolio"
-                  className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors duration-300"
+                  className="inline-block bg-white text-primary px-8 py-4 rounded-full text-lg font-semibold border-2 border-primary hover:bg-secondary transition-colors duration-300"
                 >
                   View My Work
                 </a>
@@ -471,14 +458,14 @@ export default function Landing() {
       </section>
 
       {/* Why Choose Me Section */}
-      <section id="why-me" className="py-20 bg-white">
+      <section id="why-me" className="py-20 bg-bgLight">
         <div className="container mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-4xl font-quicksand font-bold text-center mb-16"
+            className="text-4xl font-heading font-bold text-center mb-16 text-textLight"
           >
             Why Choose Me
           </motion.h2>
@@ -490,21 +477,21 @@ export default function Landing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.2 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-secondary p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <FaTag className="w-6 h-6 text-blue-600" />
+                <FaTag className="w-6 h-6 text-primary" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                 Competitive Price
               </h3>
-              <p className="text-gray-600">
+              <p className="text-textLight">
                 I offer competitive rates without compromising on quality,
                 ensuring you get the best value for your investment.
               </p>
@@ -517,21 +504,21 @@ export default function Landing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.3 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-secondary p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.5 }}
-                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <FaChartLine className="w-6 h-6 text-blue-600" />
+                <FaChartLine className="w-6 h-6 text-primary" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                 Value First Approach
               </h3>
-              <p className="text-gray-600">
+              <p className="text-textLight">
                 Every solution is designed with your business goals in mind,
                 focusing on delivering real value and measurable results.
               </p>
@@ -544,21 +531,21 @@ export default function Landing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-secondary p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.6 }}
-                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <FaStar className="w-6 h-6 text-blue-600" />
+                <FaStar className="w-6 h-6 text-primary" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                 High Quality Solutions
               </h3>
-              <p className="text-gray-600">
+              <p className="text-textLight">
                 I deliver innovative, high-quality solutions using cutting-edge
                 technologies and best practices.
               </p>
@@ -571,21 +558,21 @@ export default function Landing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.5 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-secondary p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.7 }}
-                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <FaReceipt className="w-6 h-6 text-blue-600" />
+                <FaReceipt className="w-6 h-6 text-primary" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                 Transparent Billing
               </h3>
-              <p className="text-gray-600">
+              <p className="text-textLight">
                 Clear, upfront pricing with no hidden fees. You'll always know
                 exactly what you're paying for.
               </p>
@@ -598,21 +585,21 @@ export default function Landing() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.6 }}
               whileHover={{ scale: 1.02 }}
-              className="bg-gray-50 p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
+              className="bg-secondary p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300"
             >
               <motion.div
                 initial={{ scale: 0 }}
                 whileInView={{ scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.8 }}
-                className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-6"
+                className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center mb-6"
               >
-                <FaClock className="w-6 h-6 text-blue-600" />
+                <FaClock className="w-6 h-6 text-primary" />
               </motion.div>
-              <h3 className="text-2xl font-heading font-semibold mb-4">
+              <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                 Fast Delivery
               </h3>
-              <p className="text-gray-600">
+              <p className="text-textLight">
                 Quick turnaround times without compromising quality, helping you
                 launch your projects faster.
               </p>
@@ -622,41 +609,31 @@ export default function Landing() {
       </section>
 
       {/* Portfolio Section */}
-      <section id="portfolio" className="py-20 bg-white">
+      <section id="portfolio" className="py-20 bg-bgLight">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
             Explore My Work
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* QRganiz Project */}
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-gradient-to-br from-secondary to-primary-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <h3 className="text-2xl font-quicksand font-semibold mb-4">
+                <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                   QRganiz
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  A smart organization solution featuring QR technology and
-                  AI-powered image search for effortless item management.
+                <FaMobile className="w-6 h-6 text-primary mb-3" />
+                <p className="text-textLight mb-6">
+                  Helped a solo founder bring their idea to life — from concept
+                  to product launch. I built the website, mobile app, and QR
+                  label system, and supported their successful launch on Amazon.
+                  A simple way to organize belongings using QR code stickers and
+                  an easy-to-use mobile app.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white text-blue-600 rounded-full text-sm shadow-sm">
-                    React
-                  </span>
-                  <span className="px-3 py-1 bg-white text-blue-600 rounded-full text-sm shadow-sm">
-                    Next.js
-                  </span>
-                  <span className="px-3 py-1 bg-white text-blue-600 rounded-full text-sm shadow-sm">
-                    Mobile App
-                  </span>
-                  <span className="px-3 py-1 bg-white text-blue-600 rounded-full text-sm shadow-sm">
-                    AI Integration
-                  </span>
-                </div>
                 <a
                   href="https://www.qrganiz.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-600 hover:text-blue-700 font-semibold inline-flex items-center group"
+                  className="text-primary hover:text-primary-700 font-semibold inline-flex items-center group"
                 >
                   View Project
                   <svg
@@ -677,35 +654,25 @@ export default function Landing() {
             </div>
 
             {/* Ruh-Roh Retreat Project */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-gradient-to-br from-secondary to-accent-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <h3 className="text-2xl font-quicksand font-semibold mb-4">
+                <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                   Ruh-Roh Retreat
                 </h3>
-                <p className="text-gray-600 mb-6">
-                  A modern pet boarding service website built with React.js,
-                  featuring a responsive design, booking system, and optimized
-                  for search engines.
+                <FaStar className="w-6 h-6 text-accent mb-3" />
+                <p className="text-textLight mb-6">
+                  Helped a premium pet boarding business get discovered online
+                  and grow their bookings. I built a modern, mobile-friendly
+                  website with an easy-to-use booking system, set up their
+                  Google Business Profile, and ran local SEO and ad campaigns.
+                  The result? More visibility, more inquiries, and more happy
+                  pet owners.
                 </p>
-                <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white text-purple-600 rounded-full text-sm shadow-sm">
-                    React.js
-                  </span>
-                  <span className="px-3 py-1 bg-white text-purple-600 rounded-full text-sm shadow-sm">
-                    Next.js
-                  </span>
-                  <span className="px-3 py-1 bg-white text-purple-600 rounded-full text-sm shadow-sm">
-                    SEO
-                  </span>
-                  <span className="px-3 py-1 bg-white text-purple-600 rounded-full text-sm shadow-sm">
-                    Digital Marketing
-                  </span>
-                </div>
                 <a
                   href="https://www.ruhrohretreat.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-purple-600 hover:text-purple-700 font-semibold inline-flex items-center group"
+                  className="text-accent hover:text-accent-700 font-semibold inline-flex items-center group"
                 >
                   View Project
                   <svg
@@ -726,17 +693,17 @@ export default function Landing() {
             </div>
 
             {/* Placeholder for future projects */}
-            <div className="bg-gradient-to-br from-green-50 to-teal-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div className="bg-gradient-to-br from-secondary to-primary-50 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
               <div className="p-8">
-                <h3 className="text-2xl font-heading font-semibold mb-4">
+                <h3 className="text-2xl font-heading font-semibold mb-4 text-textLight">
                   More Projects Coming Soon
                 </h3>
-                <p className="text-gray-600 mb-6">
+                <p className="text-textLight mb-6">
                   Stay tuned for more exciting projects showcasing innovative
                   solutions and cutting-edge technologies.
                 </p>
                 <div className="flex flex-wrap gap-2 mb-6">
-                  <span className="px-3 py-1 bg-white text-green-600 rounded-full text-sm shadow-sm">
+                  <span className="px-3 py-1 bg-white text-primary rounded-full text-sm shadow-sm">
                     Coming Soon
                   </span>
                 </div>
@@ -747,9 +714,9 @@ export default function Landing() {
       </section>
 
       {/* Booking Section */}
-      <section id="booking" className="py-20 bg-gray-50">
+      <section id="booking" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
             Schedule Your Free Consultation
           </h2>
           <div className="max-w-[800px] mx-auto">
@@ -767,14 +734,14 @@ export default function Landing() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gray-50">
+      <section id="contact" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-quicksand font-bold text-center mb-16">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
             Let's Start Your Digital Journey
           </h2>
           <div className="max-w-2xl mx-auto">
             {submitError && (
-              <div className="mb-6 p-4 bg-red-50 border border-red-200 text-red-600 rounded-lg">
+              <div className="mb-6 p-4 bg-accent-50 border border-accent-200 text-accent-600 rounded-lg">
                 {submitError}
               </div>
             )}
@@ -782,7 +749,7 @@ export default function Landing() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-textLight mb-1"
                 >
                   Name
                 </label>
@@ -794,18 +761,18 @@ export default function Landing() {
                     setFormData({ ...formData, name: e.target.value })
                   }
                   className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.name ? "border-red-500" : "border-gray-300"
-                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
+                    errors.name ? "border-accent" : "border-gray-300"
+                  } shadow-sm focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
                 {errors.name && (
-                  <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                  <p className="mt-1 text-sm text-accent">{errors.name}</p>
                 )}
               </div>
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-textLight mb-1"
                 >
                   Email
                 </label>
@@ -817,18 +784,18 @@ export default function Landing() {
                     setFormData({ ...formData, email: e.target.value })
                   }
                   className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.email ? "border-red-500" : "border-gray-300"
-                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
+                    errors.email ? "border-accent" : "border-gray-300"
+                  } shadow-sm focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
                 {errors.email && (
-                  <p className="mt-1 text-sm text-red-600">{errors.email}</p>
+                  <p className="mt-1 text-sm text-accent">{errors.email}</p>
                 )}
               </div>
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-textLight mb-1"
                 >
                   Phone
                 </label>
@@ -840,18 +807,18 @@ export default function Landing() {
                   placeholder="(XXX) XXX-XXXX"
                   maxLength={14}
                   className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.phone ? "border-red-500" : "border-gray-300"
-                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200`}
+                    errors.phone ? "border-accent" : "border-gray-300"
+                  } shadow-sm focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors duration-200`}
                   required
                 />
                 {errors.phone && (
-                  <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                  <p className="mt-1 text-sm text-accent">{errors.phone}</p>
                 )}
               </div>
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-1"
+                  className="block text-sm font-medium text-textLight mb-1"
                 >
                   Message
                 </label>
@@ -863,19 +830,21 @@ export default function Landing() {
                   }
                   rows={4}
                   className={`w-full px-4 py-3 rounded-lg border ${
-                    errors.message ? "border-red-500" : "border-gray-300"
-                  } shadow-sm focus:border-blue-500 focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 transition-colors duration-200 resize-none`}
+                    errors.message ? "border-accent" : "border-gray-300"
+                  } shadow-sm focus:border-primary focus:ring-2 focus:ring-primary focus:ring-opacity-50 transition-colors duration-200 resize-none`}
                   required
                 />
                 {errors.message && (
-                  <p className="mt-1 text-sm text-red-600">{errors.message}</p>
+                  <p className="mt-1 text-sm text-accent">{errors.message}</p>
                 )}
               </div>
               <button
                 type="submit"
                 disabled={isSubmitting}
                 className={`w-full ${
-                  isSubmitting ? "bg-blue-400" : "bg-blue-600 hover:bg-blue-700"
+                  isSubmitting
+                    ? "bg-primary-400"
+                    : "bg-primary hover:bg-primary-600"
                 } text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-300 text-lg flex items-center justify-center`}
               >
                 {isSubmitting ? (
@@ -916,9 +885,9 @@ export default function Landing() {
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
           <div className="bg-white p-8 rounded-lg shadow-xl max-w-md w-full mx-4">
             <div className="text-center">
-              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
+              <div className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-primary-100 mb-4">
                 <svg
-                  className="h-6 w-6 text-green-600"
+                  className="h-6 w-6 text-primary-600"
                   fill="none"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
@@ -931,16 +900,16 @@ export default function Landing() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-quicksand font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-heading font-bold text-textLight mb-2">
                 Thank You!
               </h3>
-              <p className="text-gray-600 mb-6">
+              <p className="text-textLight mb-6">
                 Your message has been sent successfully. I'll get back to you
                 soon.
               </p>
               <button
                 onClick={() => setShowSuccess(false)}
-                className="bg-blue-600 text-white px-6 py-2 rounded-md font-semibold hover:bg-blue-700 transition-colors duration-300"
+                className="bg-primary text-white px-6 py-2 rounded-md font-semibold hover:bg-primary-600 transition-colors duration-300"
               >
                 Close
               </button>

@@ -25,12 +25,12 @@ const MainLayout: React.FC<MainLayoutProps> = ({
     <>
       <DefaultMetaData />
       {/* Header Section */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-textDark shadow-md">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center">
             <Link
               href="/"
-              className="text-2xl font-logo font-bold text-primary no-underline hover:no-underline"
+              className="text-2xl font-logo font-bold text-textLight no-underline hover:no-underline"
             >
               TheJoyDigi
             </Link>
@@ -38,37 +38,37 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
-              className="text-secondary-600 hover:text-primary font-medium"
+              className="text-textLight hover:text-primary font-medium"
             >
               Home
             </Link>
             <Link
               href="/#services"
-              className="text-secondary-600 hover:text-primary font-medium"
+              className="text-textLight hover:text-primary font-medium"
             >
               Services
             </Link>
             <Link
               href="/#about"
-              className="text-secondary-600 hover:text-primary font-medium"
+              className="text-textLight hover:text-primary font-medium"
             >
               About Me
             </Link>
             <Link
               href="/#contact"
-              className="text-secondary-600 hover:text-primary font-medium"
+              className="text-textLight hover:text-primary font-medium"
             >
               Contact
             </Link>
             <Link
               href="/blog"
-              className="text-secondary-600 hover:text-primary font-medium"
+              className="text-textLight hover:text-primary font-medium"
             >
               Blog
             </Link>
           </nav>
           <div className="md:hidden">
-            <button onClick={toggleMobileMenu} className="text-secondary-600">
+            <button onClick={toggleMobileMenu} className="text-textLight">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -89,39 +89,39 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
         {/* Mobile menu */}
         {mobileMenuOpen && (
-          <div className="md:hidden bg-white border-t shadow-md">
+          <div className="md:hidden bg-textDark border-t border-textLight shadow-md">
             <div className="container mx-auto px-4 py-2 flex flex-col">
               <Link
                 href="/"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
+                className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#services"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
+                className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/#about"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
+                className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Me
               </Link>
               <Link
                 href="/#contact"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
+                className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/blog"
-                className="py-2 text-secondary-600 hover:text-primary font-medium"
+                className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
@@ -134,21 +134,21 @@ const MainLayout: React.FC<MainLayoutProps> = ({
       <main>{children}</main>
 
       {/* Footer Section */}
-      <footer className="bg-secondary-900 text-white py-12">
+      <footer className="bg-[#2F3E46] text-[#F8F9FA] py-12">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Column 1 - About */}
             <div>
-              <h3 className="text-xl font-heading font-semibold mb-4">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-[#F8F9FA]">
                 TheJoyDigi
               </h3>
-              <p className="mb-4 text-secondary-300 font-heading">
+              <p className="mb-4 text-[#F8F9FA] font-heading">
                 Empowering businesses with innovative IT solutions. I help
                 companies transform their digital presence and streamline their
                 operations.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-accent-400">
+                <a href="#" className="text-[#F8F9FA] hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -158,7 +158,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
                 </a>
-                <a href="#" className="text-white hover:text-accent-400">
+                <a href="#" className="text-[#F8F9FA] hover:text-primary">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -173,14 +173,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
             {/* Column 2 - Services */}
             <div>
-              <h3 className="text-xl font-heading font-semibold mb-4">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-[#F8F9FA]">
                 Services
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/#services"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     Website Design & Development
                   </Link>
@@ -188,7 +188,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/#services"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     Web & Mobile App Development
                   </Link>
@@ -196,7 +196,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/#services"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     SEO & Digital Marketing
                   </Link>
@@ -204,7 +204,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/#services"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     IT & Cloud Infrastructure
                   </Link>
@@ -212,7 +212,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/#services"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     Tech Consulting & Digital Strategy
                   </Link>
@@ -222,14 +222,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
             {/* Column 3 - Quick Links */}
             <div>
-              <h3 className="text-xl font-heading font-semibold mb-4">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-[#F8F9FA]">
                 Quick Links
               </h3>
               <ul className="space-y-2">
                 <li>
                   <Link
                     href="/#about"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     About Me
                   </Link>
@@ -237,7 +237,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/blog"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     Blog
                   </Link>
@@ -245,7 +245,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <Link
                     href="/#contact"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     Contact
                   </Link>
@@ -255,14 +255,14 @@ const MainLayout: React.FC<MainLayoutProps> = ({
 
             {/* Column 4 - Contact */}
             <div>
-              <h3 className="text-xl font-heading font-semibold mb-4">
+              <h3 className="text-xl font-heading font-semibold mb-4 text-[#F8F9FA]">
                 Contact Me
               </h3>
               <ul className="space-y-2">
                 <li>
                   <a
                     href="mailto:contact@thejoydigi.com"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     contact@thejoydigi.com
                   </a>
@@ -270,7 +270,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <a
                     href="tel:6572726537"
-                    className="text-secondary-300 hover:text-accent-400"
+                    className="text-[#F8F9FA] hover:text-primary"
                   >
                     (657) 272-6537
                   </a>
@@ -278,8 +278,8 @@ const MainLayout: React.FC<MainLayoutProps> = ({
               </ul>
             </div>
           </div>
-          <div className="mt-8 pt-8 border-t border-secondary-800 text-center text-secondary-400">
-            <p>
+          <div className="mt-8 pt-8 border-t border-[#F8F9FA] text-center">
+            <p className="text-[#F8F9FA]">
               &copy; {new Date().getFullYear()} TheJoyDigi. All rights reserved.
             </p>
           </div>

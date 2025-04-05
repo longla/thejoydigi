@@ -18,9 +18,9 @@ interface BlogIndexProps {
 export default function BlogIndex({ posts }: BlogIndexProps) {
   return (
     <BlogLayout>
-      <div className="min-h-screen bg-secondary-50">
+      <div className="min-h-screen bg-bgLight">
         {/* Hero Section */}
-        <section className="bg-gradient-dark text-white py-20">
+        <section className="bg-gradient-dark text-textLight py-20">
           <div className="container mx-auto px-4">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ export default function BlogIndex({ posts }: BlogIndexProps) {
               <h1 className="text-4xl md:text-5xl font-heading font-bold mb-6 text-white">
                 TheJoyDigi Blog
               </h1>
-              <p className="text-xl text-secondary-200 max-w-2xl mx-auto">
+              <p className="text-xl text-white max-w-2xl mx-auto">
                 Insights, tips, and industry updates to help your business
                 thrive in the digital age
               </p>

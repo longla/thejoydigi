@@ -62,7 +62,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-white rounded-lg shadow-lg overflow-hidden"
+              className="bg-bgLight rounded-lg shadow-lg overflow-hidden"
             >
               <div className="relative w-full max-h-[500px] overflow-hidden flex items-center justify-center pt-8">
                 <div className="relative h-[500px] w-auto">
@@ -83,30 +83,30 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                   description={post.excerpt}
                 />
                 <div className="prose prose-lg max-w-none font-sans">
-                  <div className="prose-headings:font-heading prose-h1:font-heading prose-h2:font-heading prose-h3:font-heading prose-h4:font-heading prose-h5:font-heading prose-h6:font-heading prose-p:text-secondary-600 prose-strong:text-secondary-900 prose-strong:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
+                  <div className="prose-headings:font-heading prose-h1:font-heading prose-h2:font-heading prose-h3:font-heading prose-h4:font-heading prose-h5:font-heading prose-h6:font-heading prose-p:text-textLight prose-strong:text-textLight prose-strong:font-semibold prose-a:text-primary prose-a:no-underline hover:prose-a:underline">
                     <MDXRemote
                       {...post.content}
                       components={{
                         h1: (props) => (
                           <h1
-                            className="text-3xl font-heading font-bold mb-6"
+                            className="text-3xl font-heading font-bold mb-6 text-textLight"
                             {...props}
                           />
                         ),
                         h2: (props) => (
                           <h2
-                            className="text-2xl font-heading font-bold mb-4"
+                            className="text-2xl font-heading font-bold mb-4 text-textLight"
                             {...props}
                           />
                         ),
                         h3: (props) => (
                           <h3
-                            className="text-xl font-heading font-bold mb-3"
+                            className="text-xl font-heading font-bold mb-3 text-textLight"
                             {...props}
                           />
                         ),
                         p: (props) => (
-                          <p className="mb-4 text-secondary-600" {...props} />
+                          <p className="mb-4 text-textLight" {...props} />
                         ),
                         ul: (props) => (
                           <ul className="list-disc pl-6 mb-4" {...props} />
@@ -115,7 +115,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                           <ol className="list-decimal pl-6 mb-4" {...props} />
                         ),
                         li: (props) => (
-                          <li className="mb-2 text-secondary-600" {...props} />
+                          <li className="mb-2 text-textLight" {...props} />
                         ),
                         a: (props) => (
                           <a
@@ -125,7 +125,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                         ),
                         strong: (props) => (
                           <strong
-                            className="font-semibold text-secondary-900"
+                            className="font-semibold text-textLight"
                             {...props}
                           />
                         ),
@@ -140,14 +140,14 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
 
         {/* Related Posts Section */}
         {relatedPosts.length > 0 && (
-          <section className="py-20 bg-secondary-100">
+          <section className="py-20 bg-secondary">
             <div className="container mx-auto px-4">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.4 }}
               >
-                <h2 className="text-3xl font-heading font-bold mb-8 text-center">
+                <h2 className="text-3xl font-heading font-bold mb-8 text-center text-textLight">
                   More {post.category} Articles
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -155,7 +155,7 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                     <Link
                       key={relatedPost.slug}
                       href={`/blog/${relatedPost.slug}`}
-                      className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                      className="bg-bgLight rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                     >
                       <div className="relative h-48">
                         <Image
@@ -166,14 +166,14 @@ export default function BlogPost({ post, relatedPosts }: BlogPostProps) {
                         />
                       </div>
                       <div className="p-6">
-                        <h3 className="text-xl font-heading font-bold mb-2 text-secondary-900">
+                        <h3 className="text-xl font-heading font-bold mb-2 text-textLight">
                           {relatedPost.title}
                         </h3>
-                        <p className="text-secondary-600 mb-4">
+                        <p className="text-textLight mb-4">
                           {relatedPost.excerpt}
                         </p>
                         <div className="flex items-center justify-between">
-                          <span className="text-sm text-secondary-500">
+                          <span className="text-sm text-textLight">
                             {relatedPost.date}
                           </span>
                           <span className="text-sm text-primary font-medium">

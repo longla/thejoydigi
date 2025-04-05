@@ -7,8 +7,8 @@ interface MetaDataProps {
 }
 
 export const DefaultMetaData: React.FC<MetaDataProps> = ({
-  title = "The Joy Digi – Custom Website Design & Digital Solutions",
-  description = "Expert website design, mobile app development, SEO services, and cloud infrastructure solutions. Transform your business with our comprehensive digital services.",
+  title = "TheJoyDigi – Elevating Digital Experiences",
+  description = "Empowering businesses with cutting-edge digital solutions that drive growth and enhance user experiences. Expert website design, mobile app development, SEO services, and technical SEO implementation.",
   image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png",
 }) => {
   return (
@@ -18,12 +18,12 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta
         name="keywords"
-        content="website design, web development, mobile app development, SEO services, digital marketing, cloud infrastructure, IT support, responsive web design, custom website development, business technology solutions, digital transformation, secure hosting, cross-platform apps, social media optimization"
+        content="website design, web development, mobile app development, SEO services, digital marketing, technical SEO, digital analytics, progressive web apps, cloud infrastructure, responsive design, cross-platform apps, social media optimization, user experience design, content marketing, GDPR compliance"
       />
-      <meta name="author" content="Long – The Joy Digi" />
+      <meta name="author" content="TheJoyDigi" />
       <meta
         name="copyright"
-        content="© 2025 The Joy Digi. All rights reserved."
+        content="© 2024 TheJoyDigi. All rights reserved."
       />
       <link rel="icon" href="/favicon.ico" />
 
@@ -36,7 +36,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
         property="og:image"
         content="/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png"
       />
-      <meta property="og:site_name" content="The Joy Digi" />
+      <meta property="og:site_name" content="TheJoyDigi" />
 
       {/* Twitter */}
       <meta property="twitter:card" content="summary_large_image" />
@@ -57,7 +57,7 @@ export const DefaultMetaData: React.FC<MetaDataProps> = ({
 
       {/* Fonts */}
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700&family=Nunito:wght@400;500;600;700&family=Nunito+Sans:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Raleway:wght@400;500;600;700&display=swap"
         rel="stylesheet"
       />
 
@@ -133,7 +133,7 @@ export function BlogPostMetaData({
       <meta property="article:section" content="Digital Solutions Blog" />
       <meta
         property="article:tag"
-        content="web development, digital transformation, IT solutions, business technology"
+        content="web development, digital transformation, mobile apps, user experience, technical SEO"
       />
 
       {/* Open Graph / Facebook */}
@@ -151,7 +151,7 @@ export function BlogPostMetaData({
       <meta property="article:section" content="Digital Solutions Blog" />
       <meta
         property="article:tag"
-        content="web development, digital transformation, IT solutions, business technology"
+        content="web development, digital transformation, mobile apps, user experience, technical SEO"
       />
 
       {/* Twitter */}
@@ -164,7 +164,7 @@ export function BlogPostMetaData({
       {/* Additional SEO Meta Tags */}
       <meta
         name="keywords"
-        content="web development, digital transformation, IT solutions, business technology, ${title.toLowerCase()}"
+        content="website design, web development, mobile app development, progressive web apps, technical SEO, digital analytics, ${title.toLowerCase()}"
       />
       <meta name="robots" content="index, follow" />
       <link rel="canonical" href={`https://www.thejoydigi.com/blog/${slug}`} />
