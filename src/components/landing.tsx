@@ -165,7 +165,7 @@ export default function Landing() {
       id: 2,
       title: "Mobile App Development",
       description:
-        "I help founders bring their app ideas to life without needing a technical background. I design and build mobile apps for iOS and Android that are user-friendly, scalable, and tailored to your goals — whether it’s a side project or the start of a business.",
+        "I help founders bring their app ideas to life without needing a technical background. I design and build mobile apps for iOS and Android that are user-friendly, scalable, and tailored to your goals — whether it's a side project or the start of a business.",
       icon: <FaMobile className="w-6 h-6" />,
       features: [
         "Apps designed with your goals in mind",
@@ -178,20 +178,20 @@ export default function Landing() {
       id: 3,
       title: "SEO & Digital Marketing",
       description:
-        "Want to show up on Google and get more customers? I take care of SEO and digital ads for you — including Google, Facebook, Instagram, and Amazon. You don’t need to understand the tech — I handle it all and help you reach more people online.",
+        "Want to show up on Google and get more customers? I take care of SEO and digital ads for you — including Google, Facebook, Instagram, and Amazon. You don't need to understand the tech — I handle it all and help you reach more people online.",
       icon: <FaRocket className="w-6 h-6" />,
       features: [
         "Get found on Google with smart SEO",
         "Run ads that bring real customers",
         "Help with content and social media",
-        "Simple reports to show what’s working",
+        "Simple reports to show what's working",
       ],
     },
     {
       id: 5,
       title: "Digital Analytics",
       description:
-        "I set up tracking so you know what’s working and what’s not. No complicated dashboards — just clear reports that show where your visitors come from, what they do, and how your business is growing.",
+        "I set up tracking so you know what's working and what's not. No complicated dashboards — just clear reports that show where your visitors come from, what they do, and how your business is growing.",
       icon: <FaLaptopCode className="w-6 h-6" />,
       features: [
         "Track visits and customer behavior",
@@ -329,7 +329,7 @@ export default function Landing() {
             Meet Your Digital Partner
           </h2>
           <div className="grid md:grid-cols-2 gap-12">
-            <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+            <div className="relative w-[400px] h-[400px] rounded-full overflow-hidden shadow-xl mx-auto">
               <Image
                 src="/about-image.jpeg"
                 alt="Long La - Your Digital Partner"
