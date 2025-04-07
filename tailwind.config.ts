@@ -16,7 +16,8 @@ const config: Config = {
         "serif",
       ],
       heading: ["Raleway", "sans-serif"],
-      logo: ["Raleway", "sans-serif"],
+      logo: ["Quicksand", "sans-serif"],
+      body: ["Inter", "sans-serif"],
     },
     extend: {
       backgroundImage: {
@@ -27,7 +28,7 @@ const config: Config = {
       },
       colors: {
         primary: {
-          DEFAULT: "#4ABEFF", // Joyful Sky
+          DEFAULT: "#4ABEFF",
           50: "#f0f9ff",
           100: "#e0f2fe",
           200: "#bae6fd",
@@ -41,7 +42,7 @@ const config: Config = {
           950: "#082f49",
         },
         secondary: {
-          DEFAULT: "#FDF6EC", // Soft Sand
+          DEFAULT: "#FDF6EC",
           50: "#fefefe",
           100: "#FDF6EC",
           200: "#fbecdb",
@@ -55,23 +56,23 @@ const config: Config = {
           950: "#432310",
         },
         accent: {
-          DEFAULT: "#FF6B6B", // Coral Bloom
-          50: "#fff1f1",
-          100: "#ffe1e1",
-          200: "#ffc7c7",
-          300: "#ffa0a0",
-          400: "#ff6b6b",
-          500: "#f83b3b",
-          600: "#e51d1d",
-          700: "#c11616",
-          800: "#a01616",
-          900: "#841818",
-          950: "#480707",
+          DEFAULT: "#009CA6",
+          50: "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#bae6fd",
+          300: "#7dd3fc",
+          400: "#38bdf8",
+          500: "#009CA6",
+          600: "#0284c7",
+          700: "#0369a1",
+          800: "#075985",
+          900: "#0c4a6e",
+          950: "#082f49",
         },
-        textLight: "#2F4F4F", // Cool Slate
-        textDark: "#F8F9FA", // Soft White
-        bgLight: "#FFFFFF", // Crisp White
-        bgDark: "#2F3E46", // Slate Depth
+        textLight: "#333333",
+        bgLight: "#FDF6EC",
+        textDark: "#F8F9FA",
+        bgDark: "#2F3E46",
       },
       borderRadius: {
         DEFAULT: "8px",

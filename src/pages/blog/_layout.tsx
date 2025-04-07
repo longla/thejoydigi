@@ -77,7 +77,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
               href="/#about"
               className="text-textLight hover:text-primary font-medium"
             >
-              About Me
+              About Us
             </Link>
             <Link
               href="/#contact"
@@ -135,7 +135,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 className="py-2 text-textLight hover:text-primary font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
-                About Me
+                About Us
               </Link>
               <Link
                 href="/#contact"
@@ -256,7 +256,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                     href="/#about"
                     className="text-[#F8F9FA] hover:text-primary"
                   >
-                    About Me
+                    About Us
                   </Link>
                 </li>
                 <li>
