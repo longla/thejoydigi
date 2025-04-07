@@ -220,12 +220,9 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#009CA6] mb-6 font-logo"
           >
-            The Joy Digi
-          </motion.h1>
-          <p className="text-xl md:text-2xl text-[#009CA6] mb-4 max-w-3xl mx-auto">
             A Digital Studio for Visionary Brands
-          </p>
-          <p className="text-lg text-gray-600 mb-8 max-w-3xl mx-auto">
+          </motion.h1>
+          <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
             Helping businesses grow with purposeful design, custom tech, and
             clear strategy
           </p>
