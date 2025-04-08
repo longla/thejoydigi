@@ -70,18 +70,40 @@ I’ve spent over 10 years as a software engineer working with big tech companie
 
 The Joy Digi is my way of combining that experience with a personal mission: helping others bring meaningful ideas to life. I believe in a **value-first approach** — where every project is designed not just to look good, but to make a real impact. Whether it’s a handcrafted website, a custom app, or a strategy session, it’s all about creating tools that truly serve your goals.
 
-#### 🎨 Visual Identity:
+#### 🎨 Visual Identity
 
-- **Logo:** Bold blue typography, stylized sun in “JOY”, wave in “DIGI”
-- **Color Palette:**
-  - Sky Blue `#4ABEFF` (Primary)
-  - Soft Sand `#FDF6EC` (Background)
-  - Ocean Teal `#009CA6` or Coral `#FF6B6B` (Accent)
-- **Typography:**
-  - Headings: Quicksand
-  - Body: Inter
+**Logo:**  
+Bold typography with a stylized sun in the “O” of **JOY** and a wave flowing through **DIGI** — symbolizing warmth, clarity, and creative motion.
+
+**Color Palette:**
+
+| Name               | Hex       | Role                                           |
+| ------------------ | --------- | ---------------------------------------------- |
+| **Deep Teal Blue** | `#003B49` | Primary – depth, trust, clarity                |
+| **Soft Sand**      | `#FDF6EC` | Secondary – warmth, space, approachability     |
+| **Coral**          | `#FF6B6B` | Accent – energy, contrast, emotional warmth    |
+| **Sky Blue**       | `#4ABEFF` | Accent – freshness, modern edge (optional use) |
+
+**Typography:**
+
+- **Headings:** Quicksand – rounded, modern, and friendly
+- **Body Text:** Inter – clean, legible, and professional
 
 ---
+
+### 🧭 Color Usage Guidelines
+
+| UI Element             | Suggested Colors                       |
+| ---------------------- | -------------------------------------- |
+| **Header / Logo**      | Deep Teal Blue (`#003B49`)             |
+| **CTA Buttons**        | Sky Blue (Accent)                      |
+| **Backgrounds**        | Soft Sand (`#FDF6EC`)                  |
+| **Text / Body**        | Deep Teal Blue (`#003B49`) or Charcoal |
+| **Headings**           | Deep Teal Blue                         |
+| **Inline Links**       | Coral                                  |
+| **Hover States**       | Darker/lighter Coral                   |
+| **Icons / Highlights** | Sky Blue                               |
+| **Footer Background**  | Muted Deep Teal or Soft Sand           |
 
 ### 📁 Case Studies
 

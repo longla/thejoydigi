@@ -218,24 +218,24 @@ export default function Landing() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#009CA6] mb-6 font-logo"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-logo"
           >
             A Digital Studio for Visionary Brands
           </motion.h1>
-          <p className="text-xl md:text-2xl text-gray-600 mb-4 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-[#003B49] mb-4 max-w-3xl mx-auto">
             Helping businesses grow with purposeful design, custom tech, and
             clear strategy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#booking"
-              className="inline-block bg-[#4ABEFF] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#009CA6] transition-colors duration-300"
+              className="inline-block bg-[#4ABEFF] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#003B49] transition-colors duration-300"
             >
               Schedule Your Free Consultation
             </a>
             <a
               href="#contact"
-              className="inline-block bg-white text-[#4ABEFF] border-2 border-[#4ABEFF] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#FDF6EC] transition-colors duration-300"
+              className="inline-block bg-white text-[#003B49] border-2 border-[#003B49] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#FDF6EC] transition-colors duration-300"
             >
               Contact Us
             </a>
@@ -244,13 +244,13 @@ export default function Landing() {
       </section>
 
       {/* Services Section */}
-      <section id="services" className="py-20 bg-secondary-100">
+      <section id="services" className="py-20 bg-[#FDF6EC]">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-500 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               Services
             </h2>
-            <p className="text-lg text-textLight max-w-2xl mx-auto">
+            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
               Helping businesses grow with purposeful design, custom tech, and
               clear strategy
             </p>
@@ -261,38 +261,36 @@ export default function Landing() {
                 key={service.id}
                 className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
               >
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mb-6">
+                <div className="w-16 h-16 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-6">
                   {service.icon &&
                     React.cloneElement(service.icon as React.ReactElement, {
-                      className: "w-6 h-6 text-accent-500",
+                      className: "w-6 h-6 text-[#4ABEFF]",
                     })}
                 </div>
-                <h3 className="text-2xl font-bold text-accent-500 mb-4">
+                <h3 className="text-2xl font-bold text-[#003B49] mb-4">
                   {service.title}
                 </h3>
-                <p className="text-textLight mb-6">{service.description}</p>
-
+                <p className="text-[#003B49] mb-6">{service.description}</p>
                 <div className="mb-6">
-                  <h4 className="text-lg font-semibold text-accent-500 mb-3">
+                  <h4 className="text-lg font-semibold text-[#003B49] mb-3">
                     Perfect For:
                   </h4>
                   <ul className="space-y-2">
                     {service.targetAudience?.map((audience, index) => (
                       <li
                         key={index}
-                        className="flex items-center text-textLight"
+                        className="flex items-center text-[#003B49]"
                       >
-                        <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                        <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                         {audience}
                       </li>
                     ))}
                   </ul>
                 </div>
-
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <a
                     href="#booking"
-                    className="inline-block w-full text-center bg-primary-500 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-600 transition-colors duration-300"
+                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#003B49] transition-colors duration-300"
                   >
                     Get Started
                   </a>
@@ -306,14 +304,14 @@ export default function Landing() {
       {/* Process Section */}
       <section
         id="process"
-        className="py-20 bg-gradient-to-br from-[#4ABEFF]/5 to-[#009CA6]/5"
+        className="py-20 bg-gradient-to-br from-[#4ABEFF]/5 to-[#003B49]/5"
       >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#009CA6] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               How We Work
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
               Our simple, transparent process designed to bring your vision to
               life
             </p>
@@ -326,10 +324,10 @@ export default function Landing() {
                   1
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
                 Free Consultation
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Let's chat about your goals and ideas over a virtual coffee
               </p>
             </div>
@@ -341,10 +339,10 @@ export default function Landing() {
                   2
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
                 Custom Proposal
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 A tailored plan that fits your needs and budget perfectly
               </p>
             </div>
@@ -356,10 +354,10 @@ export default function Landing() {
                   3
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
                 Design & Build
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Watch your vision come to life with our creative magic
               </p>
             </div>
@@ -371,10 +369,10 @@ export default function Landing() {
                   4
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
                 Review & Iterate
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Your feedback helps us make it even better
               </p>
             </div>
@@ -386,10 +384,10 @@ export default function Landing() {
                   5
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
                 Launch & Support
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Time to shine! We're here to help you succeed
               </p>
             </div>
@@ -401,7 +399,7 @@ export default function Landing() {
       <section id="about" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#009CA6] mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-8">
               Meet Your Digital Partner
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
@@ -413,7 +411,7 @@ export default function Landing() {
                 />
               </div>
               <div className="w-full md:w-1/2 text-left">
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-[#003B49] mb-6">
                   Hi, I'm Long — founder and developer of The Joy Digi. I've
                   spent over 10 years as a software engineer working with big
                   tech companies, startups, and consulting firms. Throughout
@@ -421,7 +419,7 @@ export default function Landing() {
                   apps to robust internal systems, learning what really creates
                   value for a business.
                 </p>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-[#003B49] mb-6">
                   The Joy Digi is my way of combining that experience with a
                   personal mission: helping others bring meaningful ideas to
                   life. I believe in a value-first approach — where every
@@ -434,7 +432,7 @@ export default function Landing() {
                   <span className="px-3 py-1 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-medium">
                     10+ Years Experience
                   </span>
-                  <span className="px-3 py-1 bg-[#009CA6]/10 text-[#009CA6] rounded-full text-sm font-medium">
+                  <span className="px-3 py-1 bg-[#003B49]/10 text-[#003B49] rounded-full text-sm font-medium">
                     Big Tech Background
                   </span>
                   <span className="px-3 py-1 bg-[#FF6B6B]/10 text-[#FF6B6B] rounded-full text-sm font-medium">
@@ -454,10 +452,10 @@ export default function Landing() {
       <section className="py-20 bg-[#FDF6EC]">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#009CA6] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               What Sets The Joy Digi Apart
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-[#003B49]">
               Our unique approach to digital solutions
             </p>
           </div>
@@ -472,10 +470,10 @@ export default function Landing() {
               <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                 <FaChartLine className="w-6 h-6 text-[#4ABEFF]" />
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                 Growth-focused
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Solutions built to support clients' next stage of growth,
                 ensuring your digital presence scales with your business.
               </p>
@@ -490,10 +488,10 @@ export default function Landing() {
               <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                 <FaUserCog className="w-6 h-6 text-[#4ABEFF]" />
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                 Tailored Approach
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Every project is shaped by your unique goals and needs, not
                 cookie-cutter solutions.
               </p>
@@ -508,10 +506,10 @@ export default function Landing() {
               <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                 <FaHeart className="w-6 h-6 text-[#4ABEFF]" />
               </div>
-              <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+              <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                 Built with Care
               </h3>
-              <p className="text-gray-600">
+              <p className="text-[#003B49]">
                 Clean design, solid tech, and long-term value at the core of
                 everything we create.
               </p>
@@ -524,10 +522,10 @@ export default function Landing() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#009CA6] mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               Transparent Pricing
             </h2>
-            <p className="text-lg text-gray-600 mb-8">
+            <p className="text-lg text-[#003B49] mb-8">
               Fair and straightforward pricing that works for your business
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -535,10 +533,10 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                   <FaClock className="w-6 h-6 text-[#4ABEFF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+                <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                   Hourly Rate
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[#003B49]">
                   Based on project needs and complexity
                 </p>
               </div>
@@ -546,10 +544,10 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                   <FaChartBar className="w-6 h-6 text-[#4ABEFF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+                <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                   Time Tracking
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[#003B49]">
                   Transparent tracking of all project hours
                 </p>
               </div>
@@ -557,10 +555,10 @@ export default function Landing() {
                 <div className="w-12 h-12 bg-[#4ABEFF]/10 rounded-full flex items-center justify-center mb-4">
                   <FaFileInvoice className="w-6 h-6 text-[#4ABEFF]" />
                 </div>
-                <h3 className="text-xl font-semibold text-[#009CA6] mb-4">
+                <h3 className="text-xl font-semibold text-[#003B49] mb-4">
                   Custom Quotes
                 </h3>
-                <p className="text-gray-600">
+                <p className="text-[#003B49]">
                   Tailored pricing for every client's needs
                 </p>
               </div>
@@ -573,10 +571,10 @@ export default function Landing() {
       <section id="portfolio" className="py-20 bg-secondary-100">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-accent-500 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               Real Projects. Real Results.
             </h2>
-            <p className="text-lg text-textLight max-w-2xl mx-auto">
+            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
               See how we've helped businesses grow with purposeful design and
               modern technology
             </p>
@@ -585,39 +583,39 @@ export default function Landing() {
             {/* QRganiz Case Study */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-accent-500">QRganiz</h3>
-                <span className="px-4 py-2 bg-primary-100 text-primary-500 rounded-full text-sm font-semibold">
+                <h3 className="text-2xl font-bold text-[#003B49]">QRganiz</h3>
+                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
                   Mobile App + Website
                 </span>
               </div>
-              <p className="text-textLight mb-6">
+              <p className="text-[#003B49] mb-6">
                 A smart QR code-based item tracker that helps users organize
                 their personal belongings. The project included both product
                 development and go-to-market strategy.
               </p>
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-accent-500 mb-3">
+                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
                   What We Did:
                 </h4>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Product Design & Branding
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Mobile App Development (React Native)
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Website Design & Development
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Amazon Product Launch Support
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     SEO Strategy & Content
                   </li>
                 </ul>
@@ -627,7 +625,7 @@ export default function Landing() {
                   href="https://www.qrganiz.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-500 hover:text-primary-600 font-semibold flex items-center"
+                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
                 >
                   View Project
                   <svg
@@ -653,40 +651,40 @@ export default function Landing() {
             {/* Ruh Roh Retreat Case Study */}
             <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
               <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-accent-500">
+                <h3 className="text-2xl font-bold text-[#003B49]">
                   Ruh Roh Retreat
                 </h3>
-                <span className="px-4 py-2 bg-primary-100 text-primary-500 rounded-full text-sm font-semibold">
+                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
                   Website + Booking System
                 </span>
               </div>
-              <p className="text-textLight mb-6">
+              <p className="text-[#003B49] mb-6">
                 A premium dog boarding business in California that needed a
                 complete digital presence, from branding to booking system.
               </p>
               <div className="mb-6">
-                <h4 className="text-lg font-semibold text-accent-500 mb-3">
+                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
                   What We Did:
                 </h4>
                 <ul className="space-y-2">
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Brand Identity Development
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Website Design & Development
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Booking System Integration
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Content Strategy & SEO
                   </li>
-                  <li className="flex items-center text-textLight">
-                    <span className="w-2 h-2 bg-primary-500 rounded-full mr-3"></span>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
                     Social Media Marketing
                   </li>
                 </ul>
@@ -696,7 +694,7 @@ export default function Landing() {
                   href="https://ruhrohretreat.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-primary-500 hover:text-primary-600 font-semibold flex items-center"
+                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
                 >
                   View Project
                   <svg
@@ -725,7 +723,7 @@ export default function Landing() {
       {/* Booking Section */}
       <section id="booking" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-[#003B49]">
             Schedule Your Free Consultation
           </h2>
           <div className="max-w-[800px] mx-auto">
@@ -745,7 +743,7 @@ export default function Landing() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-secondary">
         <div className="container mx-auto px-4">
-          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-textLight">
+          <h2 className="text-4xl font-heading font-bold text-center mb-16 text-[#003B49]">
             Let's Start Your Digital Journey
           </h2>
           <div className="max-w-2xl mx-auto">
@@ -758,7 +756,7 @@ export default function Landing() {
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-textLight mb-1"
+                  className="block text-sm font-medium text-[#003B49] mb-1"
                 >
                   Name
                 </label>
@@ -781,7 +779,7 @@ export default function Landing() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-textLight mb-1"
+                  className="block text-sm font-medium text-[#003B49] mb-1"
                 >
                   Email
                 </label>
@@ -804,7 +802,7 @@ export default function Landing() {
               <div>
                 <label
                   htmlFor="phone"
-                  className="block text-sm font-medium text-textLight mb-1"
+                  className="block text-sm font-medium text-[#003B49] mb-1"
                 >
                   Phone
                 </label>
@@ -827,7 +825,7 @@ export default function Landing() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-textLight mb-1"
+                  className="block text-sm font-medium text-[#003B49] mb-1"
                 >
                   Message
                 </label>
@@ -909,10 +907,10 @@ export default function Landing() {
                   />
                 </svg>
               </div>
-              <h3 className="text-2xl font-heading font-bold text-textLight mb-2">
+              <h3 className="text-2xl font-heading font-bold text-[#003B49] mb-2">
                 Thank You!
               </h3>
-              <p className="text-textLight mb-6">
+              <p className="text-[#003B49] mb-6">
                 Your message has been sent successfully. I'll get back to you
                 soon.
               </p>
