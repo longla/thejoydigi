@@ -290,7 +290,7 @@ export default function Landing() {
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <a
                     href="#booking"
-                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#FF6B6B] transition-colors duration-300"
+                    className="inline-block w-full text-center border-2 border-[#4ABEFF] text-[#4ABEFF] bg-[#FDF6EC] px-6 py-3 rounded-full font-semibold hover:text-[#FF6B6B] hover:border-[#FF6B6B] transition-colors duration-300"
                   >
                     Get Started
                   </a>
