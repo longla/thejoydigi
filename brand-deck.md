@@ -101,7 +101,7 @@ Bold typography with a stylized sun in the “O” of **JOY** and a wave flowing
 | **Text / Body**        | Deep Teal Blue (`#003B49`) or Charcoal |
 | **Headings**           | Deep Teal Blue                         |
 | **Inline Links**       | Coral                                  |
-| **Hover States**       | Darker/lighter Coral                   |
+| **Hover States**       | Darker Coral                           |
 | **Icons / Highlights** | Sky Blue                               |
 | **Footer Background**  | Muted Deep Teal or Soft Sand           |
 

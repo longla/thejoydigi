@@ -63,31 +63,31 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
           <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Home
             </Link>
             <Link
               href="/#services"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Services
             </Link>
             <Link
               href="/#about"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               About Us
             </Link>
             <Link
               href="/#contact"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Contact
             </Link>
             <Link
               href="/blog"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Blog
             </Link>
@@ -118,35 +118,35 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
             <div className="container mx-auto px-4 py-2 flex flex-col">
               <Link
                 href="/"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#services"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/#about"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 href="/#contact"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/blog"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
@@ -173,7 +173,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 operations.
               </p>
               <div className="flex space-x-4">
-                <a href="#" className="text-white hover:text-[#4ABEFF]">
+                <a href="#" className="text-white hover:text-[#FF6B6B]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -183,7 +183,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
                   </svg>
                 </a>
-                <a href="#" className="text-white hover:text-[#4ABEFF]">
+                <a href="#" className="text-white hover:text-[#FF6B6B]">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="h-6 w-6"
@@ -205,7 +205,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#services"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     Website Design & Development
                   </Link>
@@ -213,7 +213,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#services"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     Web & Mobile App Development
                   </Link>
@@ -221,7 +221,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#services"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     SEO & Digital Marketing
                   </Link>
@@ -229,7 +229,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#services"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     IT & Cloud Infrastructure
                   </Link>
@@ -237,7 +237,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#services"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     Tech Consulting & Digital Strategy
                   </Link>
@@ -254,7 +254,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#about"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     About Us
                   </Link>
@@ -262,7 +262,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/blog"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     Blog
                   </Link>
@@ -270,7 +270,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <Link
                     href="/#contact"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     Contact
                   </Link>
@@ -287,7 +287,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <a
                     href="mailto:contact@thejoydigi.com"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     contact@thejoydigi.com
                   </a>
@@ -295,7 +295,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 <li>
                   <a
                     href="tel:6572726537"
-                    className="text-white hover:text-[#4ABEFF]"
+                    className="text-white hover:text-[#FF6B6B]"
                   >
                     (657) 272-6537
                   </a>

@@ -229,15 +229,15 @@ export default function Landing() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#booking"
-              className="inline-block bg-[#4ABEFF] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#003B49] transition-colors duration-300"
+              className="inline-block bg-[#4ABEFF] text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#FF6B6B] transition-colors duration-300"
             >
               Schedule Your Free Consultation
             </a>
             <a
               href="#contact"
-              className="inline-block bg-white text-[#003B49] border-2 border-[#003B49] px-8 py-4 rounded-full text-lg font-semibold hover:bg-[#FDF6EC] transition-colors duration-300"
+              className="inline-flex items-center justify-center px-8 py-3 border-2 border-[#4ABEFF] text-[#4ABEFF] rounded-full font-medium hover:text-[#FF6B6B] hover:border-[#FF6B6B] transition-colors duration-300 bg-[#FDF6EC] w-full sm:w-auto"
             >
-              Contact Us
+              Get Started
             </a>
           </div>
         </div>
@@ -290,7 +290,7 @@ export default function Landing() {
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <a
                     href="#booking"
-                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#003B49] transition-colors duration-300"
+                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#FF6B6B] transition-colors duration-300"
                   >
                     Get Started
                   </a>

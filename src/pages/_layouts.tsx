@@ -38,31 +38,31 @@ const MainLayout: React.FC<MainLayoutProps> = ({
           <nav className="hidden md:flex space-x-8">
             <Link
               href="/"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Home
             </Link>
             <Link
               href="/#services"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Services
             </Link>
             <Link
               href="/#about"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               About Us
             </Link>
             <Link
               href="/#contact"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Contact
             </Link>
             <Link
               href="/blog"
-              className="text-[#003B49] hover:text-[#4ABEFF] font-medium"
+              className="text-[#003B49] hover:text-[#FF6B6B] font-medium"
             >
               Blog
             </Link>
@@ -93,35 +93,35 @@ const MainLayout: React.FC<MainLayoutProps> = ({
             <div className="container mx-auto px-4 py-2 flex flex-col">
               <Link
                 href="/"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Home
               </Link>
               <Link
                 href="/#services"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Services
               </Link>
               <Link
                 href="/#about"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 About Us
               </Link>
               <Link
                 href="/#contact"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Contact
               </Link>
               <Link
                 href="/blog"
-                className="py-2 text-[#003B49] hover:text-[#4ABEFF] font-medium"
+                className="py-2 text-[#003B49] hover:text-[#FF6B6B] font-medium"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Blog
@@ -157,7 +157,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <a
                     href="#services"
-                    className="text-white hover:text-[#4ABEFF] transition-colors duration-300"
+                    className="text-white hover:text-[#FF6B6B] transition-colors duration-300"
                   >
                     Website Design & Development
                   </a>
@@ -165,7 +165,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <a
                     href="#services"
-                    className="text-white hover:text-[#4ABEFF] transition-colors duration-300"
+                    className="text-white hover:text-[#FF6B6B] transition-colors duration-300"
                   >
                     Web & Mobile Applications
                   </a>
@@ -173,7 +173,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li>
                   <a
                     href="#services"
-                    className="text-white hover:text-[#4ABEFF] transition-colors duration-300"
+                    className="text-white hover:text-[#FF6B6B] transition-colors duration-300"
                   >
                     Digital Consulting
                   </a>
@@ -186,7 +186,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li className="text-white">
                   <a
                     href="mailto:hello@thejoydigi.com"
-                    className="hover:text-[#4ABEFF] transition-colors duration-300"
+                    className="hover:text-[#FF6B6B] transition-colors duration-300"
                   >
                     hello@thejoydigi.com
                   </a>
@@ -194,7 +194,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 <li className="text-white">
                   <a
                     href="tel:+16572726537"
-                    className="hover:text-[#4ABEFF] transition-colors duration-300"
+                    className="hover:text-[#FF6B6B] transition-colors duration-300"
                   >
                     (657) 272-6537
                   </a>
