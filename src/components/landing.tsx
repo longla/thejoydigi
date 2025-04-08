@@ -290,7 +290,7 @@ export default function Landing() {
                 <div className="mt-8 pt-6 border-t border-gray-100">
                   <a
                     href="#booking"
-                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-lg font-semibold hover:bg-[#FF6B6B] transition-colors duration-300"
+                    className="inline-block w-full text-center bg-[#4ABEFF] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#FF6B6B] transition-colors duration-300"
                   >
                     Get Started
                   </a>
@@ -848,11 +848,11 @@ export default function Landing() {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full ${
+                className={`w-full text-center px-6 py-3 rounded-full font-semibold transition-colors duration-300 text-white ${
                   isSubmitting
-                    ? "bg-primary-400"
-                    : "bg-primary hover:bg-primary-600"
-                } text-white px-6 py-4 rounded-lg font-semibold transition-colors duration-300 text-lg flex items-center justify-center`}
+                    ? "bg-[#FF6B6B] opacity-75 cursor-not-allowed"
+                    : "bg-[#4ABEFF] hover:bg-[#FF6B6B]"
+                } flex items-center justify-center`}
               >
                 {isSubmitting ? (
                   <>
