@@ -209,9 +209,12 @@ export default function Landing() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-br from-[#FDF6EC] via-white to-[#4ABEFF]">
+      <section
+        id="home"
+        className="relative h-screen flex items-center justify-center bg-[url('/hero-image.png')] md:bg-[url('/hero-image-desktop.png')] bg-cover bg-center"
+      >
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(74,190,255,0.05),transparent_50%)]"></div>
+          {/* Removed the gradient div, keeping structure if needed later */}
         </div>
         <div className="container mx-auto px-4 text-center relative z-10">
           <motion.h1
