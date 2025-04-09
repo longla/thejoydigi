@@ -210,8 +210,7 @@ At The Joy Digi, we aim to make your digital transformation feel easy, fun, and 
 1. **Free Consultation** – Understand your goals, challenges, and ideas.
 2. **Custom Proposal** – You'll receive a tailored plan with scope, time estimate, and cost.
 3. **Design & Build** – We turn your vision into a clean, functional digital product.
-4. **Review & Iterate** – You'll give feedback at key milestones for alignment.
-5. **Launch & Support** – We help launch your site/app and provide ongoing support if needed.
+4. **Launch & Support** – We help launch your site/app and provide ongoing support if needed.
 
 #### 💬 Pricing Model:
 

@@ -488,7 +488,13 @@ export default function Landing() {
         className="py-20 bg-gradient-to-br from-[#4ABEFF]/5 to-[#003B49]/5"
       >
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            className="text-center mb-12"
+          >
             <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               How We Work
             </h2>
@@ -496,84 +502,225 @@ export default function Landing() {
               At The Joy Digi, we aim to make your digital transformation feel
               easy, fun, and empowering — not overwhelming.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
-            {/* Step 1 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                <div className="w-16 h-16 bg-[#4ABEFF] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  1
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.2,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 },
+                }}
+                className="flex items-center justify-center mb-6"
+              >
+                <Image
+                  src="/how-we-work/Consultation.svg"
+                  alt="Free Consultation"
+                  width={120}
+                  height={120}
+                  className="w-32 h-32"
+                />
+              </motion.div>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="text-xl font-bold text-[#003B49] mb-2 text-center"
+              >
                 Free Consultation
-              </h3>
-              <p className="text-[#003B49]">
-                Understand your goals, challenges, and ideas
-              </p>
-            </div>
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-[#003B49]"
+              >
+                Understand your goals, challenges, and ideas.
+              </motion.p>
+            </motion.div>
 
-            {/* Step 2 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                <div className="w-16 h-16 bg-[#4ABEFF] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  2
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 },
+                }}
+                className="flex items-center justify-center mb-6"
+              >
+                <Image
+                  src="/how-we-work/proposal.svg"
+                  alt="Custom Proposal"
+                  width={120}
+                  height={120}
+                  className="w-32 h-32"
+                />
+              </motion.div>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4 }}
+                className="text-xl font-bold text-[#003B49] mb-2 text-center"
+              >
                 Custom Proposal
-              </h3>
-              <p className="text-[#003B49]">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="text-[#003B49]"
+              >
                 You'll receive a tailored plan with scope, time estimate, and
-                cost
-              </p>
-            </div>
+                cost.
+              </motion.p>
+            </motion.div>
 
-            {/* Step 3 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                <div className="w-16 h-16 bg-[#4ABEFF] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  3
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.4,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 },
+                }}
+                className="flex items-center justify-center mb-6"
+              >
+                <Image
+                  src="/how-we-work/build.svg"
+                  alt="Design & Build"
+                  width={120}
+                  height={120}
+                  className="w-32 h-32"
+                />
+              </motion.div>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                className="text-xl font-bold text-[#003B49] mb-2 text-center"
+              >
                 Design & Build
-              </h3>
-              <p className="text-[#003B49]">
-                We turn your vision into a clean, functional digital product
-              </p>
-            </div>
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="text-[#003B49]"
+              >
+                We turn your vision into a clean, functional digital product.
+              </motion.p>
+            </motion.div>
 
-            {/* Step 4 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                <div className="w-16 h-16 bg-[#4ABEFF] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  4
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
-                Review & Iterate
-              </h3>
-              <p className="text-[#003B49]">
-                You'll give feedback at key milestones for alignment
-              </p>
-            </div>
-
-            {/* Step 5 */}
-            <div className="flex flex-col items-center text-center group">
-              <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-110">
-                <div className="w-16 h-16 bg-[#4ABEFF] rounded-full flex items-center justify-center text-white text-2xl font-bold">
-                  5
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-[#003B49] mb-2 group-hover:text-[#4ABEFF] transition-colors duration-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20, scale: 0.95 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="bg-white p-6 rounded-lg shadow-lg"
+            >
+              <motion.div
+                initial={{ scale: 0.8, rotate: -5 }}
+                whileInView={{ scale: 1, rotate: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.5,
+                  type: "spring",
+                  stiffness: 100,
+                  damping: 10,
+                }}
+                whileHover={{
+                  scale: 1.1,
+                  rotate: 5,
+                  transition: { duration: 0.3 },
+                }}
+                className="flex items-center justify-center mb-6"
+              >
+                <Image
+                  src="/how-we-work/launching.svg"
+                  alt="Launch & Support"
+                  width={120}
+                  height={120}
+                  className="w-32 h-32"
+                />
+              </motion.div>
+              <motion.h3
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.6 }}
+                className="text-xl font-bold text-[#003B49] mb-2 text-center"
+              >
                 Launch & Support
-              </h3>
-              <p className="text-[#003B49]">
+              </motion.h3>
+              <motion.p
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.7 }}
+                className="text-[#003B49]"
+              >
                 We help launch your site/app and provide ongoing support if
-                needed
-              </p>
-            </div>
+                needed.
+              </motion.p>
+            </motion.div>
           </div>
         </div>
       </section>
