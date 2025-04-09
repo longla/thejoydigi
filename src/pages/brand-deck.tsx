@@ -167,7 +167,7 @@ _A Digital Studio for Visionary Brands_
 
 #### ✨ Mission Statement:
 
-Helping businesses grow with purposeful design, custom tech, and clear strategy.
+Helping businesses grow with joyful experiences, purposeful design, custom tech, and clear strategy.
 
 #### 🎯 Positioning Statement:
 

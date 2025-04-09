@@ -270,8 +270,8 @@ export default function Landing() {
             A Digital Studio for Visionary Brands
           </motion.h1>
           <p className="text-xl md:text-2xl text-[#003B49] mb-4 max-w-3xl mx-auto">
-            Helping businesses grow with purposeful design, custom tech, and
-            clear strategy
+            Helping businesses grow with joyful experiences, purposeful design,
+            custom tech, and clear strategy
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
@@ -298,8 +298,8 @@ export default function Landing() {
               Services
             </h2>
             <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
-              Helping businesses grow with purposeful design, custom tech, and
-              clear strategy
+              Helping businesses grow with joyful experiences, purposeful
+              design, custom tech, and clear strategy
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
