@@ -171,7 +171,7 @@ Helping businesses grow with joyful experiences, purposeful design, custom tech,
 
 #### 🎯 Positioning Statement:
 
-The Joy Digi helps bring ideas to life through thoughtful design and modern technology. Services include websites, web apps, and digital tools that are clean, functional, and tailored to clients' goals. Focused on creating real value that supports business growth.
+The Joy Digi helps bring ideas to life through thoughtful design and modern technology. Services include websites, web apps, and digital tools that are clean, functional, and tailored to clients' goals. Focused on creating real value that supports business growth. We make your digital journey joyful and stress-free — handling the technical side so you can focus on running your business.
 
 #### 🌊 What Sets The Joy Digi Apart:
 
@@ -204,6 +204,8 @@ The Joy Digi helps bring ideas to life through thoughtful design and modern tech
   Expert guidance to clarify your digital roadmap. Whether you're choosing the right tools, boosting visibility on search engines, or improving your funnel — we help you move smarter.
 
 #### 🔁 Process (How We Work):
+
+At The Joy Digi, we aim to make your digital transformation feel easy, fun, and empowering — not overwhelming.
 
 1. **Free Consultation** – Understand your goals, challenges, and ideas.
 2. **Custom Proposal** – You'll receive a tailored plan with scope, time estimate, and cost.
