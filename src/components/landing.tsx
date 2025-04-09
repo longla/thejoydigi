@@ -359,8 +359,8 @@ export default function Landing() {
               How We Work
             </h2>
             <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
-              Our simple, transparent process designed to bring your vision to
-              life
+              At The Joy Digi, we aim to make your digital transformation feel
+              easy, fun, and empowering — not overwhelming.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
@@ -375,7 +375,7 @@ export default function Landing() {
                 Free Consultation
               </h3>
               <p className="text-[#003B49]">
-                Let's chat about your goals and ideas over a virtual coffee
+                Understand your goals, challenges, and ideas
               </p>
             </div>
 
@@ -390,7 +390,8 @@ export default function Landing() {
                 Custom Proposal
               </h3>
               <p className="text-[#003B49]">
-                A tailored plan that fits your needs and budget perfectly
+                You'll receive a tailored plan with scope, time estimate, and
+                cost
               </p>
             </div>
 
@@ -405,7 +406,7 @@ export default function Landing() {
                 Design & Build
               </h3>
               <p className="text-[#003B49]">
-                Watch your vision come to life with our creative magic
+                We turn your vision into a clean, functional digital product
               </p>
             </div>
 
@@ -420,7 +421,7 @@ export default function Landing() {
                 Review & Iterate
               </h3>
               <p className="text-[#003B49]">
-                Your feedback helps us make it even better
+                You'll give feedback at key milestones for alignment
               </p>
             </div>
 
@@ -435,7 +436,8 @@ export default function Landing() {
                 Launch & Support
               </h3>
               <p className="text-[#003B49]">
-                Time to shine! We're here to help you succeed
+                We help launch your site/app and provide ongoing support if
+                needed
               </p>
             </div>
           </div>
