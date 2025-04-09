@@ -163,7 +163,7 @@ const partOne = `### The Joy Digi — Brand Deck (Updated)
 
 #### 🏷️ Tagline:
 
-_A Digital Studio for Visionary Brands_
+_Partnering with You on a Joyful Digital Journey_
 
 #### ✨ Mission Statement:
 

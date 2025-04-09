@@ -8,7 +8,7 @@
 
 #### 🏷️ Tagline:
 
-_A Digital Studio for Visionary Brands_
+_Partnering with You on a Joyful Digital Journey_
 
 #### ✨ Mission Statement:
 
@@ -21,7 +21,7 @@ The Joy Digi helps bring ideas to life through thoughtful design and modern tech
 #### 🌊 What Sets The Joy Digi Apart:
 
 - Growth-focused solutions – built to support clients' next stage
-- Tailored, not cookie-cutter – shaped by each client’s unique goals
+- Tailored, not cookie-cutter – shaped by each client's unique goals
 - Built with clarity and care – clean design, solid tech, and long-term value
 
 #### 🧠 Brand Personality:
@@ -53,9 +53,9 @@ The Joy Digi helps bring ideas to life through thoughtful design and modern tech
 At The Joy Digi, we aim to make your digital transformation feel easy, fun, and empowering — not overwhelming.
 
 1. **Free Consultation** – Understand your goals, challenges, and ideas.
-2. **Custom Proposal** – You’ll receive a tailored plan with scope, time estimate, and cost.
+2. **Custom Proposal** – You'll receive a tailored plan with scope, time estimate, and cost.
 3. **Design & Build** – We turn your vision into a clean, functional digital product.
-4. **Review & Iterate** – You’ll give feedback at key milestones for alignment.
+4. **Review & Iterate** – You'll give feedback at key milestones for alignment.
 5. **Launch & Support** – We help launch your site/app and provide ongoing support if needed.
 
 #### 💬 Pricing Model:
@@ -68,14 +68,14 @@ At The Joy Digi, we aim to make your digital transformation feel easy, fun, and 
 
 Hi, I'm Long — founder and developer of The Joy Digi.
 
-I’ve spent over 10 years as a software engineer working with big tech companies, startups, and consulting firms. Throughout that journey, I’ve built everything from polished user-facing apps to robust internal systems, learning what really creates value for a business.
+I've spent over 10 years as a software engineer working with big tech companies, startups, and consulting firms. Throughout that journey, I've built everything from polished user-facing apps to robust internal systems, learning what really creates value for a business.
 
-The Joy Digi is my way of combining that experience with a personal mission: helping others bring meaningful ideas to life. I believe in a **value-first approach** — where every project is designed not just to look good, but to make a real impact. Whether it’s a handcrafted website, a custom app, or a strategy session, it’s all about creating tools that truly serve your goals.
+The Joy Digi is my way of combining that experience with a personal mission: helping others bring meaningful ideas to life. I believe in a **value-first approach** — where every project is designed not just to look good, but to make a real impact. Whether it's a handcrafted website, a custom app, or a strategy session, it's all about creating tools that truly serve your goals.
 
 #### 🎨 Visual Identity
 
 **Logo:**  
-Bold typography with a stylized sun in the “O” of **JOY** and a wave flowing through **DIGI** — symbolizing warmth, clarity, and creative motion.
+Bold typography with a stylized sun in the "O" of **JOY** and a wave flowing through **DIGI** — symbolizing warmth, clarity, and creative motion.
 
 **Color Palette:**
 
@@ -146,13 +146,13 @@ Client needed help launching a premium dog boarding business from scratch: brand
 **What We Did:**
 
 - Developed business name, logo, and visual brand
-- Built a playful yet professional website that’s mobile-friendly and pet-owner focused
+- Built a playful yet professional website that's mobile-friendly and pet-owner focused
 - Integrated a booking system and meet & greet intake flow
 - Wrote clear, value-driven copy emphasizing safety, 24/7 care, home-like experience, and owner control through add-ons
 - Set up blog structure and managed content publishing for SEO
 - Ran social media ad campaigns and guided local marketing strategy
 
 **Result:**
-Ruh Roh Retreat launched with a strong digital presence and a steady stream of inquiries. The website’s charm and clarity paired with the booking and content systems helped build trust and fill the calendar quickly.
+Ruh Roh Retreat launched with a strong digital presence and a steady stream of inquiries. The website's charm and clarity paired with the booking and content systems helped build trust and fill the calendar quickly.
 
 ---

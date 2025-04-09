@@ -223,7 +223,7 @@ export default function Landing() {
             transition={{ duration: 0.6 }}
             className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-logo"
           >
-            A Digital Studio for Visionary Brands
+            Partnering with You on a Joyful Digital Journey
           </motion.h1>
           <p className="text-xl md:text-2xl text-[#003B49] mb-4 max-w-3xl mx-auto">
             Helping businesses grow with joyful experiences, purposeful design,
