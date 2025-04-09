@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Image from "next/image";
 import React, { useState } from "react";
 import {
   FaChartBar,
@@ -221,7 +222,7 @@ export default function Landing() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-quicksand"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-quicksand !font-[Quicksand]"
           >
             A Digital Studio, Fueled by Joy
           </motion.h1>
@@ -249,14 +250,26 @@ export default function Landing() {
       {/* Services Section */}
       <section id="services" className="py-20 bg-[#FDF6EC]">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
-              Services
-            </h2>
-            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
-              Helping businesses grow with joyful experiences, purposeful
-              design, custom tech, and clear strategy
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+            <div className="w-full md:w-1/2 max-w-md">
+              <Image
+                src="/services.svg"
+                alt="Services Illustration"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="text-4xl font-heading font-bold mb-6 text-[#003B49]">
+                Services
+              </h2>
+              <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
+                Helping businesses grow with joyful experiences, purposeful
+                design, custom tech, and clear strategy
+              </p>
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service) => (
@@ -307,14 +320,26 @@ export default function Landing() {
       {/* Portfolio Section - Moved to after Services */}
       <section id="portfolio" className="py-20 bg-white">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
-              Real Projects. Real Results.
-            </h2>
-            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
-              See how we've helped businesses grow with purposeful design and
-              modern technology
-            </p>
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
+                Real Projects. Real Results.
+              </h2>
+              <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
+                See how we've helped businesses grow with purposeful design and
+                modern technology
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 max-w-md">
+              <Image
+                src="/showcases.svg"
+                alt="Portfolio Showcases Illustration"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* QRganiz Case Study */}
