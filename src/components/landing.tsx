@@ -585,7 +585,7 @@ export default function Landing() {
                 className="flex items-center justify-center mb-6"
               >
                 <Image
-                  src="/how-we-work/proposal.svg"
+                  src="/how-we-work/Proposal.svg"
                   alt="Custom Proposal"
                   width={120}
                   height={120}
@@ -640,7 +640,7 @@ export default function Landing() {
                 className="flex items-center justify-center mb-6"
               >
                 <Image
-                  src="/how-we-work/build.svg"
+                  src="/how-we-work/Build.svg"
                   alt="Design & Build"
                   width={120}
                   height={120}
@@ -694,7 +694,7 @@ export default function Landing() {
                 className="flex items-center justify-center mb-6"
               >
                 <Image
-                  src="/how-we-work/launching.svg"
+                  src="/how-we-work/Launching.svg"
                   alt="Launch & Support"
                   width={120}
                   height={120}
