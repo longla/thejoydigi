@@ -221,9 +221,9 @@ export default function Landing() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-logo"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#003B49] mb-6 font-quicksand"
           >
-            Partnering with You on a Joyful Digital Journey
+            A Digital Studio, Fueled by Joy
           </motion.h1>
           <p className="text-xl md:text-2xl text-[#003B49] mb-4 max-w-3xl mx-auto">
             Helping businesses grow with joyful experiences, purposeful design,
