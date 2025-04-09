@@ -12,6 +12,50 @@ import {
   FaUserCog,
 } from "react-icons/fa";
 
+// Brand Colors component
+const BrandColors = () => {
+  const colors = [
+    {
+      name: "Deep Teal Blue",
+      hex: "#003B49",
+      role: "Primary – depth, trust, clarity",
+    },
+    {
+      name: "Soft Sand",
+      hex: "#FDF6EC",
+      role: "Secondary – warmth, space, approachability",
+    },
+    {
+      name: "Coral",
+      hex: "#FF6B6B",
+      role: "Accent – energy, contrast, emotional warmth",
+    },
+    {
+      name: "Sky Blue",
+      hex: "#4ABEFF",
+      role: "Accent – freshness, modern edge",
+    },
+  ];
+
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
+      {colors.map((color) => (
+        <div
+          key={color.hex}
+          className="border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow duration-300"
+        >
+          <div className="h-20" style={{ backgroundColor: color.hex }} />
+          <div className="p-4">
+            <h5 className="font-semibold text-[#003B49]">{color.name}</h5>
+            <p className="text-sm text-gray-600 mt-1">{color.hex}</p>
+            <p className="text-sm text-[#003B49] mt-2">{color.role}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
 type Service = {
   id: number;
   title: string;
@@ -446,6 +490,18 @@ export default function Landing() {
                   </span>
                 </div>
               </div>
+            </div>
+
+            {/* Brand Colors Section */}
+            <div className="mt-16">
+              <h3 className="text-2xl font-semibold text-[#003B49] mb-6">
+                Our Brand Colors
+              </h3>
+              <p className="text-[#003B49] mb-8">
+                A thoughtful color palette that balances professionalism with
+                warmth and approachability
+              </p>
+              <BrandColors />
             </div>
           </div>
         </div>
