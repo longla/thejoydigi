@@ -273,12 +273,6 @@ export default function Landing() {
             Helping businesses grow with joyful experiences, purposeful design,
             custom tech, and clear strategy
           </p>
-          <p className="text-lg md:text-xl text-[#003B49] mb-8 max-w-3xl mx-auto">
-            We bring ideas to life through thoughtful design and modern
-            technology. Our websites, web apps, and digital tools are clean,
-            functional, and tailored to your unique goals, focused on creating
-            real value that supports business growth.
-          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#booking"
@@ -520,14 +514,8 @@ export default function Landing() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               What Sets The Joy Digi Apart
             </h2>
-            <p className="text-lg text-[#003B49] mb-6">
+            <p className="text-lg text-[#003B49]">
               Our unique approach to digital solutions
-            </p>
-            <p className="text-md text-[#003B49] mb-8 italic">
-              "We bring ideas to life through thoughtful design and modern
-              technology. Our websites, web apps, and digital tools are clean,
-              functional, and tailored to your unique goals, focused on creating
-              real value that supports business growth."
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -645,13 +633,9 @@ export default function Landing() {
             <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
               Real Projects. Real Results.
             </h2>
-            <p className="text-lg text-[#003B49] max-w-2xl mx-auto mb-4">
-              See how we've brought ideas to life through thoughtful design and
+            <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
+              See how we've helped businesses grow with purposeful design and
               modern technology
-            </p>
-            <p className="text-md text-[#003B49] max-w-2xl mx-auto">
-              Each project is tailored to our clients' unique goals, focused on
-              creating real value that supports business growth
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
