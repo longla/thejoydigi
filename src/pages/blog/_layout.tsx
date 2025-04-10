@@ -1,4 +1,4 @@
-import { BlogPostMetaData } from "@/components/meta-data";
+import { BlogPostSEO } from "@/components/seo";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useEffect, useState, useState as useStateReact } from "react";
@@ -31,7 +31,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
   return (
     <>
       {router.pathname === "/blog/[slug]" && currentPostData ? (
-        <BlogPostMetaData
+        <BlogPostSEO
           title={currentPostData.title}
           description={currentPostData.excerpt}
           date={currentPostData.date}
@@ -40,7 +40,7 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
           hasCoverImage={!!currentPostData.coverImage}
         />
       ) : (
-        <BlogPostMetaData
+        <BlogPostSEO
           title="Digital Solutions Blog"
           description="Explore our latest insights on web development, digital transformation, IT solutions, and business technology. Stay updated with industry trends and expert perspectives."
           date={new Date().toISOString()}
