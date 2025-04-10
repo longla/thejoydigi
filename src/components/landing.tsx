@@ -317,171 +317,6 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Portfolio Section - Moved to after Services */}
-      <section id="portfolio" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
-            <div className="w-full md:w-1/2 text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
-                Real Projects. Real Results.
-              </h2>
-              <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
-                See how we've helped businesses grow with purposeful design and
-                modern technology
-              </p>
-            </div>
-            <div className="w-full md:w-1/2 max-w-md">
-              <Image
-                src="/showcases.svg"
-                alt="Portfolio Showcases Illustration"
-                width={400}
-                height={300}
-                className="w-full h-auto"
-                priority
-              />
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* QRganiz Case Study */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-[#003B49]">QRganiz</h3>
-                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
-                  Mobile App + Website
-                </span>
-              </div>
-              <p className="text-[#003B49] mb-6">
-                A smart QR code-based item tracker that helps users organize
-                their personal belongings. The project included both product
-                development and go-to-market strategy.
-              </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
-                  What We Did:
-                </h4>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Product Design & Branding
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Mobile App Development (React Native)
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Website Design & Development
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Amazon Product Launch Support
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    SEO Strategy & Content
-                  </li>
-                </ul>
-              </div>
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://www.qrganiz.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
-                >
-                  View Project
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-                <span className="text-sm text-gray-500">
-                  Productivity / Tech
-                </span>
-              </div>
-            </div>
-
-            {/* Ruh Roh Retreat Case Study */}
-            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <div className="flex items-center justify-between mb-6">
-                <h3 className="text-2xl font-bold text-[#003B49]">
-                  Ruh Roh Retreat
-                </h3>
-                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
-                  Website + Booking System
-                </span>
-              </div>
-              <p className="text-[#003B49] mb-6">
-                A premium dog boarding business in California that needed a
-                complete digital presence, from branding to booking system.
-              </p>
-              <div className="mb-6">
-                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
-                  What We Did:
-                </h4>
-                <ul className="space-y-2">
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Brand Identity Development
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Website Design & Development
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Booking System Integration
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Content Strategy & SEO
-                  </li>
-                  <li className="flex items-center text-[#003B49]">
-                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
-                    Social Media Marketing
-                  </li>
-                </ul>
-              </div>
-              <div className="flex items-center justify-between">
-                <a
-                  href="https://ruhrohretreat.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
-                >
-                  View Project
-                  <svg
-                    className="w-4 h-4 ml-2"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M14 5l7 7m0 0l-7 7m7-7H3"
-                    />
-                  </svg>
-                </a>
-                <span className="text-sm text-gray-500">
-                  Pet Services / Hospitality
-                </span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Process Section */}
       <section
         id="process"
@@ -772,6 +607,171 @@ export default function Landing() {
                     Consulting Experience
                   </span>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio Section */}
+      <section id="portfolio" className="py-20 bg-[#FDF6EC]">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 mb-16">
+            <div className="w-full md:w-1/2 text-center md:text-left">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#003B49] mb-4">
+                Real Projects. Real Results.
+              </h2>
+              <p className="text-lg text-[#003B49] max-w-2xl mx-auto">
+                See how we've helped businesses grow with purposeful design and
+                modern technology
+              </p>
+            </div>
+            <div className="w-full md:w-1/2 max-w-md">
+              <Image
+                src="/showcases.svg"
+                alt="Portfolio Showcases Illustration"
+                width={400}
+                height={300}
+                className="w-full h-auto"
+                priority
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* QRganiz Case Study */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-[#003B49]">QRganiz</h3>
+                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
+                  Mobile App + Website
+                </span>
+              </div>
+              <p className="text-[#003B49] mb-6">
+                A smart QR code-based item tracker that helps users organize
+                their personal belongings. The project included both product
+                development and go-to-market strategy.
+              </p>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
+                  What We Did:
+                </h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Product Design & Branding
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Mobile App Development (React Native)
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Website Design & Development
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Amazon Product Launch Support
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    SEO Strategy & Content
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-center justify-between">
+                <a
+                  href="https://www.qrganiz.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+                <span className="text-sm text-gray-500">
+                  Productivity / Tech
+                </span>
+              </div>
+            </div>
+
+            {/* Ruh Roh Retreat Case Study */}
+            <div className="bg-white p-8 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
+              <div className="flex items-center justify-between mb-6">
+                <h3 className="text-2xl font-bold text-[#003B49]">
+                  Ruh Roh Retreat
+                </h3>
+                <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
+                  Website + Booking System
+                </span>
+              </div>
+              <p className="text-[#003B49] mb-6">
+                A premium dog boarding business in California that needed a
+                complete digital presence, from branding to booking system.
+              </p>
+              <div className="mb-6">
+                <h4 className="text-lg font-semibold text-[#003B49] mb-3">
+                  What We Did:
+                </h4>
+                <ul className="space-y-2">
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Brand Identity Development
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Website Design & Development
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Booking System Integration
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Content Strategy & SEO
+                  </li>
+                  <li className="flex items-center text-[#003B49]">
+                    <span className="w-2 h-2 bg-[#4ABEFF] rounded-full mr-3"></span>
+                    Social Media Marketing
+                  </li>
+                </ul>
+              </div>
+              <div className="flex items-center justify-between">
+                <a
+                  href="https://ruhrohretreat.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
+                >
+                  View Project
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M14 5l7 7m0 0l-7 7m7-7H3"
+                    />
+                  </svg>
+                </a>
+                <span className="text-sm text-gray-500">
+                  Pet Services / Hospitality
+                </span>
               </div>
             </div>
           </div>
