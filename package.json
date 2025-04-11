@@ -24,6 +24,7 @@
     "gray-matter": "^4.0.3",
     "inquirer": "^9.2.15",
     "lucide-react": "^0.476.0",
+    "marked": "^15.0.8",
     "next": "^15.1.7",
     "next-mdx-remote": "^5.0.0",
     "next-seo": "^6.6.0",
