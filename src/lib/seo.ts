@@ -25,9 +25,6 @@ export const defaultSEO: DefaultSeoProps = {
   twitter: {
     handle: "@thejoydigi",
     site: "@thejoydigi",
-    title: "The Joy Digi – A Digital Studio for Visionary Brands",
-    description:
-      "The Joy Digi helps visionary brands grow through purposeful design, custom technology, and clear strategy—delivering clean, growth‑focused websites, web apps, and digital consulting.",
     cardType: "summary_large_image",
   },
   additionalMetaTags: [
