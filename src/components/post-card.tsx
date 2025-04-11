@@ -16,6 +16,8 @@ export const PostCardCompoent = ({ post }: { post: Post }) => {
             alt={post.title}
             fill
             className="object-cover rounded-t lg:rounded-t-none lg:rounded-l"
+            loading="lazy"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         </div>
         <div className="bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
