@@ -12,7 +12,8 @@
     "generate-image": "node scripts/gen-image.js",
     "generate-blog": "node scripts/generate-blog-post.js",
     "update-blog-images": "node scripts/update-blog-images.js",
-    "clean-posts": "rm -rf data/blog-posts.json && rm -rf public/posts/* && rm -rf posts/*"
+    "clean-posts": "rm -rf data/blog-posts.json && rm -rf public/posts/* && rm -rf posts/*",
+    "convert:webp": "node scripts/convert-to-webp.js"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
@@ -33,7 +34,8 @@
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-markdown": "^9.0.1",
-    "slugify": "^1.6.6"
+    "slugify": "^1.6.6",
+    "sharp": "^0.33.2"
   },
   "devDependencies": {
     "@google/generative-ai": "^0.24.0",

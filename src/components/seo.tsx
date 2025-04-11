@@ -9,7 +9,7 @@ interface DefaultSEOProps {
 export const DefaultSEO: React.FC<DefaultSEOProps> = ({
   title = "The Joy Digi | A Digital Studio, Fueled by Joy",
   description = "Helping businesses grow with joyful experiences, purposeful design, custom tech, and clear strategy. Specializing in website design, web & mobile apps, SEO, and digital consulting.",
-  image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.png",
+  image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.webp",
 }) => {
   return (
     <NextSeo
@@ -73,8 +73,8 @@ export const BlogPostSEO: React.FC<BlogPostSEOProps> = ({
   hasCoverImage,
 }) => {
   const imageUrl = hasCoverImage
-    ? `https://www.thejoydigi.com/posts/${slug}/cover.jpg`
-    : "https://www.thejoydigi.com/about-image.jpeg";
+    ? `https://www.thejoydigi.com/posts/${slug}/cover.webp`
+    : "https://www.thejoydigi.com/about-image.webp";
 
   const fullTitle = `${title} - TheJoyDigi Blog`;
   const formattedDate = new Date(date).toLocaleDateString("en-US", {

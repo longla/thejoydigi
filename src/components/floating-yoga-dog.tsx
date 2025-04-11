@@ -11,7 +11,7 @@ export default function FloatingYogaDog() {
       }}
     >
       <Image
-        src="/yoga-dog.png"
+        src="/yoga-dog.webp"
         alt="Yoga Dog"
         width={180}
         height={180}

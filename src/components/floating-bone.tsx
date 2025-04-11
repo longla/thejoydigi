@@ -20,7 +20,7 @@ export default function FloatingBone() {
       }}
     >
       <Image
-        src="/bone.png"
+        src="/bone.webp"
         alt="Floating Bone"
         width={120}
         height={120}

@@ -212,7 +212,7 @@ export default function Landing() {
       {/* Hero Section */}
       <section
         id="home"
-        className="relative h-screen flex items-center justify-center bg-[url('/hero-image.png')] md:bg-[url('/hero-image-desktop.png')] bg-cover bg-center"
+        className="relative h-screen flex items-center justify-center bg-[url('/hero-image.webp')] md:bg-[url('/hero-image-desktop.webp')] bg-cover bg-center"
       >
         <div className="absolute inset-0 overflow-hidden">
           {/* Removed the gradient div, keeping structure if needed later */}
@@ -570,7 +570,7 @@ export default function Landing() {
             <div className="flex flex-col md:flex-row items-center gap-8 mb-12">
               <div className="w-full md:w-1/2">
                 <img
-                  src="/about-image.jpeg"
+                  src="/about-image.webp"
                   alt="Long La - Founder of The Joy Digi"
                   className="rounded-full shadow-lg w-full h-auto object-cover aspect-square"
                 />

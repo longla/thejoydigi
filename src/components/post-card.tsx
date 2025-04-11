@@ -10,8 +10,8 @@ export const PostCardCompoent = ({ post }: { post: Post }) => {
           <Image
             src={
               post.hasCoverImage
-                ? `/posts/${post.slug}/cover.jpg`
-                : `/about-image.jpeg`
+                ? `/posts/${post.slug}/cover.webp`
+                : `/about-image.webp`
             }
             alt={post.title}
             fill
