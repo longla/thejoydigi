@@ -259,7 +259,6 @@ export default function Landing() {
                 height={300}
                 className="w-full h-auto"
                 priority
-                loading="eager"
               />
             </div>
             <div className="w-full md:w-1/2 text-center md:text-left">
@@ -372,7 +371,6 @@ export default function Landing() {
                   width={120}
                   height={120}
                   className="w-32 h-32"
-                  loading="lazy"
                 />
               </motion.div>
               <motion.h3
@@ -427,7 +425,6 @@ export default function Landing() {
                   width={120}
                   height={120}
                   className="w-32 h-32"
-                  loading="lazy"
                 />
               </motion.div>
               <motion.h3
@@ -483,7 +480,6 @@ export default function Landing() {
                   width={120}
                   height={120}
                   className="w-32 h-32"
-                  loading="lazy"
                 />
               </motion.div>
               <motion.h3
@@ -538,7 +534,6 @@ export default function Landing() {
                   width={120}
                   height={120}
                   className="w-32 h-32"
-                  loading="lazy"
                 />
               </motion.div>
               <motion.h3
@@ -639,7 +634,6 @@ export default function Landing() {
                 height={300}
                 className="w-full h-auto"
                 priority
-                loading="eager"
               />
             </div>
           </div>
