@@ -22,7 +22,7 @@ export default function SEOPlan({ content }: { content: string }) {
         hasCoverImage={false}
       />
       <div
-        className="prose prose-lg max-w-none
+        className="seo-content prose prose-lg max-w-none
           prose-headings:font-bold prose-headings:text-gray-900
           prose-h1:text-4xl prose-h1:mb-8 prose-h1:border-b prose-h1:border-gray-200 prose-h1:pb-4
           prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h2:text-gray-800
@@ -31,12 +31,7 @@ export default function SEOPlan({ content }: { content: string }) {
           prose-ul:list-disc prose-ul:text-gray-600 prose-ul:my-4 prose-ul:pl-6
           prose-ol:list-decimal prose-ol:text-gray-600 prose-ol:my-4 prose-ol:pl-6
           prose-li:my-2 prose-li:leading-relaxed
-          prose-table:min-w-full prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-table:overflow-hidden prose-table:shadow-sm prose-table:my-8
-          prose-thead:bg-gray-50
-          prose-th:px-6 prose-th:py-4 prose-th:text-left prose-th:text-sm prose-th:font-semibold prose-th:text-gray-700 prose-th:uppercase prose-th:tracking-wider prose-th:border-b prose-th:border-gray-200
-          prose-td:px-6 prose-td:py-4 prose-td:text-base prose-td:text-gray-600 prose-td:border-b prose-td:border-gray-200
-          prose-tr:border-b prose-tr:border-gray-200 prose-tr:last:border-b-0 prose-tr:hover:bg-gray-50
-          prose-tbody:divide-y prose-tbody:divide-gray-200
+          prose-table:min-w-full prose-table:overflow-hidden prose-table:shadow-sm prose-table:my-8 prose-table:border prose-table:border-gray-200 prose-table:rounded-lg prose-th:bg-gray-50 prose-th:border prose-th:border-gray-200 prose-th:px-4 prose-th:py-2 prose-td:border prose-td:border-gray-200 prose-td:px-4 prose-td:py-2 prose-tr:even:bg-gray-50
           prose-blockquote:border-l-4 prose-blockquote:border-gray-200 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:my-6 prose-blockquote:bg-gray-50 prose-blockquote:p-4 prose-blockquote:rounded-r-lg
           prose-code:bg-gray-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:rounded prose-code:text-sm prose-code:font-mono
           prose-pre:bg-gray-900 prose-pre:text-gray-100 prose-pre:p-4 prose-pre:rounded-lg prose-pre:my-6

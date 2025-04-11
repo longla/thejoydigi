@@ -749,7 +749,7 @@ export default function Landing() {
               </div>
               <div className="flex items-center justify-between">
                 <a
-                  href="https://ruhrohretreat.com"
+                  href="https://www.ruhrohretreat.com"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
