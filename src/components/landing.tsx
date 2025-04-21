@@ -686,13 +686,11 @@ export default function Landing() {
                 </ul>
               </div>
               <div className="flex items-center justify-between">
-                <a
-                  href="https://www.qrganiz.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/case-studies/qrganiz"
                   className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
                 >
-                  View Project
+                  View Case Study
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
@@ -706,7 +704,7 @@ export default function Landing() {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span className="text-sm text-gray-500">
                   Productivity / Tech
                 </span>
@@ -720,12 +718,13 @@ export default function Landing() {
                   Ruh Roh Retreat
                 </h3>
                 <span className="px-4 py-2 bg-[#4ABEFF]/10 text-[#4ABEFF] rounded-full text-sm font-semibold">
-                  Website + Booking System
+                  Brand + Website + Booking
                 </span>
               </div>
               <p className="text-[#003B49] mb-6">
                 A premium dog boarding business in California that needed a
-                complete digital presence, from branding to booking system.
+                complete digital presence, including branding, website, booking
+                system, and marketing strategy.
               </p>
               <div className="mb-6">
                 <h4 className="text-lg font-semibold text-[#003B49] mb-3">
@@ -755,13 +754,11 @@ export default function Landing() {
                 </ul>
               </div>
               <div className="flex items-center justify-between">
-                <a
-                  href="https://www.ruhrohretreat.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/case-studies/ruh-roh-retreat"
                   className="text-[#4ABEFF] hover:text-[#003B49] font-semibold flex items-center"
                 >
-                  View Project
+                  View Case Study
                   <svg
                     className="w-4 h-4 ml-2"
                     fill="none"
@@ -775,7 +772,7 @@ export default function Landing() {
                       d="M14 5l7 7m0 0l-7 7m7-7H3"
                     />
                   </svg>
-                </a>
+                </Link>
                 <span className="text-sm text-gray-500">
                   Pet Services / Hospitality
                 </span>
