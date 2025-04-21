@@ -5,6 +5,7 @@ import {
   FaRocket,
   FaSearch,
   FaTools,
+  FaUserCog,
   FaUsers,
 } from "react-icons/fa";
 import MainLayout from "../_layouts";
@@ -141,32 +142,60 @@ const Consulting: NextPage = () => {
                 Perfect For
               </h2>
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Non-technical founders needing digital guidance
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Businesses planning digital transformation
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Teams needing tech stack recommendations
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Companies wanting to improve their online presence
-                    </span>
-                  </li>
-                </ul>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaUserCog className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Non-technical Founders
+                      </h3>
+                      <p className="text-gray-600">
+                        Needing digital guidance and strategy
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaChartLine className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Growing Businesses
+                      </h3>
+                      <p className="text-gray-600">
+                        Planning digital transformation
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaTools className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Tech Teams
+                      </h3>
+                      <p className="text-gray-600">
+                        Needing stack recommendations
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaSearch className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Online Businesses
+                      </h3>
+                      <p className="text-gray-600">
+                        Wanting to improve their presence
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 

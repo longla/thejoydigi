@@ -1,11 +1,13 @@
 import { NextPage } from "next";
 import Link from "next/link";
 import {
+  FaChartLine,
   FaCode,
   FaMobile,
   FaRocket,
   FaServer,
   FaShieldAlt,
+  FaUserCog,
 } from "react-icons/fa";
 import MainLayout from "../_layouts";
 
@@ -139,32 +141,60 @@ const Apps: NextPage = () => {
                 Perfect For
               </h2>
               <div className="bg-white p-8 rounded-lg shadow-sm">
-                <ul className="space-y-4">
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Startups with innovative app ideas
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Businesses needing internal tools and dashboards
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Companies looking to digitize their services
-                    </span>
-                  </li>
-                  <li className="flex items-center">
-                    <span className="w-2 h-2 bg-sky-blue rounded-full mr-3"></span>
-                    <span className="text-gray-600">
-                      Founders seeking a tech partner for their vision
-                    </span>
-                  </li>
-                </ul>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaRocket className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Startups
+                      </h3>
+                      <p className="text-gray-600">
+                        With innovative app ideas ready to bring to market
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaChartLine className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Growing Companies
+                      </h3>
+                      <p className="text-gray-600">
+                        Needing internal tools and dashboards
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaCode className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Digital Transformation
+                      </h3>
+                      <p className="text-gray-600">
+                        Looking to digitize their services
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-soft-sand/50 transition-colors duration-300">
+                    <div className="w-10 h-10 bg-sky-blue/10 rounded-full flex items-center justify-center flex-shrink-0">
+                      <FaUserCog className="w-5 h-5 text-sky-blue" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-deep-teal mb-1">
+                        Founders
+                      </h3>
+                      <p className="text-gray-600">
+                        Seeking a tech partner for their vision
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </section>
 
