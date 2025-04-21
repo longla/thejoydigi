@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 import {
   FaChartBar,
@@ -304,12 +305,18 @@ export default function Landing() {
                   </ul>
                 </div>
                 <div className="mt-8 pt-6 border-t border-gray-100">
-                  <a
-                    href="#booking"
+                  <Link
+                    href={
+                      service.id === 1
+                        ? "/services/websites"
+                        : service.id === 2
+                        ? "/services/apps"
+                        : "/services/consulting"
+                    }
                     className="inline-block w-full text-center border-2 border-[#4ABEFF] text-[#4ABEFF] bg-[#FDF6EC] px-6 py-3 rounded-full font-semibold hover:text-[#FF6B6B] hover:border-[#FF6B6B] transition-colors duration-300"
                   >
-                    Get Started
-                  </a>
+                    Learn More
+                  </Link>
                 </div>
               </div>
             ))}
