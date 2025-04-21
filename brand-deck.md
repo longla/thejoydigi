@@ -8,7 +8,7 @@
 
 #### 🏷️ Tagline:
 
-_Partnering with You on a Joyful Digital Journey_
+_A digital studio for visionary brands_
 
 #### ✨ Mission Statement:
 

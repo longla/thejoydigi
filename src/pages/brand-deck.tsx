@@ -163,7 +163,7 @@ const partOne = `### The Joy Digi — Brand Deck (Updated)
 
 #### 🏷️ Tagline:
 
-_A Digital Studio, Fueled by Joy_
+_A digital studio for visionary brands_
 
 #### ✨ Mission Statement:
 
@@ -310,7 +310,14 @@ const BrandDeckPage: React.FC = () => {
               className="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-8 md:p-12"
             >
               <div className="prose prose-lg max-w-none">
-                {/* Part One - Content before Color Palette */}
+                <div className="mb-8">
+                  <h1 className="text-4xl md:text-5xl font-bold text-[#003B49] mb-6">
+                    The Joy Digi
+                  </h1>
+                  <p className="text-xl text-[#003B49] mb-8">
+                    A digital studio for visionary brands
+                  </p>
+                </div>
                 <ReactMarkdown
                   components={{
                     // Customize headings
