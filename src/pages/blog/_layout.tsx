@@ -294,10 +294,10 @@ const BlogLayout: React.FC<BlogLayoutProps> = ({ children, postData }) => {
                 </li>
                 <li>
                   <a
-                    href="tel:6572726537"
+                    href="tel:+17147942861"
                     className="text-white hover:text-[#FF6B6B]"
                   >
-                    (657) 272-6537
+                    (714) 794-2861
                   </a>
                 </li>
               </ul>

@@ -193,10 +193,10 @@ const MainLayout: React.FC<MainLayoutProps> = ({
                 </li>
                 <li className="text-white">
                   <a
-                    href="tel:+16572726537"
+                    href="tel:+17147942861"
                     className="hover:text-[#FF6B6B] transition-colors duration-300"
                   >
-                    (657) 272-6537
+                    (714) 794-2861
                   </a>
                 </li>
               </ul>
