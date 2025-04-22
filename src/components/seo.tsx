@@ -7,7 +7,7 @@ interface DefaultSEOProps {
 }
 
 export const DefaultSEO: React.FC<DefaultSEOProps> = ({
-  title = "The Joy Digi | A Digital Studio, Fueled by Joy",
+  title = "The Joy Digi | A Digital Studio for visionary brands",
   description = "Helping businesses grow with joyful experiences, purposeful design, custom tech, and clear strategy. Specializing in website design, web & mobile apps, SEO, and digital consulting.",
   image = "/long-digital-partner-websites-apps-seo-the-joy-digi-rectangle.webp",
 }) => {
