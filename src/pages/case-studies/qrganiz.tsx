@@ -44,10 +44,6 @@ const QRganizCaseStudy: NextPage = () => {
                 <p className="text-sm text-gray-600">Timeline</p>
                 <p className="font-medium text-deep-teal">6 Months</p>
               </div>
-              <div>
-                <p className="text-sm text-gray-600">Location</p>
-                <p className="font-medium text-deep-teal">Global</p>
-              </div>
             </div>
             <div className="mt-6">
               <a

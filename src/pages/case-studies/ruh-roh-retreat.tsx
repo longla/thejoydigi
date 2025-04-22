@@ -20,7 +20,7 @@ const RuhRohRetreatCaseStudy: NextPage = () => {
               A premium dog boarding business in California that needed a
               complete digital presence.
             </p>
-            <div className="relative w-full aspect-[16/9] max-w-[400px] max-h-[500px] mx-auto rounded-lg overflow-hidden shadow-lg">
+            <div className="relative w-full aspect-[16/9] max-h-[600px] mx-auto rounded-lg overflow-hidden shadow-lg">
               <Image
                 src="/case-studies/ruh-roh-hero.webp"
                 alt="Ruh Roh Retreat Facility"
@@ -41,10 +41,6 @@ const RuhRohRetreatCaseStudy: NextPage = () => {
                 <p className="font-medium text-deep-teal">
                   Pet Services / Hospitality
                 </p>
-              </div>
-              <div>
-                <p className="text-sm text-gray-600">Location</p>
-                <p className="font-medium text-deep-teal">California, USA</p>
               </div>
             </div>
             <div className="mt-6">
