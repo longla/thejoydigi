@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { NextPage } from "next";
 import Link from "next/link";
 import {
@@ -121,45 +120,56 @@ const Websites: NextPage = () => {
               </div>
             </section>
 
-            <section className="mb-16">
-              <h2 className="text-2xl font-semibold text-deep-teal mb-8">
+            <section className="max-w-4xl mx-auto mb-16">
+              <h2 className="text-3xl font-semibold text-deep-teal mb-6">
                 Our Process
               </h2>
               <div className="space-y-8">
-                {process.map((step, index) => (
-                  <motion.div
-                    key={index}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: index * 0.1 }}
-                    className="flex items-start gap-6 group"
-                  >
-                    <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                      className="w-16 h-16 bg-sky-blue text-white rounded-full flex items-center justify-center text-xl font-bold flex-shrink-0 relative"
-                    >
-                      <div className="absolute inset-0 bg-sky-blue/20 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
-                      <div className="relative z-10 flex flex-col items-center">
-                        <span className="text-sm font-medium">{step.step}</span>
-                        <div className="w-6 h-6 mt-1">{step.icon}</div>
-                      </div>
-                    </motion.div>
-                    <motion.div
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 0.5, delay: index * 0.1 + 0.2 }}
-                      className="flex-1 bg-white p-6 rounded-lg shadow-sm group-hover:shadow-md transition-shadow duration-300"
-                    >
-                      <h3 className="text-xl font-semibold text-deep-teal mb-2">
-                        {step.title}
-                      </h3>
-                      <p className="text-gray-600">{step.description}</p>
-                    </motion.div>
-                  </motion.div>
-                ))}
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-deep-teal mb-2">
+                    Discovery
+                  </h3>
+                  <p className="text-gray-600">
+                    We start by understanding your business goals, target
+                    audience, and unique requirements.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-deep-teal mb-2">
+                    Design
+                  </h3>
+                  <p className="text-gray-600">
+                    Create wireframes and design mockups that align with your
+                    brand and goals.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-deep-teal mb-2">
+                    Development
+                  </h3>
+                  <p className="text-gray-600">
+                    Build your website using modern technologies and best
+                    practices.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-deep-teal mb-2">
+                    Testing
+                  </h3>
+                  <p className="text-gray-600">
+                    Thorough testing across devices and browsers to ensure
+                    quality.
+                  </p>
+                </div>
+                <div className="bg-white p-6 rounded-lg shadow-sm">
+                  <h3 className="text-xl font-semibold text-deep-teal mb-2">
+                    Launch
+                  </h3>
+                  <p className="text-gray-600">
+                    Deploy your website and provide training for content
+                    management.
+                  </p>
+                </div>
               </div>
             </section>
 
