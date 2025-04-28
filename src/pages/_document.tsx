@@ -25,7 +25,7 @@ export default function Document() {
         {/* <!-- Google tag (gtag.js) --> */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-W4PNG5DB4T"
+          src="https://www.googletagmanager.com/gtag/js?id=G-J24K88CVVT"
         ></script>
         <script
           type="text/javascript"
@@ -35,7 +35,7 @@ window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-W4PNG5DB4T');`,
+  gtag('config', 'G-J24K88CVVT');`,
           }}
         ></script>
 
