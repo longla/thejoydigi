@@ -56,7 +56,7 @@ Thumbs.db
 
 # Podcast
 /podcast/daily-ai-brief/node_modules
-/podcast/daily-ai-brief/dist/output
+/podcast/daily-ai-brief/output
 /podcast/daily-ai-brief/dist
 /podcast/daily-ai-brief/.env
 /podcast/daily-ai-brief/.env.local
