@@ -53,3 +53,12 @@ next-env.d.ts
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Podcast
+/podcast/daily-ai-brief/node_modules/*
+/podcast/daily-ai-brief/.env
+/podcast/daily-ai-brief/.env.local
+/podcast/daily-ai-brief/.env.development
+/podcast/daily-ai-brief/.env.production
+/podcast/daily-ai-brief/.env.example
+
