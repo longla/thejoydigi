@@ -7,6 +7,16 @@ interface Video {
   title?: string;
 }
 
+interface TikTokVideosData {
+  videos: Video[];
+  metadata: {
+    total: number;
+    bucketName: string;
+    baseUrl: string;
+    generatedAt: string;
+  };
+}
+
 const TikTokContentPage: React.FC = () => {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -36,8 +46,12 @@ const TikTokContentPage: React.FC = () => {
         if (!response.ok) {
           throw new Error(`Failed to fetch videos: ${response.status} ${response.statusText}`);
         }
-        const data: Video[] = await response.json();
-        setVideos(data);
+        const data: TikTokVideosData = await response.json();
+        if (data && data.videos) {
+          setVideos(data.videos);
+        } else {
+          throw new Error("Video data is not in the expected format.");
+        }
       } catch (err: any) {
         setError(err.message);
         setVideos([]); // Clear videos on error
