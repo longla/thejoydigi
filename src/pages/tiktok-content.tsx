@@ -21,18 +21,29 @@ const TikTokContentPage: React.FC = () => {
   const [videos, setVideos] = useState<Video[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
-  const [showSuccessDialog, setShowSuccessDialog] = useState<boolean>(false);
+  const [showDialog, setShowDialog] = useState<boolean>(false);
+  const [dialogStep, setDialogStep] = useState<'confirm' | 'success'>('confirm');
   const [selectedVideoUrl, setSelectedVideoUrl] = useState<string | null>(null);
 
   const handleShareClick = (video: Video) => {
-    setSelectedVideoUrl(video.videoUrl);
-    setShowSuccessDialog(true);
-    // No actual sharing, just showing the dialog.
+    setSelectedVideoUrl(video.videoUrl); // Optional, for context if needed
+    setDialogStep('confirm'); // Start with confirmation step
+    setShowDialog(true);
   };
 
-  const closeDialog = () => {
-    setShowSuccessDialog(false);
-    setSelectedVideoUrl(null);
+  const handleConfirmShare = () => {
+    setDialogStep('success'); // Move to success step
+    // In a real app, actual sharing logic would go here BEFORE setting success
+  };
+
+  const handleCancelShare = () => {
+    setShowDialog(false); // Close dialog
+    setSelectedVideoUrl(null); // Clear selected video
+  };
+
+  const closeDialog = () => { // Used by success step and potentially cancel
+    setShowDialog(false);
+    setSelectedVideoUrl(null); // Clear selected video
   };
 
   useEffect(() => {
@@ -66,13 +77,13 @@ const TikTokContentPage: React.FC = () => {
   return (
     <>
       <Head>
-        <title>TikTok Demo Content</title>
-        <meta name="description" content="Demo content for TikTok app review. This page displays sample videos that can be shared to TikTok." />
+        <title>The Universe Whisper Video Library</title>
+        <meta name="description" content="Browse and share videos from The Universe Whisper video library to TikTok." />
       </Head>
       <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif', maxWidth: '800px', margin: '0 auto' }}>
         <header style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <h1>TikTok Demo Videos</h1>
-          <p>Browse the sample videos below. You will be able to share them to TikTok.</p>
+          <h1>The Universe Whisper Video Library</h1>
+          <p>Explore our collection of videos. Select any video to share it with your audience on TikTok.</p>
         </header>
 
         {loading && (
@@ -144,7 +155,7 @@ const TikTokContentPage: React.FC = () => {
           </ul>
         )}
 
-        {showSuccessDialog && (
+        {showDialog && (
           <div style={{
             position: 'fixed',
             top: 0,
@@ -165,37 +176,87 @@ const TikTokContentPage: React.FC = () => {
               boxShadow: '0 8px 25px rgba(0, 0, 0, 0.15)', // Enhanced shadow
               textAlign: 'center',
               minWidth: '320px', // Slightly wider
-              maxWidth: '450px', // Max width
+            maxWidth: '480px', // Max width
+            minWidth: '320px',
+            boxSizing: 'border-box',
             }}>
-              <h2 style={{ marginBottom: '20px', fontSize: '1.75em', color: '#333' }}>Action Confirmed!</h2>
-              <p style={{ marginBottom: '30px', fontSize: '1.1em', color: '#555' }}>
-                This confirms the "Share to TikTok" action was triggered for the video.
-                {selectedVideoUrl &&
-                  <span style={{ display: 'block', marginTop: '10px', fontSize: '0.9em', color: '#777' }}>
-                    Video URL: {selectedVideoUrl}
-                  </span>
-                }
-                <br />
-                <em>(This is a demo and no actual sharing has occurred.)</em>
-              </p>
-              <button
-                onClick={closeDialog}
-                style={{
-                  padding: '12px 25px',
-                  fontSize: '1.1em',
-                  cursor: 'pointer',
-                  backgroundColor: '#007bff', // Standard blue
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '6px',
-                  fontWeight: '600',
-                  transition: 'background-color 0.2s ease',
-                }}
-                onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
-                onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007bff')}
-              >
-                Close
-              </button>
+              {dialogStep === 'confirm' && (
+                <>
+                  <h2 style={{ marginTop: '0', marginBottom: '15px', fontSize: '1.6em', color: '#333' }}>Confirm Share</h2>
+                  <p style={{ marginBottom: '25px', fontSize: '1.05em', color: '#555', lineHeight: '1.5' }}>
+                    Ready to share this video to TikTok?
+                    {selectedVideoUrl &&
+                      <span style={{ display: 'block', marginTop: '10px', fontSize: '0.9em', color: '#777', wordBreak: 'break-all' }}>
+                        Video: {selectedVideoUrl}
+                      </span>
+                    }
+                  </p>
+                  <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '10px', marginTop: '20px' }}>
+                    <button
+                      onClick={handleCancelShare}
+                      style={{
+                        padding: '10px 20px',
+                        fontSize: '1em',
+                        cursor: 'pointer',
+                        backgroundColor: '#6c757d', // Grey
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '5px',
+                        fontWeight: '500',
+                        transition: 'background-color 0.2s ease',
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#5a6268')}
+                      onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#6c757d')}
+                    >
+                      Cancel
+                    </button>
+                    <button
+                      onClick={handleConfirmShare}
+                      style={{
+                        padding: '10px 20px',
+                        fontSize: '1em',
+                        cursor: 'pointer',
+                        backgroundColor: '#fe2c55', // TikTok Red
+                        color: 'white',
+                        border: 'none',
+                        borderRadius: '5px',
+                        fontWeight: '600',
+                        transition: 'background-color 0.2s ease',
+                      }}
+                      onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#e02146')}
+                      onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#fe2c55')}
+                    >
+                      Confirm
+                    </button>
+                  </div>
+                </>
+              )}
+              {dialogStep === 'success' && (
+                <>
+                  <h2 style={{ marginTop: '0', marginBottom: '15px', fontSize: '1.75em', color: '#28a745' /* Green for success */ }}>Success!</h2>
+                  <p style={{ marginBottom: '25px', fontSize: '1.1em', color: '#555' }}>
+                    Video sent to TikTok successfully!
+                  </p>
+                  <button
+                    onClick={closeDialog}
+                    style={{
+                      padding: '12px 25px',
+                      fontSize: '1.1em',
+                      cursor: 'pointer',
+                      backgroundColor: '#007bff', // Standard blue
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: '6px',
+                      fontWeight: '600',
+                      transition: 'background-color 0.2s ease',
+                    }}
+                    onMouseOver={(e) => (e.currentTarget.style.backgroundColor = '#0056b3')}
+                    onMouseOut={(e) => (e.currentTarget.style.backgroundColor = '#007bff')}
+                  >
+                    Close
+                  </button>
+                </>
+              )}
             </div>
           </div>
         )}
