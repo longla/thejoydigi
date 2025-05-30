@@ -177,7 +177,6 @@ const TikTokContentPage: React.FC = () => {
               textAlign: 'center',
               minWidth: '320px', // Slightly wider
             maxWidth: '480px', // Max width
-            minWidth: '320px',
             boxSizing: 'border-box',
             }}>
               {dialogStep === 'confirm' && (
