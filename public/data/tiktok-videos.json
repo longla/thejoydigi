@@ -1,0 +1,22 @@
+[
+  {
+    "id": "vid001",
+    "videoUrl": "https://www.tiktok.com/@tiktokdev/video/7064810732011162886",
+    "title": "TikTok API Demo Video 1"
+  },
+  {
+    "id": "vid002",
+    "videoUrl": "https://www.tiktok.com/@tiktokdev/video/7008330162007903494",
+    "title": "Developer Portal Walkthrough"
+  },
+  {
+    "id": "vid003",
+    "videoUrl": "https://www.tiktok.com/@tiktok/video/7318806124907400491",
+    "title": "New Year Reflections"
+  },
+  {
+    "id": "vid004",
+    "videoUrl": "https://www.tiktok.com/@tiktok/video/7344145015098346798",
+    "title": "International Women's Day"
+  }
+]
