@@ -95,10 +95,15 @@ export default async function handler(
     // IMPORTANT: In production, exposing tokens in URL is not recommended.
     // They should be handled server-side or stored securely (e.g., httpOnly cookies).
     const { access_token, refresh_token } = data;
-    if (access_token && refresh_token) {
-      res.redirect(`/tiktok-tokens?access_token=${encodeURIComponent(access_token)}&refresh_token=${encodeURIComponent(refresh_token)}`);
+
+    if (process.env.TIKTOK_DEMO === 'true') {
+      res.redirect('/tiktok-content');
     } else {
-      res.status(500).json({ message: 'Access token or refresh token not found in response.' });
+      if (access_token && refresh_token) {
+        res.redirect(`/tiktok-tokens?access_token=${encodeURIComponent(access_token)}&refresh_token=${encodeURIComponent(refresh_token)}`);
+      } else {
+        res.status(500).json({ message: 'Access token or refresh token not found in response.' });
+      }
     }
 
   } catch (err: any) {
