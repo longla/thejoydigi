@@ -1,11 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
 // Server-side environment variables.
-// Ensure TIKTOK_CLIENT_KEY and TIKTOK_CLIENT_SECRET are set in your environment.
+// Ensure NEXT_PUBLIC_TIKTOK_CLIENT_KEY and TIKTOK_CLIENT_SECRET are set in your environment.
+// NEXT_PUBLIC_TIKTOK_CLIENT_KEY is used here as it's also used client-side and simplifies setup.
 // For local development, you can add them to a .env.local file:
-// TIKTOK_CLIENT_KEY=your_actual_client_key
+// NEXT_PUBLIC_TIKTOK_CLIENT_KEY=your_actual_client_key
 // TIKTOK_CLIENT_SECRET=your_actual_client_secret
-const TIKTOK_CLIENT_KEY = process.env.TIKTOK_CLIENT_KEY;
+const TIKTOK_CLIENT_KEY = process.env.NEXT_PUBLIC_TIKTOK_CLIENT_KEY;
 const TIKTOK_CLIENT_SECRET = process.env.TIKTOK_CLIENT_SECRET;
 // TODO: Ensure this matches the redirect URI configured in your TikTok app and on the auth page
 const REDIRECT_URI = 'https://www.thejoydigi.com/api/tiktok/callback';
@@ -27,7 +28,7 @@ export default async function handler(
   res: NextApiResponse
 ) {
   if (!TIKTOK_CLIENT_KEY || !TIKTOK_CLIENT_SECRET) {
-    console.error('Missing TikTok server-side environment variables: TIKTOK_CLIENT_KEY or TIKTOK_CLIENT_SECRET');
+    console.error('Missing TikTok server-side environment variables: NEXT_PUBLIC_TIKTOK_CLIENT_KEY or TIKTOK_CLIENT_SECRET');
     return res.status(500).json({ message: 'Server configuration error: TikTok credentials not set.' });
   }
 
