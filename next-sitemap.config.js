@@ -4,7 +4,7 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",
-  exclude: ["/blog/_layout"],
+  exclude: ["/blog/_layout", "/x-ai-playground"],
   robotsTxtOptions: {
     policies: [
       { userAgent: "*", allow: "/" },
