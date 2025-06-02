@@ -23,7 +23,7 @@ export default async function handler(
       model,
       systemMessage,
       userMessage,
-      enableLiveSearch, // This will be used later if the API supports a similar feature
+      enableLiveSearch,
     }: XAiRequestBody = req.body;
 
     if (!apiKey || !model || !userMessage) {
@@ -33,11 +33,29 @@ export default async function handler(
     const externalApiUrl = 'https://api.x.ai/v1/chat/completions';
 
     // Construct the messages array for the external API
-    const messages = [];
-    if (systemMessage) {
+    const messages: Array<{ role: string; content: string }> = [];
+    if (systemMessage && systemMessage.trim() !== '') {
       messages.push({ role: 'system', content: systemMessage });
     }
     messages.push({ role: 'user', content: userMessage });
+
+    // Construct the body for the external API call
+    const externalApiBody: {
+      model: string;
+      messages: Array<{ role: string; content: string }>;
+      search_parameters?: { mode: string; return_citations: boolean };
+      // stream parameter can be added here if needed, e.g., stream: false
+    } = {
+      model,
+      messages,
+    };
+
+    if (enableLiveSearch) {
+      externalApiBody.search_parameters = {
+        mode: "auto",
+        return_citations: true,
+      };
+    }
 
     const response = await fetch(externalApiUrl, {
       method: 'POST',
@@ -45,12 +63,7 @@ export default async function handler(
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${apiKey}`,
       },
-      body: JSON.stringify({
-        model,
-        messages,
-        // stream: false, // Assuming we want a non-streaming response for now
-        // liveSearch: enableLiveSearch, // Assuming the external API might have a similar parameter
-      }),
+      body: JSON.stringify(externalApiBody),
     });
 
     if (!response.ok) {
