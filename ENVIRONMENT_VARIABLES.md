@@ -41,3 +41,15 @@
     ```
     NEXT_PUBLIC_TIKTOK_SCOPES=user.info.basic,video.upload
     ```
+
+## Interest Topics Management (S3)
+
+These variables configure the AWS S3 bucket used to store the `interests.json` file.
+
+```
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=us-east-1
+S3_BUCKET_NAME=your_bucket
+INTERESTS_KEY=interests.json # optional
+```
