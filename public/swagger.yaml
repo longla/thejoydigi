@@ -76,13 +76,11 @@ components:
     RemoveInterestRequest:
       type: object
       required:
-        - topics
+        - topic
       properties:
-        topics:
-          type: array
-          items:
-            type: string
-          description: The list of topics to remove.
+        topic:
+          type: string
+          description: The topic of the interest to remove.
     MessageResponse:
       type: object
       properties:
