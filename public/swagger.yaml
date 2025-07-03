@@ -2,46 +2,71 @@ openapi: 3.1.0
 info:
   title: The Joy Digi API
   version: 1.0.0
-  description: API documentation for The Joy Digi Next.js application.
+  description: API documentation for The Joy Digi Next.js application. This API allows you to manage interests for users.
 servers:
-  - url: /api
+  - url: https://www.thejoydigi.com/api
 paths:
   /interests:
     get:
-      summary: Returns a list of interests
+      summary: Get the list of interests
+      operationId: getInterests
+      description: Retrieves a list of all available interests.
       responses:
-        '200':
+        "200":
           description: A list of interests
           content:
             application/json:
               schema:
                 type: array
                 items:
-                  type: object
-                  properties:
-                    id:
-                      type: integer
-                    name:
-                      type: string
+                  $ref: '#/components/schemas/Interest'
     post:
-      summary: Adds a new interest
+      summary: Add a new interest
+      operationId: addInterest
+      description: Creates a new interest in the system.
       requestBody:
         required: true
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                name:
-                  type: string
+              $ref: '#/components/schemas/AddInterestRequest'
       responses:
-        '200':
+        "200":
           description: Interest added successfully
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  message:
-                    type: string
-                    example: Interest added.
+                $ref: '#/components/schemas/MessageResponse'
+components:
+  schemas:
+    Interest:
+      type: object
+      properties:
+        id:
+          type: integer
+          description: The unique identifier for the interest.
+        name:
+          type: string
+          description: The name of the interest.
+    AddInterestRequest:
+      type: object
+      required:
+        - name
+      properties:
+        name:
+          type: string
+          description: The name of the interest to add.
+    MessageResponse:
+      type: object
+      properties:
+        message:
+          type: string
+          description: A confirmation message.
+  securitySchemes:
+    ApiKeyAuth:
+      type: apiKey
+      in: header
+      name: Authorization
+      x-openai-is_authenticated: false
+security:
+  - ApiKeyAuth: []
