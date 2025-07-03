@@ -54,6 +54,24 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MessageResponse"
+  /interests/delete:
+    post:
+      summary: Remove multiple interests
+      operationId: removeMultipleInterests
+      description: Removes multiple existing interests from the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RemoveMultipleInterestsRequest"
+      responses:
+        "200":
+          description: Interests removed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MessageResponse"
 components:
   schemas:
     Interest:
@@ -87,6 +105,16 @@ components:
         message:
           type: string
           description: A confirmation message.
+    RemoveMultipleInterestsRequest:
+      type: object
+      required:
+        - topics
+      properties:
+        topics:
+          type: array
+          items:
+            type: string
+          description: An array of topics to remove.
   securitySchemes:
     ApiKeyAuth:
       type: apiKey
