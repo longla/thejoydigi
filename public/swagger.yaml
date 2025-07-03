@@ -37,6 +37,23 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MessageResponse"
+    delete:
+      summary: Remove an interest
+      operationId: removeInterest
+      description: Removes an existing interest from the system.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RemoveInterestRequest"
+      responses:
+        "200":
+          description: Interest removed successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/MessageResponse"
 components:
   schemas:
     Interest:
@@ -56,6 +73,16 @@ components:
         topic:
           type: string
           description: The topic of the interest to add.
+    RemoveInterestRequest:
+      type: object
+      required:
+        - topics
+      properties:
+        topics:
+          type: array
+          items:
+            type: string
+          description: The list of topics to remove.
     MessageResponse:
       type: object
       properties:
