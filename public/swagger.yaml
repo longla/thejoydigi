@@ -37,23 +37,6 @@ paths:
             application/json:
               schema:
                 $ref: "#/components/schemas/MessageResponse"
-    delete:
-      summary: Remove an interest
-      operationId: removeInterest
-      description: Removes an existing interest from the system.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: "#/components/schemas/RemoveInterestRequest"
-      responses:
-        "200":
-          description: Interest removed successfully
-          content:
-            application/json:
-              schema:
-                $ref: "#/components/schemas/MessageResponse"
   /interests/delete:
     post:
       summary: Remove multiple interests

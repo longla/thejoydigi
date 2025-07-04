@@ -51,15 +51,10 @@ export default async function handler(
       }
       // Load existing topics
       const existingTopics = await loadTopics();
-      // Filter out topics that are already present
-      const newTopics = topics.filter(
-        (topic) => !existingTopics.includes(topic)
+      // remove topics from existing topics
+      const updatedTopics = existingTopics.filter(
+        (topic) => !topics.includes(topic)
       );
-      if (newTopics.length === 0) {
-        return res.status(200).json({ message: "No new topics to add." });
-      }
-      // Combine existing and new topics
-      const updatedTopics = [...existingTopics, ...newTopics];
       // Save updated topics back to S3
       await saveTopics(updatedTopics);
       res.status(200).json({ topics: updatedTopics });
